@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6673AA2-A855-4455-850F-C7F072B0AD22}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JBA_BizSupport</RootNamespace>
+    <AssemblyName>JBA_BizSupport</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>JBA_BizSupport.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataGridViewProgressCell.cs" />
+    <Compile Include="DataGridViewProgressColumn.cs" />
+    <Compile Include="frmCorpRecExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCorpRecExpense.Designer.cs">
+      <DependentUpon>frmCorpRecExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExpenseManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExpenseManage.Designer.cs">
+      <DependentUpon>frmExpenseManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIndivRecExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIndivRecExpense.Designer.cs">
+      <DependentUpon>frmIndivRecExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIndivRecExpense1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIndivRecExpense1.Designer.cs">
+      <DependentUpon>frmIndivRecExpense1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTempSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTempSave.Designer.cs">
+      <DependentUpon>frmTempSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoiceManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInvoiceManage.Designer.cs">
+      <DependentUpon>frmInvoiceManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMasterMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMasterMaintenance.Designer.cs">
+      <DependentUpon>frmMasterMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeaAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeaAddress.Designer.cs">
+      <DependentUpon>frmSeaAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeaPaymentDest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeaPaymentDest.Designer.cs">
+      <DependentUpon>frmSeaPaymentDest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeaTempDest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeaTempDest1.Designer.cs">
+      <DependentUpon>frmSeaTempDest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTempPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTempPayment.designer.cs">
+      <DependentUpon>frmTempPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeaBusinessName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeaBusinessName.Designer.cs">
+      <DependentUpon>frmSeaBusinessName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeaTempDest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeaTempDest.Designer.cs">
+      <DependentUpon>frmSeaTempDest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchBank.Designer.cs">
+      <DependentUpon>frmSearchBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchBranch.Designer.cs">
+      <DependentUpon>frmSearchBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTempPayment1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTempPayment1.Designer.cs">
+      <DependentUpon>frmTempPayment1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JBADBDataSet.cs">
+      <DependentUpon>JBADBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JBADBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JBADBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl3.Designer.cs">
+      <DependentUpon>UserControl3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl4.Designer.cs">
+      <DependentUpon>UserControl4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl5.Designer.cs">
+      <DependentUpon>UserControl5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl6.Designer.cs">
+      <DependentUpon>UserControl6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl7.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl7.Designer.cs">
+      <DependentUpon>UserControl7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl8.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl8.Designer.cs">
+      <DependentUpon>UserControl8.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmCorpRecExpense.resx">
+      <DependentUpon>frmCorpRecExpense.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExpenseManage.resx">
+      <DependentUpon>frmExpenseManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIndivRecExpense.resx">
+      <DependentUpon>frmIndivRecExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIndivRecExpense1.resx">
+      <DependentUpon>frmIndivRecExpense1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTempSave.resx">
+      <DependentUpon>frmTempSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoiceManage.resx">
+      <DependentUpon>frmInvoiceManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMasterMaintenance.resx">
+      <DependentUpon>frmMasterMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeaAddress.resx">
+      <DependentUpon>frmSeaAddress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeaPaymentDest.resx">
+      <DependentUpon>frmSeaPaymentDest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeaTempDest1.resx">
+      <DependentUpon>frmSeaTempDest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTempPayment.resx">
+      <DependentUpon>frmTempPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeaBusinessName.resx">
+      <DependentUpon>frmSeaBusinessName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeaTempDest.resx">
+      <DependentUpon>frmSeaTempDest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchBank.resx">
+      <DependentUpon>frmSearchBank.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchBranch.resx">
+      <DependentUpon>frmSearchBranch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTempPayment1.resx">
+      <DependentUpon>frmTempPayment1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl3.resx">
+      <DependentUpon>UserControl3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl4.resx">
+      <DependentUpon>UserControl4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl5.resx">
+      <DependentUpon>UserControl5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl6.resx">
+      <DependentUpon>UserControl6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl7.resx">
+      <DependentUpon>UserControl7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl8.resx">
+      <DependentUpon>UserControl8.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="JBADBDataSet.xsc">
+      <DependentUpon>JBADBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JBADBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JBADBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JBADBDataSet.xss">
+      <DependentUpon>JBADBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.2 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

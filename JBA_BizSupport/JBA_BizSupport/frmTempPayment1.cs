@@ -115,6 +115,12 @@ namespace JBA_BizSupport
                 // 進捗ログ表示
                 dataGridView1.GridColor = Color.Gray;
                 this.progressLogTableAdapter.FillByProgressLog(this.jBADBDataSet.PROGRESS_LOG, TextTmpPayNum);
+                // UserControl部分（PCA仕訳伝票番号）表示
+                string TextPCADataNum = this.pCA_DATA_DETAILTableAdapter.ScalarQueryPCADataNumber(TextTmpPayNum).ToString();
+                int TabNum = this.pCA_DATA_DETAILTableAdapter.ScalarQueryTabNumber(TextPCADataNum, 1) ?? 0;
+                userControl71.TmpPayNumber = TextTmpPayNum;
+                userControl71.TabNumber= TabNum;
+                userControl71.LabelText = TextPCADataNum + "-" + TabNum.ToString("D3");
             }
             else if (ListButtonFLG == "CreateNewClick")
             {
@@ -236,19 +242,19 @@ namespace JBA_BizSupport
         // 仕訳データ生成ボタンクリック
         private void button9_Click_1(object sender, EventArgs e)
         {
-            label1.Text = "0000000";
-            comboBox9.Text = "仮払い";
-            textBox9.Text = "1,500,000";
-            //label6.TextAlign=ContentAlignment.TopRight;
-            label7.Text = "1,500,000";
-            //label7.TextAlign = ContentAlignment.TopRight;
-            label15.Text = "1111111";
-            comboBox6.Text = "預金（三井住友）";
-            textBox12.Text = "1,500,000";
-            //label10.TextAlign = ContentAlignment.TopRight;
-            label11.Text = "1,500,000";
-            //label11.TextAlign = ContentAlignment.TopRight;
-            button10.Enabled = true;
+            //label1.Text = "0000000";
+            //comboBox9.Text = "仮払い";
+            //textBox9.Text = "1,500,000";
+            ////label6.TextAlign=ContentAlignment.TopRight;
+            //label7.Text = "1,500,000";
+            ////label7.TextAlign = ContentAlignment.TopRight;
+            //label15.Text = "1111111";
+            //comboBox6.Text = "預金（三井住友）";
+            //textBox12.Text = "1,500,000";
+            ////label10.TextAlign = ContentAlignment.TopRight;
+            //label11.Text = "1,500,000";
+            ////label11.TextAlign = ContentAlignment.TopRight;
+            //button10.Enabled = true;
         }
 
         // 仮払方法コンボボックス値変更

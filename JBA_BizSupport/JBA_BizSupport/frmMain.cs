@@ -86,6 +86,7 @@ namespace JBA_BizSupport
             }
         }
 
+        // 費用計上管理システムボタンクリック
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -94,6 +95,7 @@ namespace JBA_BizSupport
             frm.ShowDialog(this);
         }
 
+        // 請求書発行管理システムボタンクリック
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -102,6 +104,7 @@ namespace JBA_BizSupport
             frm.ShowDialog(this);
         }
 
+        // マスタメンテナンスボタンクリック
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -110,6 +113,7 @@ namespace JBA_BizSupport
             frm.ShowDialog(this);
         }
 
+        // 終了ボタンクリック
         private void button4_Click(object sender, EventArgs e)
         {
             //CancelEventArgsオブジェクトの作成

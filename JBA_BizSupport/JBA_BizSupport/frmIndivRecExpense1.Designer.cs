@@ -54,9 +54,8 @@
             this.APPLICATION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRICE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HIMOKU_NAME2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.gAMAHIMOKUBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.DEPOSIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PAYMENT_DATE = new JBA_BizSupport.frmIndivRecExpense1.CalendarColumn();
+            this.PAYMENT_DATE = new JBA_BizSupport.CalendarColumn();
             this.comboBox16 = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -118,7 +117,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.jBADBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jBADBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gAMAHIMOKUBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gAMAHIMOKUBindingSource1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -201,7 +199,7 @@
             // 
             this.textBox13.BackColor = System.Drawing.SystemColors.Control;
             this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Location = new System.Drawing.Point(751, 350);
+            this.textBox13.Location = new System.Drawing.Point(758, 350);
             this.textBox13.MaxLength = 9;
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
@@ -214,7 +212,7 @@
             // 
             this.textBox12.BackColor = System.Drawing.SystemColors.Control;
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Location = new System.Drawing.Point(557, 350);
+            this.textBox12.Location = new System.Drawing.Point(564, 350);
             this.textBox12.MaxLength = 9;
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
@@ -273,23 +271,26 @@
             // 
             // DelBtn
             // 
-            this.DelBtn.FillWeight = 25F;
+            this.DelBtn.FillWeight = 38F;
             this.DelBtn.HeaderText = "削除";
+            this.DelBtn.MinimumWidth = 38;
             this.DelBtn.Name = "DelBtn";
             this.DelBtn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // OrderNo
             // 
-            this.OrderNo.FillWeight = 17.81436F;
+            this.OrderNo.FillWeight = 27F;
             this.OrderNo.HeaderText = "順";
+            this.OrderNo.MinimumWidth = 27;
             this.OrderNo.Name = "OrderNo";
             this.OrderNo.ReadOnly = true;
             this.OrderNo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // BUSINESS_CD
             // 
-            this.BUSINESS_CD.FillWeight = 25F;
+            this.BUSINESS_CD.FillWeight = 38F;
             this.BUSINESS_CD.HeaderText = "事業CODE";
+            this.BUSINESS_CD.MinimumWidth = 38;
             this.BUSINESS_CD.Name = "BUSINESS_CD";
             this.BUSINESS_CD.ReadOnly = true;
             this.BUSINESS_CD.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -298,8 +299,9 @@
             // 
             this.BUSINESS_NAME.DataSource = this.gAMABUSINESSBindingSource;
             this.BUSINESS_NAME.DisplayMember = "BUSINESS_NAME";
-            this.BUSINESS_NAME.FillWeight = 48.78946F;
+            this.BUSINESS_NAME.FillWeight = 73F;
             this.BUSINESS_NAME.HeaderText = "事業名";
+            this.BUSINESS_NAME.MinimumWidth = 73;
             this.BUSINESS_NAME.Name = "BUSINESS_NAME";
             this.BUSINESS_NAME.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.BUSINESS_NAME.ValueMember = "BUSINESS_CD";
@@ -321,24 +323,27 @@
             // 
             // CLIENT_CD
             // 
-            this.CLIENT_CD.FillWeight = 45F;
+            this.CLIENT_CD.FillWeight = 68F;
             this.CLIENT_CD.HeaderText = "支払先コード";
+            this.CLIENT_CD.MinimumWidth = 68;
             this.CLIENT_CD.Name = "CLIENT_CD";
             this.CLIENT_CD.ReadOnly = true;
             this.CLIENT_CD.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // CLIENT_NAME
             // 
-            this.CLIENT_NAME.FillWeight = 48.78946F;
+            this.CLIENT_NAME.FillWeight = 74F;
             this.CLIENT_NAME.HeaderText = "支払先";
+            this.CLIENT_NAME.MinimumWidth = 74;
             this.CLIENT_NAME.Name = "CLIENT_NAME";
             this.CLIENT_NAME.ReadOnly = true;
             this.CLIENT_NAME.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // TRANSFER_EXCLUSION
             // 
-            this.TRANSFER_EXCLUSION.FillWeight = 25F;
+            this.TRANSFER_EXCLUSION.FillWeight = 38F;
             this.TRANSFER_EXCLUSION.HeaderText = "振込除外";
+            this.TRANSFER_EXCLUSION.MinimumWidth = 38;
             this.TRANSFER_EXCLUSION.Name = "TRANSFER_EXCLUSION";
             this.TRANSFER_EXCLUSION.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
@@ -346,8 +351,9 @@
             // 
             this.HIMOKU_NAME1.DataSource = this.gAMAHIMOKUBindingSource;
             this.HIMOKU_NAME1.DisplayMember = "HIMOKU_NAME";
-            this.HIMOKU_NAME1.FillWeight = 80F;
+            this.HIMOKU_NAME1.FillWeight = 113F;
             this.HIMOKU_NAME1.HeaderText = "費目";
+            this.HIMOKU_NAME1.MinimumWidth = 113;
             this.HIMOKU_NAME1.Name = "HIMOKU_NAME1";
             this.HIMOKU_NAME1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.HIMOKU_NAME1.ValueMember = "HIMOKU_CD";
@@ -359,8 +365,9 @@
             // 
             // APPLICATION
             // 
-            this.APPLICATION.FillWeight = 53.44307F;
+            this.APPLICATION.FillWeight = 81F;
             this.APPLICATION.HeaderText = "適用";
+            this.APPLICATION.MinimumWidth = 81;
             this.APPLICATION.Name = "APPLICATION";
             this.APPLICATION.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
@@ -369,35 +376,33 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle1.Format = "N0";
             this.PRICE.DefaultCellStyle = dataGridViewCellStyle1;
-            this.PRICE.FillWeight = 44.53588F;
+            this.PRICE.FillWeight = 67F;
             this.PRICE.HeaderText = "金額";
             this.PRICE.MaxInputLength = 9;
+            this.PRICE.MinimumWidth = 67;
             this.PRICE.Name = "PRICE";
             this.PRICE.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // HIMOKU_NAME2
             // 
-            this.HIMOKU_NAME2.DataSource = this.gAMAHIMOKUBindingSource1;
+            this.HIMOKU_NAME2.DataSource = this.gAMAHIMOKUBindingSource;
             this.HIMOKU_NAME2.DisplayMember = "HIMOKU_NAME";
-            this.HIMOKU_NAME2.FillWeight = 80F;
+            this.HIMOKU_NAME2.FillWeight = 120F;
             this.HIMOKU_NAME2.HeaderText = "費目";
+            this.HIMOKU_NAME2.MinimumWidth = 120;
             this.HIMOKU_NAME2.Name = "HIMOKU_NAME2";
             this.HIMOKU_NAME2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.HIMOKU_NAME2.ValueMember = "HIMOKU_CD";
-            // 
-            // gAMAHIMOKUBindingSource1
-            // 
-            this.gAMAHIMOKUBindingSource1.DataMember = "GAMA_HIMOKU";
-            this.gAMAHIMOKUBindingSource1.DataSource = this.jBADBDataSetBindingSource;
             // 
             // DEPOSIT
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle2.Format = "N0";
             this.DEPOSIT.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DEPOSIT.FillWeight = 50F;
+            this.DEPOSIT.FillWeight = 76F;
             this.DEPOSIT.HeaderText = "内預り金";
             this.DEPOSIT.MaxInputLength = 9;
+            this.DEPOSIT.MinimumWidth = 76;
             this.DEPOSIT.Name = "DEPOSIT";
             this.DEPOSIT.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
@@ -405,11 +410,11 @@
             // 
             dataGridViewCellStyle3.Format = "d";
             this.PAYMENT_DATE.DefaultCellStyle = dataGridViewCellStyle3;
-            this.PAYMENT_DATE.FillWeight = 68.37829F;
+            this.PAYMENT_DATE.FillWeight = 109F;
             this.PAYMENT_DATE.HeaderText = "支払日";
+            this.PAYMENT_DATE.MinimumWidth = 109;
             this.PAYMENT_DATE.Name = "PAYMENT_DATE";
             this.PAYMENT_DATE.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.PAYMENT_DATE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // comboBox16
             // 
@@ -418,7 +423,7 @@
             this.comboBox16.Items.AddRange(new object[] {
             "振込",
             "現金"});
-            this.comboBox16.Location = new System.Drawing.Point(424, 346);
+            this.comboBox16.Location = new System.Drawing.Point(431, 346);
             this.comboBox16.Name = "comboBox16";
             this.comboBox16.Size = new System.Drawing.Size(55, 20);
             this.comboBox16.TabIndex = 70;
@@ -451,10 +456,13 @@
             // 
             // userControl71
             // 
+            this.userControl71.LabelText = "PCA_DATA_NUMBER";
             this.userControl71.Location = new System.Drawing.Point(-9, -11);
             this.userControl71.Name = "userControl71";
             this.userControl71.Size = new System.Drawing.Size(850, 241);
             this.userControl71.TabIndex = 70;
+            this.userControl71.TabNumber = 0;
+            this.userControl71.TmpPayNumber = null;
             // 
             // tabPage2
             // 
@@ -654,6 +662,7 @@
             this.button11.TabIndex = 17;
             this.button11.Text = "精算依頼書（EXCEL）からのインポート";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // comboBox10
             // 
@@ -755,6 +764,7 @@
             this.button9.TabIndex = 62;
             this.button9.Text = "新　規\r\n\r\n登　録";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // checkBox1
             // 
@@ -868,7 +878,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(340, 336);
+            this.pictureBox5.Location = new System.Drawing.Point(347, 336);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(540, 50);
             this.pictureBox5.TabIndex = 6;
@@ -935,7 +945,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.jBADBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jBADBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gAMAHIMOKUBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gAMAHIMOKUBindingSource1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -1019,7 +1028,6 @@
         private JBADBDataSetTableAdapters.GAMA_BUSINESSTableAdapter gAMA_BUSINESSTableAdapter;
         private System.Windows.Forms.BindingSource gAMAHIMOKUBindingSource;
         private JBADBDataSetTableAdapters.GAMA_HIMOKUTableAdapter gAMA_HIMOKUTableAdapter;
-        private System.Windows.Forms.BindingSource gAMAHIMOKUBindingSource1;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.DataGridViewButtonColumn DelBtn;

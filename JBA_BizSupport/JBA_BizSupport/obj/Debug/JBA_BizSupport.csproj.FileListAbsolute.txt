@@ -39,7 +39,6 @@ C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA
 C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA_BizSupport.pdb
 C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\bin\Debug\JBA_BizSupport.exe
 C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\bin\Debug\JBA_BizSupport.pdb
-C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA_BizSupport.csprojResolveAssemblyReference.cache
 C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA_BizSupport.frmCorpRecExpense.resources
 C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA_BizSupport.frmExpenseManage.resources
 C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA_BizSupport.frmIndivRecExpense.resources
@@ -67,3 +66,4 @@ C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA
 C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA_BizSupport.UserControl7.resources
 C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA_BizSupport.UserControl8.resources
 C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA_BizSupport.csproj.GenerateResource.Cache
+C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA_BizSupport.csprojResolveAssemblyReference.cache

@@ -10,6 +10,7 @@ namespace JBA_BizSupport
             InitializeComponent();
         }
 
+        // 戻るボタンクリック
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -19,9 +20,5 @@ namespace JBA_BizSupport
             frm.Show();
         }
 
-        private void frmExpenseManage_Load(object sender, EventArgs e)
-        {
-//            this.Activate();
-        }
     }
 }

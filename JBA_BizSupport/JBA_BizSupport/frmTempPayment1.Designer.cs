@@ -29,24 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTempPayment1));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.jBADBDataSet = new JBA_BizSupport.JBADBDataSet();
+            this.userControl71 = new JBA_BizSupport.UserControl7();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.progressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.processdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.processnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pROGRESSLOGBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jBADBDataSet = new JBA_BizSupport.JBADBDataSet();
             this.textBox20 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,15 +50,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -76,8 +61,6 @@
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.jBADBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button8 = new System.Windows.Forms.Button();
@@ -88,41 +71,34 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.gAMA_TRANSFER_FROM_BANKTableAdapter = new JBA_BizSupport.JBADBDataSetTableAdapters.GAMA_TRANSFER_FROM_BANKTableAdapter();
             this.progressLogTableAdapter = new JBA_BizSupport.JBADBDataSetTableAdapters.ProgressLogTableAdapter();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pCADATADETAILBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pCA_DATA_DETAILTableAdapter = new JBA_BizSupport.JBADBDataSetTableAdapters.PCA_DATA_DETAILTableAdapter();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.jBADBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROGRESSLOGBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jBADBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jBADBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pCADATADETAILBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.userControl71);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.textBox20);
-            this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.comboBox4);
-            this.groupBox2.Controls.Add(this.comboBox5);
-            this.groupBox2.Controls.Add(this.comboBox8);
-            this.groupBox2.Controls.Add(this.comboBox6);
-            this.groupBox2.Controls.Add(this.comboBox7);
-            this.groupBox2.Controls.Add(this.comboBox9);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label5);
@@ -132,15 +108,6 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.textBox24);
-            this.groupBox2.Controls.Add(this.textBox18);
-            this.groupBox2.Controls.Add(this.textBox21);
-            this.groupBox2.Controls.Add(this.textBox15);
-            this.groupBox2.Controls.Add(this.textBox12);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.vScrollBar2);
             this.groupBox2.Controls.Add(this.textBox6);
             this.groupBox2.Controls.Add(this.textBox7);
             this.groupBox2.Controls.Add(this.textBox5);
@@ -152,8 +119,6 @@
             this.groupBox2.Controls.Add(this.textBox19);
             this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.pictureBox8);
-            this.groupBox2.Controls.Add(this.pictureBox7);
             this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.button8);
             this.groupBox2.Controls.Add(this.pictureBox6);
@@ -164,8 +129,6 @@
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.pictureBox4);
             this.groupBox2.Controls.Add(this.pictureBox3);
-            this.groupBox2.Controls.Add(this.button10);
-            this.groupBox2.Controls.Add(this.button9);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.pictureBox2);
@@ -176,10 +139,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "■費用計上管理システム（仮払い入力）";
             // 
-            // jBADBDataSet
+            // userControl71
             // 
-            this.jBADBDataSet.DataSetName = "JBADBDataSet";
-            this.jBADBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.userControl71.Location = new System.Drawing.Point(48, 366);
+            this.userControl71.Name = "userControl71";
+            this.userControl71.Size = new System.Drawing.Size(837, 241);
+            this.userControl71.TabIndex = 64;
+            this.userControl71.TmpPayNumber = null;
             // 
             // dataGridView1
             // 
@@ -199,14 +165,14 @@
             this.processdateDataGridViewTextBoxColumn,
             this.processnameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.pROGRESSLOGBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Enabled = false;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
@@ -251,6 +217,11 @@
             this.pROGRESSLOGBindingSource.DataMember = "PROGRESS_LOG";
             this.pROGRESSLOGBindingSource.DataSource = this.jBADBDataSet;
             // 
+            // jBADBDataSet
+            // 
+            this.jBADBDataSet.DataSetName = "JBADBDataSet";
+            this.jBADBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // textBox20
             // 
             this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -261,15 +232,6 @@
             this.textBox20.TabIndex = 12;
             this.textBox20.Text = "ACCOUNT_TYPE";
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(482, 455);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(9, 12);
-            this.label15.TabIndex = 62;
-            this.label15.Text = " ";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -278,78 +240,6 @@
             this.label1.Size = new System.Drawing.Size(9, 12);
             this.label1.TabIndex = 62;
             this.label1.Text = " ";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "交通費",
-            "謝金",
-            "源泉税"});
-            this.comboBox4.Location = new System.Drawing.Point(607, 499);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(125, 20);
-            this.comboBox4.TabIndex = 35;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "交通費",
-            "謝金",
-            "源泉税"});
-            this.comboBox5.Location = new System.Drawing.Point(607, 475);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(125, 20);
-            this.comboBox5.TabIndex = 29;
-            // 
-            // comboBox8
-            // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
-            "交通費",
-            "謝金",
-            "源泉税"});
-            this.comboBox8.Location = new System.Drawing.Point(223, 499);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(125, 20);
-            this.comboBox8.TabIndex = 32;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "交通費",
-            "謝金",
-            "源泉税"});
-            this.comboBox6.Location = new System.Drawing.Point(607, 451);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(125, 20);
-            this.comboBox6.TabIndex = 23;
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
-            "交通費",
-            "謝金",
-            "源泉税"});
-            this.comboBox7.Location = new System.Drawing.Point(223, 475);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(125, 20);
-            this.comboBox7.TabIndex = 26;
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
-            "交通費",
-            "謝金",
-            "源泉税"});
-            this.comboBox9.Location = new System.Drawing.Point(223, 451);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(125, 20);
-            this.comboBox9.TabIndex = 20;
             // 
             // label4
             // 
@@ -431,83 +321,6 @@
             this.label14.Size = new System.Drawing.Size(70, 12);
             this.label14.TabIndex = 60;
             this.label14.Text = "TextBankCD";
-            // 
-            // textBox24
-            // 
-            this.textBox24.Location = new System.Drawing.Point(735, 500);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(124, 19);
-            this.textBox24.TabIndex = 37;
-            this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(735, 476);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(124, 19);
-            this.textBox18.TabIndex = 31;
-            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(351, 500);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(124, 19);
-            this.textBox21.TabIndex = 34;
-            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(351, 476);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(124, 19);
-            this.textBox15.TabIndex = 28;
-            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(735, 452);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(124, 19);
-            this.textBox12.TabIndex = 25;
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(351, 452);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(124, 19);
-            this.textBox9.TabIndex = 22;
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label11.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label11.Location = new System.Drawing.Point(756, 527);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 12);
-            this.label11.TabIndex = 29;
-            this.label11.Text = "                     ";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label7.Location = new System.Drawing.Point(372, 528);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 12);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "                      ";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // vScrollBar2
-            // 
-            this.vScrollBar2.Location = new System.Drawing.Point(862, 448);
-            this.vScrollBar2.Name = "vScrollBar2";
-            this.vScrollBar2.Size = new System.Drawing.Size(20, 74);
-            this.vScrollBar2.TabIndex = 28;
             // 
             // textBox6
             // 
@@ -623,24 +436,6 @@
             this.dateTimePicker1.TabIndex = 10;
             this.dateTimePicker1.Value = new System.DateTime(2017, 2, 24, 0, 0, 0, 0);
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(59, 366);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(277, 35);
-            this.pictureBox8.TabIndex = 11;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(55, 393);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(810, 168);
-            this.pictureBox7.TabIndex = 10;
-            this.pictureBox7.TabStop = false;
-            // 
             // comboBox2
             // 
             this.comboBox2.DataSource = this.jBADBDataSetBindingSource;
@@ -738,25 +533,14 @@
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
-            // button10
+            // pictureBox3
             // 
-            this.button10.Enabled = false;
-            this.button10.Location = new System.Drawing.Point(210, 567);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(182, 30);
-            this.button10.TabIndex = 41;
-            this.button10.Text = "PCA受渡仕訳データ作成";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(70, 567);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(131, 30);
-            this.button9.TabIndex = 40;
-            this.button9.Text = "仕訳データ生成";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click_1);
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(59, 83);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(444, 63);
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
             // 
             // button1
             // 
@@ -780,6 +564,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(59, 26);
             this.pictureBox2.Name = "pictureBox2";
@@ -795,14 +580,14 @@
             // 
             this.progressLogTableAdapter.ClearBeforeFill = true;
             // 
-            // pictureBox3
+            // pCADATADETAILBindingSource
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(59, 83);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(444, 63);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.pCADATADETAILBindingSource.DataMember = "PCA_DATA_DETAIL";
+            this.pCADATADETAILBindingSource.DataSource = this.jBADBDataSet;
+            // 
+            // pCA_DATA_DETAILTableAdapter
+            // 
+            this.pCA_DATA_DETAILTableAdapter.ClearBeforeFill = true;
             // 
             // frmTempPayment1
             // 
@@ -815,17 +600,16 @@
             this.Load += new System.EventHandler(this.frmTempPayment1_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.jBADBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROGRESSLOGBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jBADBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jBADBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pCADATADETAILBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -833,9 +617,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.VScrollBar vScrollBar2;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.ComboBox comboBox3;
@@ -843,8 +624,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.PictureBox pictureBox6;
@@ -854,30 +633,15 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox16;
@@ -898,5 +662,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn processdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn processnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private UserControl7 userControl71;
+        private System.Windows.Forms.BindingSource pCADATADETAILBindingSource;
+        private JBADBDataSetTableAdapters.PCA_DATA_DETAILTableAdapter pCA_DATA_DETAILTableAdapter;
     }
 }

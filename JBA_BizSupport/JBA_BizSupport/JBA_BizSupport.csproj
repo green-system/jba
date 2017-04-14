@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataGridViewCalendarColumn.cs" />
     <Compile Include="DataGridViewProgressCell.cs" />
     <Compile Include="DataGridViewProgressColumn.cs" />
     <Compile Include="frmCorpRecExpense.cs">

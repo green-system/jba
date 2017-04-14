@@ -104,7 +104,6 @@
             this.Controls.Add(this.button4);
             this.Name = "frmExpenseManage";
             this.Text = "費用計上管理システム";
-            this.Load += new System.EventHandler(this.frmExpenseManage_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);

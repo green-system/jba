@@ -7,7 +7,8 @@ namespace JBA_BizSupport
 {
     public partial class UserControl7 : UserControl
     {
-        public string TmpPayNumber { get; set; }
+        //public string TmpPayNumber { get; set; }
+        public string PatternNumber { get; set; }
         public byte TabNumber { get; set; }
         public string LabelText
         {
@@ -38,7 +39,7 @@ namespace JBA_BizSupport
             //{
             //this.pCA_DATA_DETAILTableAdapter.FillByPatternNumber(this.jBADBDataSet.PCA_DATA_DETAIL, TmpPayNumber, cnt_tab);
             // 指定された仮払番号とタブ番号のレコードをデータテーブルに読み込む
-            this.pCA_DATA_DETAILTableAdapter.FillByPatternNumber(this.jBADBDataSet.PCA_DATA_DETAIL, TmpPayNumber, TabNumber);
+            this.pCA_DATA_DETAILTableAdapter.FillByPatternNumber(this.jBADBDataSet.PCA_DATA_DETAIL, PatternNumber, TabNumber);
             // データテーブルに1行以上データがある場合、データグリッドビューに1行ずつ追加する
             if (this.jBADBDataSet.PCA_DATA_DETAIL.Count != 0)
             {

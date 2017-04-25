@@ -74,11 +74,11 @@ namespace JBA_BizSupport
                 {
                     case 1:
                         textBox16.Text = "現金";
-                        //comboBox1.SelectedIndex = 1;
+                        comboBox1.SelectedIndex = 1;    // 表示されてないけどcomboBox1_SelectedIndexChangedイベントを発生させるために必要
                         break;
                     case 2:
                         textBox16.Text = "振込";
-                        //comboBox1.SelectedIndex = 0;
+                        comboBox1.SelectedIndex = 0;    // 表示されてないけどcomboBox1_SelectedIndexChangedイベントを発生させるために必要
                         break;
                 }
                 textBox2.ReadOnly = true;
@@ -118,7 +118,8 @@ namespace JBA_BizSupport
                 string TextPCADataNum = this.pCA_DATA_DETAILTableAdapter.ScalarQueryPCADataNumber(TextTmpPayNum).ToString();
                 // GADA_PCA_DATA_DETAILテーブルのPCA仕訳伝票番号（第1引数）毎のタブ番号（第2引数）の存在有無（0：存在しない 1：存在する）
                 byte TabNum = byte.Parse(this.pCA_DATA_DETAILTableAdapter.ScalarQueryTabNumber(TextPCADataNum, 1).ToString() ?? "0");
-                userControl71.TmpPayNumber = TextTmpPayNum;
+                //userControl71.TmpPayNumber = TextTmpPayNum;
+                userControl71.PatternNumber = TextTmpPayNum;
                 userControl71.TabNumber = TabNum;
                 userControl71.LabelText = TextPCADataNum + "-" + TabNum.ToString("D3");
             }

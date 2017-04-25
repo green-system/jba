@@ -147,7 +147,7 @@
             this.userControl71.Size = new System.Drawing.Size(837, 241);
             this.userControl71.TabIndex = 64;
             this.userControl71.TabNumber = ((byte)(0));
-            this.userControl71.TmpPayNumber = null;
+            //this.userControl71.TmpPayNumber = null;
             // 
             // dataGridView1
             // 

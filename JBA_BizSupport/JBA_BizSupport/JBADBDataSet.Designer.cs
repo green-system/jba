@@ -46,6 +46,8 @@ namespace JBA_BizSupport {
         
         private GADA_ADJUSTMENTDataTable tableGADA_ADJUSTMENT;
         
+        private ADJUST_TEMP_PAYDataTable tableADJUST_TEMP_PAY;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -106,6 +108,9 @@ namespace JBA_BizSupport {
                 }
                 if ((ds.Tables["GADA_ADJUSTMENT"] != null)) {
                     base.Tables.Add(new GADA_ADJUSTMENTDataTable(ds.Tables["GADA_ADJUSTMENT"]));
+                }
+                if ((ds.Tables["ADJUST_TEMP_PAY"] != null)) {
+                    base.Tables.Add(new ADJUST_TEMP_PAYDataTable(ds.Tables["ADJUST_TEMP_PAY"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -237,6 +242,16 @@ namespace JBA_BizSupport {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public ADJUST_TEMP_PAYDataTable ADJUST_TEMP_PAY {
+            get {
+                return this.tableADJUST_TEMP_PAY;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -334,6 +349,9 @@ namespace JBA_BizSupport {
                 }
                 if ((ds.Tables["GADA_ADJUSTMENT"] != null)) {
                     base.Tables.Add(new GADA_ADJUSTMENTDataTable(ds.Tables["GADA_ADJUSTMENT"]));
+                }
+                if ((ds.Tables["ADJUST_TEMP_PAY"] != null)) {
+                    base.Tables.Add(new ADJUST_TEMP_PAYDataTable(ds.Tables["ADJUST_TEMP_PAY"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -434,6 +452,12 @@ namespace JBA_BizSupport {
                     this.tableGADA_ADJUSTMENT.InitVars();
                 }
             }
+            this.tableADJUST_TEMP_PAY = ((ADJUST_TEMP_PAYDataTable)(base.Tables["ADJUST_TEMP_PAY"]));
+            if ((initTable == true)) {
+                if ((this.tableADJUST_TEMP_PAY != null)) {
+                    this.tableADJUST_TEMP_PAY.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -466,6 +490,8 @@ namespace JBA_BizSupport {
             base.Tables.Add(this.tableGADA_ADJUSTMENT_DETAIL);
             this.tableGADA_ADJUSTMENT = new GADA_ADJUSTMENTDataTable();
             base.Tables.Add(this.tableGADA_ADJUSTMENT);
+            this.tableADJUST_TEMP_PAY = new ADJUST_TEMP_PAYDataTable();
+            base.Tables.Add(this.tableADJUST_TEMP_PAY);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -531,6 +557,12 @@ namespace JBA_BizSupport {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeGADA_ADJUSTMENT() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeADJUST_TEMP_PAY() {
             return false;
         }
         
@@ -621,6 +653,9 @@ namespace JBA_BizSupport {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void GADA_ADJUSTMENTRowChangeEventHandler(object sender, GADA_ADJUSTMENTRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void ADJUST_TEMP_PAYRowChangeEventHandler(object sender, ADJUST_TEMP_PAYRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -5444,6 +5479,342 @@ namespace JBA_BizSupport {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class ADJUST_TEMP_PAYDataTable : global::System.Data.TypedTableBase<ADJUST_TEMP_PAYRow> {
+            
+            private global::System.Data.DataColumn columnBUSINESS_CD;
+            
+            private global::System.Data.DataColumn columnBUSINESS_NAME;
+            
+            private global::System.Data.DataColumn columnTEMP_PAY_PURPOSE;
+            
+            private global::System.Data.DataColumn columnTEMP_PAY_PRICE;
+            
+            private global::System.Data.DataColumn columnTEMP_PAY_DAY;
+            
+            private global::System.Data.DataColumn columnCLIENT_CD;
+            
+            private global::System.Data.DataColumn columnCLIENT_NAME;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ADJUST_TEMP_PAYDataTable() {
+                this.TableName = "ADJUST_TEMP_PAY";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ADJUST_TEMP_PAYDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected ADJUST_TEMP_PAYDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BUSINESS_CDColumn {
+                get {
+                    return this.columnBUSINESS_CD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BUSINESS_NAMEColumn {
+                get {
+                    return this.columnBUSINESS_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TEMP_PAY_PURPOSEColumn {
+                get {
+                    return this.columnTEMP_PAY_PURPOSE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TEMP_PAY_PRICEColumn {
+                get {
+                    return this.columnTEMP_PAY_PRICE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TEMP_PAY_DAYColumn {
+                get {
+                    return this.columnTEMP_PAY_DAY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CLIENT_CDColumn {
+                get {
+                    return this.columnCLIENT_CD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CLIENT_NAMEColumn {
+                get {
+                    return this.columnCLIENT_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ADJUST_TEMP_PAYRow this[int index] {
+                get {
+                    return ((ADJUST_TEMP_PAYRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ADJUST_TEMP_PAYRowChangeEventHandler ADJUST_TEMP_PAYRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ADJUST_TEMP_PAYRowChangeEventHandler ADJUST_TEMP_PAYRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ADJUST_TEMP_PAYRowChangeEventHandler ADJUST_TEMP_PAYRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ADJUST_TEMP_PAYRowChangeEventHandler ADJUST_TEMP_PAYRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddADJUST_TEMP_PAYRow(ADJUST_TEMP_PAYRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ADJUST_TEMP_PAYRow AddADJUST_TEMP_PAYRow(string BUSINESS_CD, string BUSINESS_NAME, string TEMP_PAY_PURPOSE, int TEMP_PAY_PRICE, System.DateTime TEMP_PAY_DAY, string CLIENT_CD, string CLIENT_NAME) {
+                ADJUST_TEMP_PAYRow rowADJUST_TEMP_PAYRow = ((ADJUST_TEMP_PAYRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        BUSINESS_CD,
+                        BUSINESS_NAME,
+                        TEMP_PAY_PURPOSE,
+                        TEMP_PAY_PRICE,
+                        TEMP_PAY_DAY,
+                        CLIENT_CD,
+                        CLIENT_NAME};
+                rowADJUST_TEMP_PAYRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowADJUST_TEMP_PAYRow);
+                return rowADJUST_TEMP_PAYRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                ADJUST_TEMP_PAYDataTable cln = ((ADJUST_TEMP_PAYDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new ADJUST_TEMP_PAYDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnBUSINESS_CD = base.Columns["BUSINESS_CD"];
+                this.columnBUSINESS_NAME = base.Columns["BUSINESS_NAME"];
+                this.columnTEMP_PAY_PURPOSE = base.Columns["TEMP_PAY_PURPOSE"];
+                this.columnTEMP_PAY_PRICE = base.Columns["TEMP_PAY_PRICE"];
+                this.columnTEMP_PAY_DAY = base.Columns["TEMP_PAY_DAY"];
+                this.columnCLIENT_CD = base.Columns["CLIENT_CD"];
+                this.columnCLIENT_NAME = base.Columns["CLIENT_NAME"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnBUSINESS_CD = new global::System.Data.DataColumn("BUSINESS_CD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBUSINESS_CD);
+                this.columnBUSINESS_NAME = new global::System.Data.DataColumn("BUSINESS_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBUSINESS_NAME);
+                this.columnTEMP_PAY_PURPOSE = new global::System.Data.DataColumn("TEMP_PAY_PURPOSE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTEMP_PAY_PURPOSE);
+                this.columnTEMP_PAY_PRICE = new global::System.Data.DataColumn("TEMP_PAY_PRICE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTEMP_PAY_PRICE);
+                this.columnTEMP_PAY_DAY = new global::System.Data.DataColumn("TEMP_PAY_DAY", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTEMP_PAY_DAY);
+                this.columnCLIENT_CD = new global::System.Data.DataColumn("CLIENT_CD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCLIENT_CD);
+                this.columnCLIENT_NAME = new global::System.Data.DataColumn("CLIENT_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCLIENT_NAME);
+                this.columnBUSINESS_CD.MaxLength = 4;
+                this.columnBUSINESS_NAME.MaxLength = 100;
+                this.columnTEMP_PAY_PURPOSE.MaxLength = 100;
+                this.columnCLIENT_CD.MaxLength = 5;
+                this.columnCLIENT_NAME.MaxLength = 100;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ADJUST_TEMP_PAYRow NewADJUST_TEMP_PAYRow() {
+                return ((ADJUST_TEMP_PAYRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new ADJUST_TEMP_PAYRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(ADJUST_TEMP_PAYRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.ADJUST_TEMP_PAYRowChanged != null)) {
+                    this.ADJUST_TEMP_PAYRowChanged(this, new ADJUST_TEMP_PAYRowChangeEvent(((ADJUST_TEMP_PAYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ADJUST_TEMP_PAYRowChanging != null)) {
+                    this.ADJUST_TEMP_PAYRowChanging(this, new ADJUST_TEMP_PAYRowChangeEvent(((ADJUST_TEMP_PAYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ADJUST_TEMP_PAYRowDeleted != null)) {
+                    this.ADJUST_TEMP_PAYRowDeleted(this, new ADJUST_TEMP_PAYRowChangeEvent(((ADJUST_TEMP_PAYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ADJUST_TEMP_PAYRowDeleting != null)) {
+                    this.ADJUST_TEMP_PAYRowDeleting(this, new ADJUST_TEMP_PAYRowChangeEvent(((ADJUST_TEMP_PAYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveADJUST_TEMP_PAYRow(ADJUST_TEMP_PAYRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                JBADBDataSet ds = new JBADBDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "ADJUST_TEMP_PAYDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class GAMA_BUSINESSRow : global::System.Data.DataRow {
@@ -8804,6 +9175,217 @@ namespace JBA_BizSupport {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ADJUST_TEMP_PAYRow : global::System.Data.DataRow {
+            
+            private ADJUST_TEMP_PAYDataTable tableADJUST_TEMP_PAY;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ADJUST_TEMP_PAYRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableADJUST_TEMP_PAY = ((ADJUST_TEMP_PAYDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BUSINESS_CD {
+                get {
+                    try {
+                        return ((string)(this[this.tableADJUST_TEMP_PAY.BUSINESS_CDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'ADJUST_TEMP_PAY\' にある列 \'BUSINESS_CD\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableADJUST_TEMP_PAY.BUSINESS_CDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BUSINESS_NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableADJUST_TEMP_PAY.BUSINESS_NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'ADJUST_TEMP_PAY\' にある列 \'BUSINESS_NAME\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableADJUST_TEMP_PAY.BUSINESS_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TEMP_PAY_PURPOSE {
+                get {
+                    try {
+                        return ((string)(this[this.tableADJUST_TEMP_PAY.TEMP_PAY_PURPOSEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'ADJUST_TEMP_PAY\' にある列 \'TEMP_PAY_PURPOSE\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableADJUST_TEMP_PAY.TEMP_PAY_PURPOSEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int TEMP_PAY_PRICE {
+                get {
+                    try {
+                        return ((int)(this[this.tableADJUST_TEMP_PAY.TEMP_PAY_PRICEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'ADJUST_TEMP_PAY\' にある列 \'TEMP_PAY_PRICE\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableADJUST_TEMP_PAY.TEMP_PAY_PRICEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime TEMP_PAY_DAY {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableADJUST_TEMP_PAY.TEMP_PAY_DAYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'ADJUST_TEMP_PAY\' にある列 \'TEMP_PAY_DAY\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableADJUST_TEMP_PAY.TEMP_PAY_DAYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CLIENT_CD {
+                get {
+                    try {
+                        return ((string)(this[this.tableADJUST_TEMP_PAY.CLIENT_CDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'ADJUST_TEMP_PAY\' にある列 \'CLIENT_CD\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableADJUST_TEMP_PAY.CLIENT_CDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CLIENT_NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableADJUST_TEMP_PAY.CLIENT_NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'ADJUST_TEMP_PAY\' にある列 \'CLIENT_NAME\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableADJUST_TEMP_PAY.CLIENT_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBUSINESS_CDNull() {
+                return this.IsNull(this.tableADJUST_TEMP_PAY.BUSINESS_CDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBUSINESS_CDNull() {
+                this[this.tableADJUST_TEMP_PAY.BUSINESS_CDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBUSINESS_NAMENull() {
+                return this.IsNull(this.tableADJUST_TEMP_PAY.BUSINESS_NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBUSINESS_NAMENull() {
+                this[this.tableADJUST_TEMP_PAY.BUSINESS_NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTEMP_PAY_PURPOSENull() {
+                return this.IsNull(this.tableADJUST_TEMP_PAY.TEMP_PAY_PURPOSEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTEMP_PAY_PURPOSENull() {
+                this[this.tableADJUST_TEMP_PAY.TEMP_PAY_PURPOSEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTEMP_PAY_PRICENull() {
+                return this.IsNull(this.tableADJUST_TEMP_PAY.TEMP_PAY_PRICEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTEMP_PAY_PRICENull() {
+                this[this.tableADJUST_TEMP_PAY.TEMP_PAY_PRICEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTEMP_PAY_DAYNull() {
+                return this.IsNull(this.tableADJUST_TEMP_PAY.TEMP_PAY_DAYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTEMP_PAY_DAYNull() {
+                this[this.tableADJUST_TEMP_PAY.TEMP_PAY_DAYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCLIENT_CDNull() {
+                return this.IsNull(this.tableADJUST_TEMP_PAY.CLIENT_CDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCLIENT_CDNull() {
+                this[this.tableADJUST_TEMP_PAY.CLIENT_CDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCLIENT_NAMENull() {
+                return this.IsNull(this.tableADJUST_TEMP_PAY.CLIENT_NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCLIENT_NAMENull() {
+                this[this.tableADJUST_TEMP_PAY.CLIENT_NAMEColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -9163,6 +9745,40 @@ namespace JBA_BizSupport {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public GADA_ADJUSTMENTRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class ADJUST_TEMP_PAYRowChangeEvent : global::System.EventArgs {
+            
+            private ADJUST_TEMP_PAYRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ADJUST_TEMP_PAYRowChangeEvent(ADJUST_TEMP_PAYRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ADJUST_TEMP_PAYRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -13347,7 +13963,7 @@ ORDER BY               ZIP_CODE";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT                      A.PCA_DATA_NUMBER, A.TAB_NUMBER, A.LINE_NUMBER, A.BORROWED_SUBJECT_CD, A.BORROWED_PRICE, 
@@ -13370,12 +13986,21 @@ WHERE                       (A.DELETE_FLG = 0) AND (B.DELETE_FLG = 0) AND (C.DEL
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatternNumber", global::System.Data.SqlDbType.Char, 12, global::System.Data.ParameterDirection.Input, 0, 0, "PATTERN_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT                      COUNT(DISTINCT TAB_NUMBER) AS Expr1\r\nFROM            " +
+            this._commandCollection[2].CommandText = @"SELECT DISTINCT A.PCA_DATA_NUMBER
+FROM                         GADA_PCA_DATA_DETAIL AS A INNER JOIN
+                                      GADA_PCA_DATA AS B ON A.PCA_DATA_NUMBER = B.PCA_DATA_NUMBER INNER JOIN
+                                      GADA_ADJUSTMENT_DETAIL AS C ON B.PATTERN_NUMBER = C.ADJUST_NUMBER
+WHERE                       (A.DELETE_FLG = 0) AND (B.DELETE_FLG = 0) AND (C.DELETE_FLG = 0) AND (B.PATTERN_NUMBER = @PatternNumber)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatternNumber", global::System.Data.SqlDbType.Char, 12, global::System.Data.ParameterDirection.Input, 0, 0, "PATTERN_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT                      COUNT(DISTINCT TAB_NUMBER) AS Expr1\r\nFROM            " +
                 "             GADA_PCA_DATA_DETAIL\r\nWHERE                       (DELETE_FLG = 0) " +
                 "AND (PCA_DATA_NUMBER = @PCADataNumber) AND (TAB_NUMBER = @TabNumber)";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PCADataNumber", global::System.Data.SqlDbType.Char, 12, global::System.Data.ParameterDirection.Input, 0, 0, "PCA_DATA_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TabNumber", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "TAB_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PCADataNumber", global::System.Data.SqlDbType.Char, 12, global::System.Data.ParameterDirection.Input, 0, 0, "PCA_DATA_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TabNumber", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "TAB_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13453,8 +14078,42 @@ WHERE                       (A.DELETE_FLG = 0) AND (B.DELETE_FLG = 0) AND (C.DEL
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> ScalarQueryTabNumber(string PCADataNumber, byte TabNumber) {
+        public virtual string ScalarQueryPCADataNumberAdjustment(string PatternNumber) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((PatternNumber == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(PatternNumber));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((string)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> ScalarQueryTabNumber(string PCADataNumber, byte TabNumber) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((PCADataNumber == null)) {
                 throw new global::System.ArgumentNullException("PCADataNumber");
             }
@@ -15851,6 +16510,183 @@ ORDER BY               LINE_NUMBER";
             else {
                 return new global::System.Nullable<int>(((int)(returnValue)));
             }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class ADJUST_TEMP_PAYTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public ADJUST_TEMP_PAYTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "ADJUST_TEMP_PAY";
+            tableMapping.ColumnMappings.Add("BUSINESS_CD", "BUSINESS_CD");
+            tableMapping.ColumnMappings.Add("BUSINESS_NAME", "BUSINESS_NAME");
+            tableMapping.ColumnMappings.Add("TEMP_PAY_PURPOSE", "TEMP_PAY_PURPOSE");
+            tableMapping.ColumnMappings.Add("TEMP_PAY_PRICE", "TEMP_PAY_PRICE");
+            tableMapping.ColumnMappings.Add("TEMP_PAY_DAY", "TEMP_PAY_DAY");
+            tableMapping.ColumnMappings.Add("CLIENT_CD", "CLIENT_CD");
+            tableMapping.ColumnMappings.Add("CLIENT_NAME", "CLIENT_NAME");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::JBA_BizSupport.Properties.Settings.Default.JBADBConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT                      GADA_TEMP_PAY.BUSINESS_CD, GAMA_BUSINESS.BUSINESS_NAME, GADA_TEMP_PAY.TEMP_PAY_PURPOSE, 
+                                      GADA_TEMP_PAY.TEMP_PAY_PRICE, GADA_TEMP_PAY.TEMP_PAY_DAY, GADA_TEMP_PAY.CLIENT_CD, 
+                                      GAMA_CLIENT.CLIENT_NAME
+FROM                         GADA_TEMP_PAY LEFT OUTER JOIN
+                                      GAMA_BUSINESS ON GADA_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN
+                                      GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CLIENT_CD
+WHERE                       (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BUSINESS.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FLG = 0) 
+                                      AND (GADA_TEMP_PAY.TEMP_PAY_NUMBER = @TmpPayNumber)
+";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TmpPayNumber", global::System.Data.SqlDbType.Char, 12, global::System.Data.ParameterDirection.Input, 0, 0, "TEMP_PAY_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int FillByTmpPayNumber(JBADBDataSet.ADJUST_TEMP_PAYDataTable dataTable, string TmpPayNumber) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((TmpPayNumber == null)) {
+                throw new global::System.ArgumentNullException("TmpPayNumber");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(TmpPayNumber));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
     }
     

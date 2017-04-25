@@ -244,8 +244,10 @@ namespace JBA_BizSupport
                     //frm2.TextClientCDTmp = dataGridView1[29, e.RowIndex].Value.ToString();
                     //frm2.TextClientNameTmp = dataGridView1[30, e.RowIndex].Value.ToString();
                     frm2.DateAdjustDay = DateTime.Parse(dataGridView1[10, e.RowIndex].Value.ToString());
-                    frm2.DateTransferDay = DateTime.Parse(dataGridView1[21, e.RowIndex].Value.ToString());
-                    frm2.DateJournalDay = DateTime.Parse(dataGridView1[22, e.RowIndex].Value.ToString());
+                    //frm2.DateTransferDay = DateTime.Parse(dataGridView1[21, e.RowIndex].Value.ToString());
+                    //frm2.DateJournalDay = DateTime.Parse(dataGridView1[22, e.RowIndex].Value.ToString());
+                    frm2.DateTransferDay = DateTime.Now;    // ダミー
+                    frm2.DateJournalDay = DateTime.Now;     // ダミー
                     frm2.DatePCAOutputDay = DateTime.Parse(dataGridView1[23, e.RowIndex].Value.ToString());
                     frm2.IntAdjPayType = int.Parse(dataGridView1[11, e.RowIndex].Value.ToString());
                     frm2.TextBankCD = dataGridView1[12, e.RowIndex].Value.ToString();

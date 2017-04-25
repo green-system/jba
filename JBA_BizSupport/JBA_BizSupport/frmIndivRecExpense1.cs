@@ -55,6 +55,7 @@ namespace JBA_BizSupport
             if (ListButtonFLG == "GridDoubleClick" || ListButtonFLG == "ButtonClick")
             {
                 // 初期表示設定
+                //精算番号欄
                 textBox1.Text = TextAdjustNum;
                 comboBox11.Visible = true;
                 comboBox11.Text = TextBizCDAdj;
@@ -72,6 +73,7 @@ namespace JBA_BizSupport
                         label5.Text = "収益";
                         break;
                 }
+                // 支払先欄
                 dateTimePicker1.Visible = false;
                 textBox17.Visible = true;
                 textBox17.Text = DateAdjustDay.ToString("d");
@@ -84,6 +86,7 @@ namespace JBA_BizSupport
                 textBox22.ReadOnly = true;
                 textBox22.BackColor = Color.FromKnownColor(KnownColor.Control);
                 textBox22.Text = DatePCAOutputDay.ToString("d");
+                // 精算方法欄
                 comboBox3.Visible = false;
                 textBox23.Visible = true;
                 textBox23.ReadOnly = true;
@@ -92,20 +95,20 @@ namespace JBA_BizSupport
                 {
                     case 1:
                         textBox23.Text = "現金";
-                        //comboBox3.SelectedIndex = 1;
+                        comboBox3.SelectedIndex = 1;    // 表示されてないけどcomboBox3_SelectedIndexChangedイベントを発生させるために必要
                         break;
                     case 2:
                         textBox23.Text = "振込";
-                        //comboBox3.SelectedIndex = 0;
+                        comboBox3.SelectedIndex = 0;    // 表示されてないけどcomboBox3_SelectedIndexChangedイベントを発生させるために必要
                         break;
                 }
+                // 銀行情報
                 label6.Text = TextBankCD;
                 label7.Text = TextBankName;
                 label8.Text = TextBranchCD;
                 label9.Text = TextBranchName;
                 textBox9.Text = TextAccountHolderKANA;
                 comboBox10.Visible = true;
-                textBox20.Visible = true;
                 switch (IntAccountType)
                 {
                     case 0:
@@ -122,28 +125,31 @@ namespace JBA_BizSupport
                         break;
                 }
                 textBox10.Text = TextAccountNum;
+                // 振込元口座情報
                 dateTimePicker3.Visible = false;
                 textBox24.Visible = true;
                 textBox24.Text = DateTransferDay.ToString("d");
                 comboBox2.SelectedIndex = IntRecNumber;
                 // 仮払い有無ラジオボタン表示
-                if (TextTmpPayNum!="" || TextTmpPayNum == string.Empty || TextTmpPayNum == null)
+                if (TextTmpPayNum == "" || TextTmpPayNum == string.Empty || TextTmpPayNum == null)
                 {
                     radioButton3.Checked = false;
                     radioButton4.Checked = true;
                 }
                 else
                 {
+                    this.aDJUST_TEMP_PAYTableAdapter.FillByTmpPayNumber(this.jBADBDataSet.ADJUST_TEMP_PAY, TextTmpPayNum);
                     radioButton3.Checked = true;
                     radioButton4.Checked = false;
                 }
-                //// UserControl部分（PCA仕訳伝票番号）表示
-                //string TextPCADataNum = this.pCA_DATA_DETAILTableAdapter.ScalarQueryPCADataNumber(TmpPayNumber).ToString();
-                //// GADA_PCA_DATA_DETAILテーブルのPCA仕訳伝票番号（第1引数）毎のタブ番号（第2引数）の存在有無（0：存在しない 1：存在する）
-                //byte TabNum = byte.Parse(this.pCA_DATA_DETAILTableAdapter.ScalarQueryTabNumber(TextPCADataNum, 1).ToString() ?? "0");
-                //userControl71.TmpPayNumber = TextAdjustNum;
-                //userControl71.TabNumber = TabNum;
-                //userControl71.LabelText = TextPCADataNum + "-" + TabNum.ToString("D3");
+                // UserControl部分（PCA仕訳伝票番号）表示
+                string TextPCADataNum = this.pCA_DATA_DETAILTableAdapter.ScalarQueryPCADataNumberAdjustment(TextAdjustNum).ToString();
+                // GADA_PCA_DATA_DETAILテーブルのPCA仕訳伝票番号（第1引数）毎のタブ番号（第2引数）の存在有無（0：存在しない 1：存在する）
+                byte TabNum = byte.Parse(this.pCA_DATA_DETAILTableAdapter.ScalarQueryTabNumber(TextPCADataNum, 1).ToString() ?? "0");
+                //userControl71.TmpPayNumber = TextTmpPayNum;
+                userControl71.PatternNumber = TextAdjustNum;
+                userControl71.TabNumber = TabNum;
+                userControl71.LabelText = TextPCADataNum + "-" + TabNum.ToString("D3");
             }
             else if (ListButtonFLG == "CreateNewClick")
             {
@@ -158,6 +164,76 @@ namespace JBA_BizSupport
                 dateTimePicker1.Value = DateTime.Now;
                 label7.Text = "";
                 label9.Text = "";
+            }
+        }
+
+        // 事業コード変更（精算欄）
+        private void comboBox11_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        // 事業コード変更（仮払先）
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label2.Text = comboBox1.ValueMember.ToString();                           // 事業名
+        }
+
+        // 仮払い有無ラジオボタン（仮払いあり）変更
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton3.Checked)
+            {
+                button6.Enabled = true;                                                   // 仮払先ボタン
+                textBox14.Enabled = true;
+                textBox14.ReadOnly = true;
+                textBox14.BackColor = Color.FromKnownColor(KnownColor.Control);
+                textBox14.Text = TextTmpPayNum;                                           // 仮払番号
+                textBox18.Enabled = true;
+                textBox18.Visible = true;
+                textBox18.ReadOnly = true;
+                textBox18.BackColor = Color.FromKnownColor(KnownColor.Control);
+                textBox18.Text = this.jBADBDataSet.ADJUST_TEMP_PAY.Rows[0][0].ToString(); // 事業コード
+                comboBox1.Visible = false;
+                label2.Enabled = true;
+                //label2.Text = this.jBADBDataSet.ADJUST_TEMP_PAY.Rows[0][1].ToString();    // 事業名
+                textBox16.Visible = true;
+                textBox16.ReadOnly = true;
+                textBox16.BackColor = Color.FromKnownColor(KnownColor.Control);
+                textBox16.Text = this.jBADBDataSet.ADJUST_TEMP_PAY.Rows[0][2].ToString(); // 目的
+                textBox15.Visible = true;
+                textBox15.ReadOnly = true;
+                textBox15.BackColor = Color.FromKnownColor(KnownColor.Control);
+                textBox15.Text = int.Parse(this.jBADBDataSet.ADJUST_TEMP_PAY.Rows[0][3].ToString()).ToString("#,0"); // 金額
+                textBox19.Visible = true;
+                textBox19.ReadOnly = true;
+                textBox19.BackColor = Color.FromKnownColor(KnownColor.Control);
+                textBox19.Text = this.jBADBDataSet.ADJUST_TEMP_PAY.Rows[0][4].ToString(); // 仮払日付
+                dateTimePicker2.Visible = false;
+                label11.Enabled = true;
+                label11.Text = this.jBADBDataSet.ADJUST_TEMP_PAY.Rows[0][5].ToString();   // 支払先CODE
+                label10.Enabled = true;
+                label10.Text = this.jBADBDataSet.ADJUST_TEMP_PAY.Rows[0][6].ToString();   // 支払先
+
+            }
+        }
+
+        // 仮払い有無ラジオボタン（仮払いなし）変更
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton4.Checked)
+            {
+                button6.Enabled = false;                                                // 仮払先ボタン
+                textBox14.Enabled = false;                                              // 仮払番号
+                textBox18.Visible = false;
+                comboBox1.Visible = true;                                               // 事業コード
+                label2.Enabled = false;                                                 // 事業名
+                textBox16.Enabled = false;                                              // 目的
+                textBox15.Enabled = false;                                              // 金額
+                textBox19.Visible = false;
+                dateTimePicker2.Visible = true;                                         // 仮払日付
+                label11.Enabled = false;                                                // 支払先CODE
+                label10.Enabled = false;                                                // 支払先
             }
         }
 
@@ -317,7 +393,7 @@ namespace JBA_BizSupport
         }
 
         // 精算方法コンボボックス変更
-        private void comboBox16_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox3.SelectedIndex == 0)
             {
@@ -342,24 +418,6 @@ namespace JBA_BizSupport
                 ToolTip1.AutoPopDelay = 10000;
                 ToolTip1.ShowAlways = true;
                 ToolTip1.SetToolTip(comboBox2, comboBox2.SelectedItem.ToString());
-            }
-        }
-
-        // 仮払い有無ラジオボタン変更
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton3.Checked)
-            {
-                button6.Enabled = true;
-            }
-        }
-
-        // 仮払い有無ラジオボタン変更
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton4.Checked)
-            {
-                button6.Enabled = false;
             }
         }
 

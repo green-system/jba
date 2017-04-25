@@ -36,30 +36,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.payment_flg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adjustment_row_cnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pUBLICFLGDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.aDJUSTNUMBERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bUSINESSCDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bUSINESSITEMNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bILLIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cLIENTCDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cLIENTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tEMPPAYNUMBERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aDJUSTDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aDJUSTPAYTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bANKCDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oFFICECDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aCCOUNTTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aCCOUNTHOLDERKANADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aCCOUNTNUMBERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rECNUMBERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mANUALUPDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aDMINNUMBERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sYSTEMUPDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pCAOUTPUTDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gADAADJUSTMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jBADBDataSet = new JBA_BizSupport.JBADBDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -96,6 +72,32 @@
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.payment_flg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adjustment_row_cnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pUBLICFLGDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.aDJUSTNUMBERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bUSINESSCDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bUSINESSITEMNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bILLIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cLIENTCDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cLIENTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tEMPPAYNUMBERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aDJUSTDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aDJUSTPAYTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bANKCDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oFFICECDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aCCOUNTTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aCCOUNTHOLDERKANADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aCCOUNTNUMBERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rECNUMBERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mANUALUPDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aDMINNUMBERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sYSTEMUPDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pCAOUTPUTDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bank_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.branch_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gADAADJUSTMENTBindingSource)).BeginInit();
@@ -201,7 +203,9 @@
             this.sYSTEMUPDATEDataGridViewTextBoxColumn,
             this.Column1,
             this.Column2,
-            this.pCAOUTPUTDATEDataGridViewTextBoxColumn});
+            this.pCAOUTPUTDATEDataGridViewTextBoxColumn,
+            this.bank_name,
+            this.branch_name});
             this.dataGridView1.DataSource = this.gADAADJUSTMENTBindingSource;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(29, 82);
@@ -216,203 +220,6 @@
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             this.dataGridView1.Sorted += new System.EventHandler(this.dataGridView1_Sorted);
-            // 
-            // payment_flg
-            // 
-            this.payment_flg.DataPropertyName = "payment_flg";
-            this.payment_flg.HeaderText = "payment_flg";
-            this.payment_flg.Name = "payment_flg";
-            this.payment_flg.ReadOnly = true;
-            this.payment_flg.Visible = false;
-            // 
-            // adjustment_row_cnt
-            // 
-            this.adjustment_row_cnt.DataPropertyName = "adjustment_row_cnt";
-            this.adjustment_row_cnt.HeaderText = "adjustment_row_cnt";
-            this.adjustment_row_cnt.Name = "adjustment_row_cnt";
-            this.adjustment_row_cnt.ReadOnly = true;
-            this.adjustment_row_cnt.Visible = false;
-            // 
-            // pUBLICFLGDataGridViewCheckBoxColumn
-            // 
-            this.pUBLICFLGDataGridViewCheckBoxColumn.DataPropertyName = "PUBLIC_FLG";
-            this.pUBLICFLGDataGridViewCheckBoxColumn.HeaderText = "PUBLIC_FLG";
-            this.pUBLICFLGDataGridViewCheckBoxColumn.Name = "pUBLICFLGDataGridViewCheckBoxColumn";
-            this.pUBLICFLGDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.pUBLICFLGDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // aDJUSTNUMBERDataGridViewTextBoxColumn
-            // 
-            this.aDJUSTNUMBERDataGridViewTextBoxColumn.DataPropertyName = "ADJUST_NUMBER";
-            this.aDJUSTNUMBERDataGridViewTextBoxColumn.HeaderText = "精算番号";
-            this.aDJUSTNUMBERDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.aDJUSTNUMBERDataGridViewTextBoxColumn.Name = "aDJUSTNUMBERDataGridViewTextBoxColumn";
-            this.aDJUSTNUMBERDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bUSINESSCDDataGridViewTextBoxColumn
-            // 
-            this.bUSINESSCDDataGridViewTextBoxColumn.DataPropertyName = "BUSINESS_CD";
-            this.bUSINESSCDDataGridViewTextBoxColumn.FillWeight = 80F;
-            this.bUSINESSCDDataGridViewTextBoxColumn.HeaderText = "事業コード";
-            this.bUSINESSCDDataGridViewTextBoxColumn.MinimumWidth = 80;
-            this.bUSINESSCDDataGridViewTextBoxColumn.Name = "bUSINESSCDDataGridViewTextBoxColumn";
-            this.bUSINESSCDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bUSINESSITEMNAMEDataGridViewTextBoxColumn
-            // 
-            this.bUSINESSITEMNAMEDataGridViewTextBoxColumn.DataPropertyName = "BUSINESS_ITEM_NAME";
-            this.bUSINESSITEMNAMEDataGridViewTextBoxColumn.FillWeight = 200F;
-            this.bUSINESSITEMNAMEDataGridViewTextBoxColumn.HeaderText = "案件名";
-            this.bUSINESSITEMNAMEDataGridViewTextBoxColumn.MinimumWidth = 200;
-            this.bUSINESSITEMNAMEDataGridViewTextBoxColumn.Name = "bUSINESSITEMNAMEDataGridViewTextBoxColumn";
-            this.bUSINESSITEMNAMEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bILLIDDataGridViewTextBoxColumn
-            // 
-            this.bILLIDDataGridViewTextBoxColumn.DataPropertyName = "BILL_ID";
-            this.bILLIDDataGridViewTextBoxColumn.HeaderText = "BILL_ID";
-            this.bILLIDDataGridViewTextBoxColumn.Name = "bILLIDDataGridViewTextBoxColumn";
-            this.bILLIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bILLIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // cLIENTCDDataGridViewTextBoxColumn
-            // 
-            this.cLIENTCDDataGridViewTextBoxColumn.DataPropertyName = "CLIENT_CD";
-            this.cLIENTCDDataGridViewTextBoxColumn.HeaderText = "CLIENT_CD";
-            this.cLIENTCDDataGridViewTextBoxColumn.Name = "cLIENTCDDataGridViewTextBoxColumn";
-            this.cLIENTCDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cLIENTCDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // cLIENTNAMEDataGridViewTextBoxColumn
-            // 
-            this.cLIENTNAMEDataGridViewTextBoxColumn.DataPropertyName = "CLIENT_NAME";
-            this.cLIENTNAMEDataGridViewTextBoxColumn.FillWeight = 80F;
-            this.cLIENTNAMEDataGridViewTextBoxColumn.HeaderText = "担当者";
-            this.cLIENTNAMEDataGridViewTextBoxColumn.MinimumWidth = 80;
-            this.cLIENTNAMEDataGridViewTextBoxColumn.Name = "cLIENTNAMEDataGridViewTextBoxColumn";
-            this.cLIENTNAMEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tEMPPAYNUMBERDataGridViewTextBoxColumn
-            // 
-            this.tEMPPAYNUMBERDataGridViewTextBoxColumn.DataPropertyName = "TEMP_PAY_NUMBER";
-            this.tEMPPAYNUMBERDataGridViewTextBoxColumn.HeaderText = "TEMP_PAY_NUMBER";
-            this.tEMPPAYNUMBERDataGridViewTextBoxColumn.Name = "tEMPPAYNUMBERDataGridViewTextBoxColumn";
-            this.tEMPPAYNUMBERDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tEMPPAYNUMBERDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // aDJUSTDATEDataGridViewTextBoxColumn
-            // 
-            this.aDJUSTDATEDataGridViewTextBoxColumn.DataPropertyName = "ADJUST_DATE";
-            this.aDJUSTDATEDataGridViewTextBoxColumn.FillWeight = 80F;
-            this.aDJUSTDATEDataGridViewTextBoxColumn.HeaderText = "計上日付";
-            this.aDJUSTDATEDataGridViewTextBoxColumn.MinimumWidth = 80;
-            this.aDJUSTDATEDataGridViewTextBoxColumn.Name = "aDJUSTDATEDataGridViewTextBoxColumn";
-            this.aDJUSTDATEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aDJUSTPAYTYPEDataGridViewTextBoxColumn
-            // 
-            this.aDJUSTPAYTYPEDataGridViewTextBoxColumn.DataPropertyName = "ADJUST_PAY_TYPE";
-            this.aDJUSTPAYTYPEDataGridViewTextBoxColumn.HeaderText = "ADJUST_PAY_TYPE";
-            this.aDJUSTPAYTYPEDataGridViewTextBoxColumn.Name = "aDJUSTPAYTYPEDataGridViewTextBoxColumn";
-            this.aDJUSTPAYTYPEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aDJUSTPAYTYPEDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // bANKCDDataGridViewTextBoxColumn
-            // 
-            this.bANKCDDataGridViewTextBoxColumn.DataPropertyName = "BANK_CD";
-            this.bANKCDDataGridViewTextBoxColumn.HeaderText = "BANK_CD";
-            this.bANKCDDataGridViewTextBoxColumn.Name = "bANKCDDataGridViewTextBoxColumn";
-            this.bANKCDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bANKCDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // oFFICECDDataGridViewTextBoxColumn
-            // 
-            this.oFFICECDDataGridViewTextBoxColumn.DataPropertyName = "OFFICE_CD";
-            this.oFFICECDDataGridViewTextBoxColumn.HeaderText = "OFFICE_CD";
-            this.oFFICECDDataGridViewTextBoxColumn.Name = "oFFICECDDataGridViewTextBoxColumn";
-            this.oFFICECDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.oFFICECDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // aCCOUNTTYPEDataGridViewTextBoxColumn
-            // 
-            this.aCCOUNTTYPEDataGridViewTextBoxColumn.DataPropertyName = "ACCOUNT_TYPE";
-            this.aCCOUNTTYPEDataGridViewTextBoxColumn.HeaderText = "ACCOUNT_TYPE";
-            this.aCCOUNTTYPEDataGridViewTextBoxColumn.Name = "aCCOUNTTYPEDataGridViewTextBoxColumn";
-            this.aCCOUNTTYPEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aCCOUNTTYPEDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // aCCOUNTHOLDERKANADataGridViewTextBoxColumn
-            // 
-            this.aCCOUNTHOLDERKANADataGridViewTextBoxColumn.DataPropertyName = "ACCOUNT_HOLDER_KANA";
-            this.aCCOUNTHOLDERKANADataGridViewTextBoxColumn.HeaderText = "ACCOUNT_HOLDER_KANA";
-            this.aCCOUNTHOLDERKANADataGridViewTextBoxColumn.Name = "aCCOUNTHOLDERKANADataGridViewTextBoxColumn";
-            this.aCCOUNTHOLDERKANADataGridViewTextBoxColumn.ReadOnly = true;
-            this.aCCOUNTHOLDERKANADataGridViewTextBoxColumn.Visible = false;
-            // 
-            // aCCOUNTNUMBERDataGridViewTextBoxColumn
-            // 
-            this.aCCOUNTNUMBERDataGridViewTextBoxColumn.DataPropertyName = "ACCOUNT_NUMBER";
-            this.aCCOUNTNUMBERDataGridViewTextBoxColumn.HeaderText = "ACCOUNT_NUMBER";
-            this.aCCOUNTNUMBERDataGridViewTextBoxColumn.Name = "aCCOUNTNUMBERDataGridViewTextBoxColumn";
-            this.aCCOUNTNUMBERDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aCCOUNTNUMBERDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // rECNUMBERDataGridViewTextBoxColumn
-            // 
-            this.rECNUMBERDataGridViewTextBoxColumn.DataPropertyName = "REC_NUMBER";
-            this.rECNUMBERDataGridViewTextBoxColumn.HeaderText = "REC_NUMBER";
-            this.rECNUMBERDataGridViewTextBoxColumn.Name = "rECNUMBERDataGridViewTextBoxColumn";
-            this.rECNUMBERDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rECNUMBERDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // mANUALUPDATEDataGridViewTextBoxColumn
-            // 
-            this.mANUALUPDATEDataGridViewTextBoxColumn.DataPropertyName = "MANUAL_UPDATE";
-            this.mANUALUPDATEDataGridViewTextBoxColumn.HeaderText = "MANUAL_UPDATE";
-            this.mANUALUPDATEDataGridViewTextBoxColumn.Name = "mANUALUPDATEDataGridViewTextBoxColumn";
-            this.mANUALUPDATEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mANUALUPDATEDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // aDMINNUMBERDataGridViewTextBoxColumn
-            // 
-            this.aDMINNUMBERDataGridViewTextBoxColumn.DataPropertyName = "ADMIN_NUMBER";
-            this.aDMINNUMBERDataGridViewTextBoxColumn.HeaderText = "ADMIN_NUMBER";
-            this.aDMINNUMBERDataGridViewTextBoxColumn.Name = "aDMINNUMBERDataGridViewTextBoxColumn";
-            this.aDMINNUMBERDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aDMINNUMBERDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // sYSTEMUPDATEDataGridViewTextBoxColumn
-            // 
-            this.sYSTEMUPDATEDataGridViewTextBoxColumn.DataPropertyName = "SYSTEM_UPDATE";
-            this.sYSTEMUPDATEDataGridViewTextBoxColumn.HeaderText = "SYSTEM_UPDATE";
-            this.sYSTEMUPDATEDataGridViewTextBoxColumn.Name = "sYSTEMUPDATEDataGridViewTextBoxColumn";
-            this.sYSTEMUPDATEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sYSTEMUPDATEDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 80F;
-            this.Column1.HeaderText = "振込日";
-            this.Column1.MinimumWidth = 80;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 80F;
-            this.Column2.HeaderText = "仕訳作成日";
-            this.Column2.MinimumWidth = 80;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // pCAOUTPUTDATEDataGridViewTextBoxColumn
-            // 
-            this.pCAOUTPUTDATEDataGridViewTextBoxColumn.DataPropertyName = "PCA_OUTPUT_DATE";
-            this.pCAOUTPUTDATEDataGridViewTextBoxColumn.FillWeight = 80F;
-            this.pCAOUTPUTDATEDataGridViewTextBoxColumn.HeaderText = "PCA作成日付";
-            this.pCAOUTPUTDATEDataGridViewTextBoxColumn.MinimumWidth = 80;
-            this.pCAOUTPUTDATEDataGridViewTextBoxColumn.Name = "pCAOUTPUTDATEDataGridViewTextBoxColumn";
-            this.pCAOUTPUTDATEDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // gADAADJUSTMENTBindingSource
             // 
@@ -742,6 +549,219 @@
             this.dataGridViewTextBoxColumn23.ReadOnly = true;
             this.dataGridViewTextBoxColumn23.Visible = false;
             // 
+            // payment_flg
+            // 
+            this.payment_flg.DataPropertyName = "payment_flg";
+            this.payment_flg.HeaderText = "payment_flg";
+            this.payment_flg.Name = "payment_flg";
+            this.payment_flg.ReadOnly = true;
+            this.payment_flg.Visible = false;
+            // 
+            // adjustment_row_cnt
+            // 
+            this.adjustment_row_cnt.DataPropertyName = "adjustment_row_cnt";
+            this.adjustment_row_cnt.HeaderText = "adjustment_row_cnt";
+            this.adjustment_row_cnt.Name = "adjustment_row_cnt";
+            this.adjustment_row_cnt.ReadOnly = true;
+            this.adjustment_row_cnt.Visible = false;
+            // 
+            // pUBLICFLGDataGridViewCheckBoxColumn
+            // 
+            this.pUBLICFLGDataGridViewCheckBoxColumn.DataPropertyName = "PUBLIC_FLG";
+            this.pUBLICFLGDataGridViewCheckBoxColumn.HeaderText = "PUBLIC_FLG";
+            this.pUBLICFLGDataGridViewCheckBoxColumn.Name = "pUBLICFLGDataGridViewCheckBoxColumn";
+            this.pUBLICFLGDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.pUBLICFLGDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // aDJUSTNUMBERDataGridViewTextBoxColumn
+            // 
+            this.aDJUSTNUMBERDataGridViewTextBoxColumn.DataPropertyName = "ADJUST_NUMBER";
+            this.aDJUSTNUMBERDataGridViewTextBoxColumn.HeaderText = "精算番号";
+            this.aDJUSTNUMBERDataGridViewTextBoxColumn.MinimumWidth = 100;
+            this.aDJUSTNUMBERDataGridViewTextBoxColumn.Name = "aDJUSTNUMBERDataGridViewTextBoxColumn";
+            this.aDJUSTNUMBERDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bUSINESSCDDataGridViewTextBoxColumn
+            // 
+            this.bUSINESSCDDataGridViewTextBoxColumn.DataPropertyName = "BUSINESS_CD";
+            this.bUSINESSCDDataGridViewTextBoxColumn.FillWeight = 80F;
+            this.bUSINESSCDDataGridViewTextBoxColumn.HeaderText = "事業コード";
+            this.bUSINESSCDDataGridViewTextBoxColumn.MinimumWidth = 80;
+            this.bUSINESSCDDataGridViewTextBoxColumn.Name = "bUSINESSCDDataGridViewTextBoxColumn";
+            this.bUSINESSCDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bUSINESSITEMNAMEDataGridViewTextBoxColumn
+            // 
+            this.bUSINESSITEMNAMEDataGridViewTextBoxColumn.DataPropertyName = "BUSINESS_ITEM_NAME";
+            this.bUSINESSITEMNAMEDataGridViewTextBoxColumn.FillWeight = 200F;
+            this.bUSINESSITEMNAMEDataGridViewTextBoxColumn.HeaderText = "案件名";
+            this.bUSINESSITEMNAMEDataGridViewTextBoxColumn.MinimumWidth = 200;
+            this.bUSINESSITEMNAMEDataGridViewTextBoxColumn.Name = "bUSINESSITEMNAMEDataGridViewTextBoxColumn";
+            this.bUSINESSITEMNAMEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bILLIDDataGridViewTextBoxColumn
+            // 
+            this.bILLIDDataGridViewTextBoxColumn.DataPropertyName = "BILL_ID";
+            this.bILLIDDataGridViewTextBoxColumn.HeaderText = "BILL_ID";
+            this.bILLIDDataGridViewTextBoxColumn.Name = "bILLIDDataGridViewTextBoxColumn";
+            this.bILLIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bILLIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cLIENTCDDataGridViewTextBoxColumn
+            // 
+            this.cLIENTCDDataGridViewTextBoxColumn.DataPropertyName = "CLIENT_CD";
+            this.cLIENTCDDataGridViewTextBoxColumn.HeaderText = "CLIENT_CD";
+            this.cLIENTCDDataGridViewTextBoxColumn.Name = "cLIENTCDDataGridViewTextBoxColumn";
+            this.cLIENTCDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cLIENTCDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cLIENTNAMEDataGridViewTextBoxColumn
+            // 
+            this.cLIENTNAMEDataGridViewTextBoxColumn.DataPropertyName = "CLIENT_NAME";
+            this.cLIENTNAMEDataGridViewTextBoxColumn.FillWeight = 80F;
+            this.cLIENTNAMEDataGridViewTextBoxColumn.HeaderText = "担当者";
+            this.cLIENTNAMEDataGridViewTextBoxColumn.MinimumWidth = 80;
+            this.cLIENTNAMEDataGridViewTextBoxColumn.Name = "cLIENTNAMEDataGridViewTextBoxColumn";
+            this.cLIENTNAMEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tEMPPAYNUMBERDataGridViewTextBoxColumn
+            // 
+            this.tEMPPAYNUMBERDataGridViewTextBoxColumn.DataPropertyName = "TEMP_PAY_NUMBER";
+            this.tEMPPAYNUMBERDataGridViewTextBoxColumn.HeaderText = "TEMP_PAY_NUMBER";
+            this.tEMPPAYNUMBERDataGridViewTextBoxColumn.Name = "tEMPPAYNUMBERDataGridViewTextBoxColumn";
+            this.tEMPPAYNUMBERDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tEMPPAYNUMBERDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // aDJUSTDATEDataGridViewTextBoxColumn
+            // 
+            this.aDJUSTDATEDataGridViewTextBoxColumn.DataPropertyName = "ADJUST_DATE";
+            this.aDJUSTDATEDataGridViewTextBoxColumn.FillWeight = 80F;
+            this.aDJUSTDATEDataGridViewTextBoxColumn.HeaderText = "計上日付";
+            this.aDJUSTDATEDataGridViewTextBoxColumn.MinimumWidth = 80;
+            this.aDJUSTDATEDataGridViewTextBoxColumn.Name = "aDJUSTDATEDataGridViewTextBoxColumn";
+            this.aDJUSTDATEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // aDJUSTPAYTYPEDataGridViewTextBoxColumn
+            // 
+            this.aDJUSTPAYTYPEDataGridViewTextBoxColumn.DataPropertyName = "ADJUST_PAY_TYPE";
+            this.aDJUSTPAYTYPEDataGridViewTextBoxColumn.HeaderText = "ADJUST_PAY_TYPE";
+            this.aDJUSTPAYTYPEDataGridViewTextBoxColumn.Name = "aDJUSTPAYTYPEDataGridViewTextBoxColumn";
+            this.aDJUSTPAYTYPEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aDJUSTPAYTYPEDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bANKCDDataGridViewTextBoxColumn
+            // 
+            this.bANKCDDataGridViewTextBoxColumn.DataPropertyName = "BANK_CD";
+            this.bANKCDDataGridViewTextBoxColumn.HeaderText = "BANK_CD";
+            this.bANKCDDataGridViewTextBoxColumn.Name = "bANKCDDataGridViewTextBoxColumn";
+            this.bANKCDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bANKCDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // oFFICECDDataGridViewTextBoxColumn
+            // 
+            this.oFFICECDDataGridViewTextBoxColumn.DataPropertyName = "OFFICE_CD";
+            this.oFFICECDDataGridViewTextBoxColumn.HeaderText = "OFFICE_CD";
+            this.oFFICECDDataGridViewTextBoxColumn.Name = "oFFICECDDataGridViewTextBoxColumn";
+            this.oFFICECDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.oFFICECDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // aCCOUNTTYPEDataGridViewTextBoxColumn
+            // 
+            this.aCCOUNTTYPEDataGridViewTextBoxColumn.DataPropertyName = "ACCOUNT_TYPE";
+            this.aCCOUNTTYPEDataGridViewTextBoxColumn.HeaderText = "ACCOUNT_TYPE";
+            this.aCCOUNTTYPEDataGridViewTextBoxColumn.Name = "aCCOUNTTYPEDataGridViewTextBoxColumn";
+            this.aCCOUNTTYPEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aCCOUNTTYPEDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // aCCOUNTHOLDERKANADataGridViewTextBoxColumn
+            // 
+            this.aCCOUNTHOLDERKANADataGridViewTextBoxColumn.DataPropertyName = "ACCOUNT_HOLDER_KANA";
+            this.aCCOUNTHOLDERKANADataGridViewTextBoxColumn.HeaderText = "ACCOUNT_HOLDER_KANA";
+            this.aCCOUNTHOLDERKANADataGridViewTextBoxColumn.Name = "aCCOUNTHOLDERKANADataGridViewTextBoxColumn";
+            this.aCCOUNTHOLDERKANADataGridViewTextBoxColumn.ReadOnly = true;
+            this.aCCOUNTHOLDERKANADataGridViewTextBoxColumn.Visible = false;
+            // 
+            // aCCOUNTNUMBERDataGridViewTextBoxColumn
+            // 
+            this.aCCOUNTNUMBERDataGridViewTextBoxColumn.DataPropertyName = "ACCOUNT_NUMBER";
+            this.aCCOUNTNUMBERDataGridViewTextBoxColumn.HeaderText = "ACCOUNT_NUMBER";
+            this.aCCOUNTNUMBERDataGridViewTextBoxColumn.Name = "aCCOUNTNUMBERDataGridViewTextBoxColumn";
+            this.aCCOUNTNUMBERDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aCCOUNTNUMBERDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // rECNUMBERDataGridViewTextBoxColumn
+            // 
+            this.rECNUMBERDataGridViewTextBoxColumn.DataPropertyName = "REC_NUMBER";
+            this.rECNUMBERDataGridViewTextBoxColumn.HeaderText = "REC_NUMBER";
+            this.rECNUMBERDataGridViewTextBoxColumn.Name = "rECNUMBERDataGridViewTextBoxColumn";
+            this.rECNUMBERDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rECNUMBERDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // mANUALUPDATEDataGridViewTextBoxColumn
+            // 
+            this.mANUALUPDATEDataGridViewTextBoxColumn.DataPropertyName = "MANUAL_UPDATE";
+            this.mANUALUPDATEDataGridViewTextBoxColumn.HeaderText = "MANUAL_UPDATE";
+            this.mANUALUPDATEDataGridViewTextBoxColumn.Name = "mANUALUPDATEDataGridViewTextBoxColumn";
+            this.mANUALUPDATEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mANUALUPDATEDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // aDMINNUMBERDataGridViewTextBoxColumn
+            // 
+            this.aDMINNUMBERDataGridViewTextBoxColumn.DataPropertyName = "ADMIN_NUMBER";
+            this.aDMINNUMBERDataGridViewTextBoxColumn.HeaderText = "ADMIN_NUMBER";
+            this.aDMINNUMBERDataGridViewTextBoxColumn.Name = "aDMINNUMBERDataGridViewTextBoxColumn";
+            this.aDMINNUMBERDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aDMINNUMBERDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // sYSTEMUPDATEDataGridViewTextBoxColumn
+            // 
+            this.sYSTEMUPDATEDataGridViewTextBoxColumn.DataPropertyName = "SYSTEM_UPDATE";
+            this.sYSTEMUPDATEDataGridViewTextBoxColumn.HeaderText = "SYSTEM_UPDATE";
+            this.sYSTEMUPDATEDataGridViewTextBoxColumn.Name = "sYSTEMUPDATEDataGridViewTextBoxColumn";
+            this.sYSTEMUPDATEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sYSTEMUPDATEDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 80F;
+            this.Column1.HeaderText = "振込日";
+            this.Column1.MinimumWidth = 80;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 80F;
+            this.Column2.HeaderText = "仕訳作成日";
+            this.Column2.MinimumWidth = 80;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // pCAOUTPUTDATEDataGridViewTextBoxColumn
+            // 
+            this.pCAOUTPUTDATEDataGridViewTextBoxColumn.DataPropertyName = "PCA_OUTPUT_DATE";
+            this.pCAOUTPUTDATEDataGridViewTextBoxColumn.FillWeight = 80F;
+            this.pCAOUTPUTDATEDataGridViewTextBoxColumn.HeaderText = "PCA作成日付";
+            this.pCAOUTPUTDATEDataGridViewTextBoxColumn.MinimumWidth = 80;
+            this.pCAOUTPUTDATEDataGridViewTextBoxColumn.Name = "pCAOUTPUTDATEDataGridViewTextBoxColumn";
+            this.pCAOUTPUTDATEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bank_name
+            // 
+            this.bank_name.DataPropertyName = "bank_name";
+            this.bank_name.HeaderText = "bank_name";
+            this.bank_name.Name = "bank_name";
+            this.bank_name.ReadOnly = true;
+            this.bank_name.Visible = false;
+            // 
+            // branch_name
+            // 
+            this.branch_name.DataPropertyName = "branch_name";
+            this.branch_name.HeaderText = "branch_name";
+            this.branch_name.Name = "branch_name";
+            this.branch_name.ReadOnly = true;
+            this.branch_name.Visible = false;
+            // 
             // frmIndivRecExpense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -830,5 +850,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn pCAOUTPUTDATEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bank_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn branch_name;
     }
 }

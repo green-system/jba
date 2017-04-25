@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIndivRecExpense1));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
@@ -52,6 +52,8 @@
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.gAMABUSINESSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jBADBDataSet = new JBA_BizSupport.JBADBDataSet();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -61,8 +63,6 @@
             this.OrderNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BUSINESS_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BUSINESS_NAME = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.gAMABUSINESSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.jBADBDataSet = new JBA_BizSupport.JBADBDataSet();
             this.CLIENT_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CLIENT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TRANSFER_EXCLUSION = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -118,6 +118,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.jBADBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button8 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -128,10 +129,14 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.gAMA_BUSINESSTableAdapter = new JBA_BizSupport.JBADBDataSetTableAdapters.GAMA_BUSINESSTableAdapter();
             this.gAMA_HIMOKUTableAdapter = new JBA_BizSupport.JBADBDataSetTableAdapters.GAMA_HIMOKUTableAdapter();
+            this.pCADATADETAILBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pCA_DATA_DETAILTableAdapter = new JBA_BizSupport.JBADBDataSetTableAdapters.PCA_DATA_DETAILTableAdapter();
+            this.aDJUSTTEMPPAYBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aDJUST_TEMP_PAYTableAdapter = new JBA_BizSupport.JBADBDataSetTableAdapters.ADJUST_TEMP_PAYTableAdapter();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gAMABUSINESSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jBADBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gAMAHIMOKUBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -140,11 +145,14 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jBADBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pCADATADETAILBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aDJUSTTEMPPAYBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -263,6 +271,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(59, 20);
             this.comboBox3.TabIndex = 82;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -339,10 +348,10 @@
             // 
             // textBox15
             // 
+            this.textBox15.BackColor = System.Drawing.SystemColors.Control;
             this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox15.Location = new System.Drawing.Point(557, 137);
             this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
             this.textBox15.Size = new System.Drawing.Size(67, 12);
             this.textBox15.TabIndex = 77;
             this.textBox15.Text = "TEMP_PAY_PRICE";
@@ -400,15 +409,26 @@
             // 
             // comboBox11
             // 
+            this.comboBox11.DataSource = this.gAMABUSINESSBindingSource;
+            this.comboBox11.DisplayMember = "BUSINESS_CD";
             this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
-            "公益会計",
-            "事業会計"});
             this.comboBox11.Location = new System.Drawing.Point(159, 60);
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(58, 20);
             this.comboBox11.TabIndex = 6;
+            this.comboBox11.ValueMember = "BUSINESS_NAME";
+            this.comboBox11.SelectedIndexChanged += new System.EventHandler(this.comboBox11_SelectedIndexChanged);
+            // 
+            // gAMABUSINESSBindingSource
+            // 
+            this.gAMABUSINESSBindingSource.DataMember = "GAMA_BUSINESS";
+            this.gAMABUSINESSBindingSource.DataSource = this.jBADBDataSet;
+            // 
+            // jBADBDataSet
+            // 
+            this.jBADBDataSet.DataSetName = "JBADBDataSet";
+            this.jBADBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox11
             // 
@@ -481,9 +501,11 @@
             this.dataGridView1.Location = new System.Drawing.Point(54, 216);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.RowTemplate.Height = 21;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(928, 128);
             this.dataGridView1.TabIndex = 71;
@@ -500,6 +522,7 @@
             this.DelBtn.HeaderText = "削除";
             this.DelBtn.MinimumWidth = 38;
             this.DelBtn.Name = "DelBtn";
+            this.DelBtn.ReadOnly = true;
             this.DelBtn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // OrderNo
@@ -528,13 +551,9 @@
             this.BUSINESS_NAME.HeaderText = "事業名";
             this.BUSINESS_NAME.MinimumWidth = 73;
             this.BUSINESS_NAME.Name = "BUSINESS_NAME";
+            this.BUSINESS_NAME.ReadOnly = true;
             this.BUSINESS_NAME.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.BUSINESS_NAME.ValueMember = "BUSINESS_CD";
-            // 
-            // jBADBDataSet
-            // 
-            this.jBADBDataSet.DataSetName = "JBADBDataSet";
-            this.jBADBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // CLIENT_CD
             // 
@@ -560,6 +579,7 @@
             this.TRANSFER_EXCLUSION.HeaderText = "振込除外";
             this.TRANSFER_EXCLUSION.MinimumWidth = 38;
             this.TRANSFER_EXCLUSION.Name = "TRANSFER_EXCLUSION";
+            this.TRANSFER_EXCLUSION.ReadOnly = true;
             this.TRANSFER_EXCLUSION.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // HIMOKU_NAME1
@@ -570,8 +590,14 @@
             this.HIMOKU_NAME1.HeaderText = "費目";
             this.HIMOKU_NAME1.MinimumWidth = 113;
             this.HIMOKU_NAME1.Name = "HIMOKU_NAME1";
+            this.HIMOKU_NAME1.ReadOnly = true;
             this.HIMOKU_NAME1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.HIMOKU_NAME1.ValueMember = "HIMOKU_CD";
+            // 
+            // gAMAHIMOKUBindingSource
+            // 
+            this.gAMAHIMOKUBindingSource.DataMember = "GAMA_HIMOKU";
+            this.gAMAHIMOKUBindingSource.DataSource = this.jBADBDataSet;
             // 
             // APPLICATION
             // 
@@ -579,18 +605,20 @@
             this.APPLICATION.HeaderText = "適用";
             this.APPLICATION.MinimumWidth = 81;
             this.APPLICATION.Name = "APPLICATION";
+            this.APPLICATION.ReadOnly = true;
             this.APPLICATION.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // PRICE
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "N0";
-            this.PRICE.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N0";
+            this.PRICE.DefaultCellStyle = dataGridViewCellStyle7;
             this.PRICE.FillWeight = 67F;
             this.PRICE.HeaderText = "金額";
             this.PRICE.MaxInputLength = 9;
             this.PRICE.MinimumWidth = 67;
             this.PRICE.Name = "PRICE";
+            this.PRICE.ReadOnly = true;
             this.PRICE.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // HIMOKU_NAME2
@@ -601,29 +629,32 @@
             this.HIMOKU_NAME2.HeaderText = "費目";
             this.HIMOKU_NAME2.MinimumWidth = 120;
             this.HIMOKU_NAME2.Name = "HIMOKU_NAME2";
+            this.HIMOKU_NAME2.ReadOnly = true;
             this.HIMOKU_NAME2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.HIMOKU_NAME2.ValueMember = "HIMOKU_CD";
             // 
             // DEPOSIT
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N0";
-            this.DEPOSIT.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "N0";
+            this.DEPOSIT.DefaultCellStyle = dataGridViewCellStyle8;
             this.DEPOSIT.FillWeight = 76F;
             this.DEPOSIT.HeaderText = "内預り金";
             this.DEPOSIT.MaxInputLength = 9;
             this.DEPOSIT.MinimumWidth = 76;
             this.DEPOSIT.Name = "DEPOSIT";
+            this.DEPOSIT.ReadOnly = true;
             this.DEPOSIT.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // PAYMENT_DATE
             // 
-            dataGridViewCellStyle3.Format = "d";
-            this.PAYMENT_DATE.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Format = "d";
+            this.PAYMENT_DATE.DefaultCellStyle = dataGridViewCellStyle9;
             this.PAYMENT_DATE.FillWeight = 109F;
             this.PAYMENT_DATE.HeaderText = "支払日";
             this.PAYMENT_DATE.MinimumWidth = 109;
             this.PAYMENT_DATE.Name = "PAYMENT_DATE";
+            this.PAYMENT_DATE.ReadOnly = true;
             this.PAYMENT_DATE.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // tabControl1
@@ -656,10 +687,10 @@
             this.userControl71.LabelText = "PCA_DATA_NUMBER";
             this.userControl71.Location = new System.Drawing.Point(-9, -11);
             this.userControl71.Name = "userControl71";
+            this.userControl71.PatternNumber = null;
             this.userControl71.Size = new System.Drawing.Size(850, 241);
             this.userControl71.TabIndex = 70;
             this.userControl71.TabNumber = ((byte)(0));
-            this.userControl71.TmpPayNumber = null;
             // 
             // tabPage2
             // 
@@ -763,15 +794,16 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.gAMABUSINESSBindingSource;
+            this.comboBox1.DisplayMember = "BUSINESS_CD";
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "公益会計",
-            "事業会計"});
             this.comboBox1.Location = new System.Drawing.Point(159, 134);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(67, 20);
             this.comboBox1.TabIndex = 6;
+            this.comboBox1.ValueMember = "BUSINESS_NAME";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -1063,16 +1095,21 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DataSource = this.jBADBDataSetBindingSource;
+            this.comboBox2.DisplayMember = "disp_value";
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "三井住友銀行　飯田橋支店　普通　9999999",
-            "東京三菱UFJ銀行　水道橋支店　普通　9999999"});
             this.comboBox2.Location = new System.Drawing.Point(55, 433);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(305, 20);
             this.comboBox2.TabIndex = 56;
+            this.comboBox2.ValueMember = "ACCOUNT_HOLDER_KANA";
             this.comboBox2.MouseHover += new System.EventHandler(this.comboBox2_MouseHover);
+            // 
+            // jBADBDataSetBindingSource
+            // 
+            this.jBADBDataSetBindingSource.DataMember = "GAMA_TRANSFER_FROM_BANK";
+            this.jBADBDataSetBindingSource.DataSource = this.jBADBDataSet;
             // 
             // button8
             // 
@@ -1147,6 +1184,24 @@
             // 
             this.gAMA_HIMOKUTableAdapter.ClearBeforeFill = true;
             // 
+            // pCADATADETAILBindingSource
+            // 
+            this.pCADATADETAILBindingSource.DataMember = "PCA_DATA_DETAIL";
+            this.pCADATADETAILBindingSource.DataSource = this.jBADBDataSet;
+            // 
+            // pCA_DATA_DETAILTableAdapter
+            // 
+            this.pCA_DATA_DETAILTableAdapter.ClearBeforeFill = true;
+            // 
+            // aDJUSTTEMPPAYBindingSource
+            // 
+            this.aDJUSTTEMPPAYBindingSource.DataMember = "ADJUST_TEMP_PAY";
+            this.aDJUSTTEMPPAYBindingSource.DataSource = this.jBADBDataSet;
+            // 
+            // aDJUST_TEMP_PAYTableAdapter
+            // 
+            this.aDJUST_TEMP_PAYTableAdapter.ClearBeforeFill = true;
+            // 
             // frmIndivRecExpense1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1158,9 +1213,9 @@
             this.Load += new System.EventHandler(this.frmIndivRecExpense1_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gAMABUSINESSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jBADBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gAMAHIMOKUBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -1171,11 +1226,14 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jBADBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pCADATADETAILBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aDJUSTTEMPPAYBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1245,19 +1303,6 @@
         private JBADBDataSetTableAdapters.GAMA_HIMOKUTableAdapter gAMA_HIMOKUTableAdapter;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.DataGridViewButtonColumn DelBtn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OrderNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BUSINESS_CD;
-        private System.Windows.Forms.DataGridViewComboBoxColumn BUSINESS_NAME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CLIENT_CD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CLIENT_NAME;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn TRANSFER_EXCLUSION;
-        private System.Windows.Forms.DataGridViewComboBoxColumn HIMOKU_NAME1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn APPLICATION;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRICE;
-        private System.Windows.Forms.DataGridViewComboBoxColumn HIMOKU_NAME2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DEPOSIT;
-        private CalendarColumn PAYMENT_DATE;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox14;
@@ -1277,5 +1322,23 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.TextBox textBox24;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.BindingSource pCADATADETAILBindingSource;
+        private JBADBDataSetTableAdapters.PCA_DATA_DETAILTableAdapter pCA_DATA_DETAILTableAdapter;
+        private System.Windows.Forms.BindingSource aDJUSTTEMPPAYBindingSource;
+        private System.Windows.Forms.BindingSource jBADBDataSetBindingSource;
+        private System.Windows.Forms.DataGridViewButtonColumn DelBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BUSINESS_CD;
+        private System.Windows.Forms.DataGridViewComboBoxColumn BUSINESS_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CLIENT_CD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CLIENT_NAME;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn TRANSFER_EXCLUSION;
+        private System.Windows.Forms.DataGridViewComboBoxColumn HIMOKU_NAME1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn APPLICATION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRICE;
+        private System.Windows.Forms.DataGridViewComboBoxColumn HIMOKU_NAME2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DEPOSIT;
+        private CalendarColumn PAYMENT_DATE;
+        private JBADBDataSetTableAdapters.ADJUST_TEMP_PAYTableAdapter aDJUST_TEMP_PAYTableAdapter;
     }
 }

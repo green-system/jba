@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace JBA_BizSupport
@@ -25,13 +22,19 @@ namespace JBA_BizSupport
             frmMain f1 = new frmMain();
             if (args.Length > 0)
             {
-                f1.Argument = args[0];
+                //f1.Argument = args[0];
+                Argument = args[0];
             }
             else
             {
-                f1.Argument = "";
+                //f1.Argument = "";
+                Argument = "";
             }
             Application.Run(f1);
         }
+
+        // メインメソッドから設定されるメンバー
+        static public string Argument = null; // コマンドライン引数の内容
+
     }
 }

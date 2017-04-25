@@ -8,7 +8,7 @@ namespace JBA_BizSupport
     public partial class UserControl7 : UserControl
     {
         public string TmpPayNumber { get; set; }
-        public int TabNumber { get; set; }
+        public byte TabNumber { get; set; }
         public string LabelText
         {
             get { return label1.Text; }
@@ -22,26 +22,32 @@ namespace JBA_BizSupport
             InitializeComponent();
         }
 
+        // フォームロード
         private void UserControl7_Load(object sender, EventArgs e)
         {
             dataGridView1.Columns["BORROWED_PRICE"].ValueType = typeof(int);
             dataGridView1.Columns["LEND_PRICE"].ValueType = typeof(int);
         }
 
+        // label1テキスト変更
         private void label1_TextChanged(object sender, EventArgs e)
         {
-            byte cnt_tab = 1;
-            do
+            //byte cnt_tab = 1;
+            this.gAMA_HIMOKUTableAdapter.Fill(this.jBADBDataSet.GAMA_HIMOKU);
+            //do
+            //{
+            //this.pCA_DATA_DETAILTableAdapter.FillByPatternNumber(this.jBADBDataSet.PCA_DATA_DETAIL, TmpPayNumber, cnt_tab);
+            // 指定された仮払番号とタブ番号のレコードをデータテーブルに読み込む
+            this.pCA_DATA_DETAILTableAdapter.FillByPatternNumber(this.jBADBDataSet.PCA_DATA_DETAIL, TmpPayNumber, TabNumber);
+            // データテーブルに1行以上データがある場合、データグリッドビューに1行ずつ追加する
+            if (this.jBADBDataSet.PCA_DATA_DETAIL.Count != 0)
             {
-                this.gAMA_HIMOKUTableAdapter.Fill(this.jBADBDataSet.GAMA_HIMOKU);
-                this.pCA_DATA_DETAILTableAdapter.FillByPatternNumber(this.jBADBDataSet.PCA_DATA_DETAIL, TmpPayNumber, cnt_tab);
-                if (this.jBADBDataSet.PCA_DATA_DETAIL.Count == 0) { break; }
                 var borrowed_total = 0;
                 var lend_total = 0;
                 for (byte cnt_line = 1; cnt_line <= this.jBADBDataSet.PCA_DATA_DETAIL.Count; ++cnt_line)
                 {
                     // PCA仕訳伝票詳細データ表示
-                    this.dataGridView1.Rows.Add(cnt_line.ToString(),                                 // No
+                    this.dataGridView1.Rows.Add(null,                                                // No
                          jBADBDataSet.Tables["PCA_DATA_DETAIL"].Rows[cnt_line - 1][0].ToString(),    // 借方科目CODE
                          jBADBDataSet.Tables["PCA_DATA_DETAIL"].Rows[cnt_line - 1][0].ToString(),    // 借方科目名
                          jBADBDataSet.Tables["PCA_DATA_DETAIL"].Rows[cnt_line - 1][1],               // 借方金額
@@ -53,11 +59,15 @@ namespace JBA_BizSupport
                     // 貸方金額合計計算
                     lend_total = lend_total + int.Parse(dataGridView1[6, cnt_line - 1].Value.ToString());
                 }
+                // 最後の空行に行番号を記入する
+                this.dataGridView1[0, this.jBADBDataSet.PCA_DATA_DETAIL.Count].Value = this.jBADBDataSet.PCA_DATA_DETAIL.Count + 1;
+
                 textBox1.Text = borrowed_total.ToString("#,0");
                 textBox2.Text = lend_total.ToString("#,0");
+            }
                 // 次のタブ番号へ移動
-                cnt_tab++;
-            } while (cnt_tab < this.jBADBDataSet.PCA_DATA_DETAIL.Count);
+            //    cnt_tab++;
+            //} while (cnt_tab < 100);
         }
 
         // データグリッドビュー縦スクロールバー表示イベント
@@ -86,7 +96,13 @@ namespace JBA_BizSupport
             {
                 dataGridView1.Width = 795;
             }
-            dataGridView1.Refresh();
+            //this.Refresh();
+        }
+
+        // データグリッドビューサイズ変更時
+        private void dataGridView1_SizeChanged(object sender, EventArgs e)
+        {
+            this.Refresh();
         }
 
         // データグリッドビュー内のセルが編集中のとき
@@ -189,5 +205,29 @@ namespace JBA_BizSupport
             }
         }
 
+        //CellEnterイベントハンドラ（DataGridViewのコンボボックスのドロップダウンリストを一回のクリックで表示する）
+        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+
+            if ((dgv.Columns[e.ColumnIndex].Name == "himokuname1" || dgv.Columns[e.ColumnIndex].Name == "himokuname2") &&
+               dgv.Columns[e.ColumnIndex] is DataGridViewComboBoxColumn)
+            {
+                SendKeys.Send("{F4}");
+            }
+        }
+
+        // データグリッドビューに新しい行が追加されたとき行番号を記入する
+        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            this.dataGridView1[0, e.RowIndex].Value = e.RowIndex + 1;
+        }
+
+        // データグリッドビューの金額列がNullになったとき0を表示してエラー表示しないようにする
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            dataGridView1[e.ColumnIndex, e.RowIndex].Value = 0;
+            e.Cancel = false;
+        }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,29 +6,29 @@ namespace JBA_BizSupport
 {
     public partial class frmTempPayment1 : Form
     {
-        ToolTip ToolTip1;
+        ToolTip ToolTip1;                                   // 振込元口座ツールチップ表示用
 
-        public string ListButtonFLG { get; set; }
-        public string TextTmpPayNum { get; set; }
-        public string TextReqPersonName { get; set; }
-        public string TextBizCD { get; set; }
-        public string TextBizName { get; set; }
-        public int IntBillID { get; set; }
-        public string TextTmpPayPurpose { get; set; }
-        public string TextClientCD { get; set; }
-        public string TextClientName { get; set; }
-        public string TextTmpPayOL { get; set; }
-        public int IntTmpPayType { get; set; }
-        public int IntTmpPayPrice { get; set; }
-        public DateTime DateTmpPayDay { get; set; }
-        public string TextBankCD { get; set; }
-        public string TextBankName { get; set; }
-        public string TextBranchCD { get; set; }
-        public string TextBranchName { get; set; }
-        public string TextAccountHolderKANA { get; set; }
-        public int IntAccountType { get; set; }
-        public string TextAccountNum { get; set; }
-        public int IntRecNumber { get; set; }
+        public string ListButtonFLG { get; set; }           // 仮払い一覧画面からの遷移方法
+        public string TextTmpPayNum { get; set; }           // 仮払番号
+        public string TextReqPersonName { get; set; }       // 依頼者氏名
+        public string TextBizCD { get; set; }               // 事業コード
+        public string TextBizName { get; set; }             // 事業名称
+        public int IntBillID { get; set; }                  // 会計区分
+        public string TextTmpPayPurpose { get; set; }       // 目的
+        public string TextClientCD { get; set; }            // 支払先コード（取引先コード）
+        public string TextClientName { get; set; }          // 取引先名
+        public string TextTmpPayOL { get; set; }            // 摘要
+        public int IntTmpPayType { get; set; }              // 支払方法種別
+        public int IntTmpPayPrice { get; set; }             // 仮払金額
+        public DateTime DateTmpPayDay { get; set; }         // 仮払日付
+        public string TextBankCD { get; set; }              // 振込先銀行コード
+        public string TextBankName { get; set; }            // 振込先銀行名
+        public string TextBranchCD { get; set; }            // 振込先支店コード
+        public string TextBranchName { get; set; }          // 振込先支店名
+        public string TextAccountHolderKANA { get; set; }   // 振込先口座名義名カナ
+        public int IntAccountType { get; set; }             // 振込先口座種別
+        public string TextAccountNum { get; set; }          // 振込先口座番号
+        public int IntRecNumber { get; set; }               // 振込元銀行口座連番
 
         public frmTempPayment1()
         {
@@ -41,7 +40,7 @@ namespace JBA_BizSupport
         {
             // TODO: このコード行はデータを 'jBADBDataSet.GAMA_TRANSFER_FROM_BANK' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.gAMA_TRANSFER_FROM_BANKTableAdapter.Fill(this.jBADBDataSet.GAMA_TRANSFER_FROM_BANK);
-            // 列ヘッダの背景色の変更
+            // データグリッドビューダブルクリック・選択ボタンクリックか新規作成ボタンクリックかで初期設定を変更
             if (ListButtonFLG == "GridDoubleClick" || ListButtonFLG == "ButtonClick")
             {
                 // 初期表示設定
@@ -75,11 +74,11 @@ namespace JBA_BizSupport
                 {
                     case 1:
                         textBox16.Text = "現金";
-                        comboBox1.SelectedIndex = 1;
+                        //comboBox1.SelectedIndex = 1;
                         break;
                     case 2:
                         textBox16.Text = "振込";
-                        comboBox1.SelectedIndex = 0;
+                        //comboBox1.SelectedIndex = 0;
                         break;
                 }
                 textBox2.ReadOnly = true;
@@ -117,9 +116,10 @@ namespace JBA_BizSupport
                 this.progressLogTableAdapter.FillByProgressLog(this.jBADBDataSet.PROGRESS_LOG, TextTmpPayNum);
                 // UserControl部分（PCA仕訳伝票番号）表示
                 string TextPCADataNum = this.pCA_DATA_DETAILTableAdapter.ScalarQueryPCADataNumber(TextTmpPayNum).ToString();
-                int TabNum = this.pCA_DATA_DETAILTableAdapter.ScalarQueryTabNumber(TextPCADataNum, 1) ?? 0;
+                // GADA_PCA_DATA_DETAILテーブルのPCA仕訳伝票番号（第1引数）毎のタブ番号（第2引数）の存在有無（0：存在しない 1：存在する）
+                byte TabNum = byte.Parse(this.pCA_DATA_DETAILTableAdapter.ScalarQueryTabNumber(TextPCADataNum, 1).ToString() ?? "0");
                 userControl71.TmpPayNumber = TextTmpPayNum;
-                userControl71.TabNumber= TabNum;
+                userControl71.TabNumber = TabNum;
                 userControl71.LabelText = TextPCADataNum + "-" + TabNum.ToString("D3");
             }
             else if (ListButtonFLG == "CreateNewClick")
@@ -315,6 +315,5 @@ namespace JBA_BizSupport
                 ToolTip1.SetToolTip(comboBox2, comboBox2.SelectedValue.ToString());
             }
         }
-
     }
 }

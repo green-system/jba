@@ -44,16 +44,16 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.gAMAHIMOKUBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.jBADBDataSet = new JBA_BizSupport.JBADBDataSet();
+            this.himokuname1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.himokuname2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.gAMAHIMOKUBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jBADBDataSet = new JBA_BizSupport.JBADBDataSet();
             this.gAMA_HIMOKUTableAdapter = new JBA_BizSupport.JBADBDataSetTableAdapters.GAMA_HIMOKUTableAdapter();
             this.pCA_DATA_DETAILTableAdapter = new JBA_BizSupport.JBADBDataSetTableAdapters.PCA_DATA_DETAILTableAdapter();
             this.pCADATADETAILBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.himokuname1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.himokuname2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -143,20 +143,38 @@
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.Size = new System.Drawing.Size(795, 73);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dataGridView1.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridView1_CurrentCellDirtyStateChanged);
+            this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             this.dataGridView1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView1_EditingControlShowing);
+            this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
+            this.dataGridView1.SizeChanged += new System.EventHandler(this.dataGridView1_SizeChanged);
             this.dataGridView1.VisibleChanged += new System.EventHandler(this.dataGridView1_VisibleChanged);
             // 
-            // gAMAHIMOKUBindingSource
+            // himokuname1
             // 
-            this.gAMAHIMOKUBindingSource.DataMember = "GAMA_HIMOKU";
-            this.gAMAHIMOKUBindingSource.DataSource = this.jBADBDataSet;
+            this.himokuname1.DataSource = this.gAMAHIMOKUBindingSource;
+            this.himokuname1.DisplayMember = "HIMOKU_NAME";
+            this.himokuname1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.himokuname1.FillWeight = 128F;
+            this.himokuname1.HeaderText = "科目名";
+            this.himokuname1.MinimumWidth = 128;
+            this.himokuname1.Name = "himokuname1";
+            this.himokuname1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.himokuname1.ValueMember = "HIMOKU_CD";
             // 
-            // jBADBDataSet
+            // himokuname2
             // 
-            this.jBADBDataSet.DataSetName = "JBADBDataSet";
-            this.jBADBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.himokuname2.DataSource = this.gAMAHIMOKUBindingSource;
+            this.himokuname2.DisplayMember = "HIMOKU_NAME";
+            this.himokuname2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.himokuname2.FillWeight = 128F;
+            this.himokuname2.HeaderText = "科目名";
+            this.himokuname2.MinimumWidth = 128;
+            this.himokuname2.Name = "himokuname2";
+            this.himokuname2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.himokuname2.ValueMember = "HIMOKU_CD";
             // 
             // textBox1
             // 
@@ -190,6 +208,16 @@
             this.label1.Text = "PCA_DATA_NUMBER";
             this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
             // 
+            // gAMAHIMOKUBindingSource
+            // 
+            this.gAMAHIMOKUBindingSource.DataMember = "GAMA_HIMOKU";
+            this.gAMAHIMOKUBindingSource.DataSource = this.jBADBDataSet;
+            // 
+            // jBADBDataSet
+            // 
+            this.jBADBDataSet.DataSetName = "JBADBDataSet";
+            this.jBADBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gAMA_HIMOKUTableAdapter
             // 
             this.gAMA_HIMOKUTableAdapter.ClearBeforeFill = true;
@@ -202,30 +230,6 @@
             // 
             this.pCADATADETAILBindingSource.DataMember = "PCA_DATA_DETAIL";
             this.pCADATADETAILBindingSource.DataSource = this.jBADBDataSet;
-            // 
-            // himokuname1
-            // 
-            this.himokuname1.DataSource = this.gAMAHIMOKUBindingSource;
-            this.himokuname1.DisplayMember = "HIMOKU_NAME";
-            this.himokuname1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.himokuname1.FillWeight = 128F;
-            this.himokuname1.HeaderText = "科目名";
-            this.himokuname1.MinimumWidth = 128;
-            this.himokuname1.Name = "himokuname1";
-            this.himokuname1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.himokuname1.ValueMember = "HIMOKU_CD";
-            // 
-            // himokuname2
-            // 
-            this.himokuname2.DataSource = this.gAMAHIMOKUBindingSource;
-            this.himokuname2.DisplayMember = "HIMOKU_NAME";
-            this.himokuname2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.himokuname2.FillWeight = 128F;
-            this.himokuname2.HeaderText = "科目名";
-            this.himokuname2.MinimumWidth = 128;
-            this.himokuname2.Name = "himokuname2";
-            this.himokuname2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.himokuname2.ValueMember = "HIMOKU_CD";
             // 
             // dataGridViewTextBoxColumn1
             // 

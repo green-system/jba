@@ -16,7 +16,7 @@ namespace JBA_BizSupport
         private void frmTempPayment_Load(object sender, EventArgs e)
         {
             // TODO: このコード行はデータを 'jBADBDataSet.GADA_TEMP_PAY' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.gADA_TEMP_PAYTableAdapter.Fill(this.jBADBDataSet.GADA_TEMP_PAY);
+            this.gADA_TEMP_PAYTableAdapter.FillByEmpty(this.jBADBDataSet.GADA_TEMP_PAY);
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.PeachPuff;
             dataGridView1.Columns["TEMP_PAY_PRICE"].ValueType = typeof(int);
             label3.Text = this.jBADBDataSet.GADA_TEMP_PAY.Count.ToString() + "件";
@@ -61,25 +61,48 @@ namespace JBA_BizSupport
                 var RadioButtonChecked = panel1.Controls.OfType<RadioButton>()
                     .SingleOrDefault(rb => rb.Checked == true);
 
-                switch (RadioButtonChecked.Name)
+                if (textBox1.Text == "")
                 {
-                    case "radioButton1": // 全ての仮払
-                        this.gADA_TEMP_PAYTableAdapter.Fill(this.jBADBDataSet.GADA_TEMP_PAY);
-                        break;
-                    case "radioButton2": // 未精算の仮払
-                        this.gADA_TEMP_PAYTableAdapter.FillByUnsettled(this.jBADBDataSet.GADA_TEMP_PAY, textBox1.Text);
-                        break;
-                    case "radioButton3": // 振込の仮払
-                        this.gADA_TEMP_PAYTableAdapter.FillByTmpPayTransfer(this.jBADBDataSet.GADA_TEMP_PAY, textBox1.Text);
-                        break;
-                    case "radioButton4": // 現金の仮払
-                        this.gADA_TEMP_PAYTableAdapter.FillByTmpPayCash(this.jBADBDataSet.GADA_TEMP_PAY, textBox1.Text);
-                        break;
-                    case "radioButton5": // 一時保存
-                        this.gADA_TEMP_PAYTableAdapter.FillByTmpSave(this.jBADBDataSet.GADA_TEMP_PAY, textBox1.Text);
-                        break;
+                    switch (RadioButtonChecked.Name)
+                    {
+                        case "radioButton1": // 全ての仮払
+                            this.gADA_TEMP_PAYTableAdapter.FillByEmpty(this.jBADBDataSet.GADA_TEMP_PAY);
+                            break;
+                        case "radioButton2": // 未精算の仮払
+                            this.gADA_TEMP_PAYTableAdapter.FillByUnsettledEmpty(this.jBADBDataSet.GADA_TEMP_PAY);
+                            break;
+                        case "radioButton3": // 振込の仮払
+                            this.gADA_TEMP_PAYTableAdapter.FillByTmpPayTransferEmpty(this.jBADBDataSet.GADA_TEMP_PAY);
+                            break;
+                        case "radioButton4": // 現金の仮払
+                            this.gADA_TEMP_PAYTableAdapter.FillByTmpPayCashEmpty(this.jBADBDataSet.GADA_TEMP_PAY);
+                            break;
+                        case "radioButton5": // 一時保存
+                            this.gADA_TEMP_PAYTableAdapter.FillByTmpSaveEmpty(this.jBADBDataSet.GADA_TEMP_PAY);
+                            break;
+                    }
                 }
-
+                else
+                {
+                    switch (RadioButtonChecked.Name)
+                    {
+                        case "radioButton1": // 全ての仮払
+                            this.gADA_TEMP_PAYTableAdapter.Fill(this.jBADBDataSet.GADA_TEMP_PAY, textBox1.Text);
+                            break;
+                        case "radioButton2": // 未精算の仮払
+                            this.gADA_TEMP_PAYTableAdapter.FillByUnsettled(this.jBADBDataSet.GADA_TEMP_PAY, textBox1.Text);
+                            break;
+                        case "radioButton3": // 振込の仮払
+                            this.gADA_TEMP_PAYTableAdapter.FillByTmpPayTransfer(this.jBADBDataSet.GADA_TEMP_PAY, textBox1.Text);
+                            break;
+                        case "radioButton4": // 現金の仮払
+                            this.gADA_TEMP_PAYTableAdapter.FillByTmpPayCash(this.jBADBDataSet.GADA_TEMP_PAY, textBox1.Text);
+                            break;
+                        case "radioButton5": // 一時保存
+                            this.gADA_TEMP_PAYTableAdapter.FillByTmpSave(this.jBADBDataSet.GADA_TEMP_PAY, textBox1.Text);
+                            break;
+                    }
+                }
             }
             catch (System.Exception ex)
             {
@@ -96,7 +119,7 @@ namespace JBA_BizSupport
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.button1.PerformClick();
+                this.button2.PerformClick();
             }
         }
 

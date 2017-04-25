@@ -8,7 +8,34 @@ namespace JBA_BizSupport
 {
     public partial class frmIndivRecExpense1 : Form
     {
-        ToolTip ToolTip1;
+        ToolTip ToolTip1;                                   // 振込元口座ツールチップ表示用
+
+        public string ListButtonFLG { get; set; }           // 個人経費一覧画面からの遷移方法
+        public string TextAdjustNum { get; set; }           // 精算番号
+        public string TextBizCDAdj { get; set; }            // 事業コード（精算）
+        public string TextBizItemName { get; set; }         // 案件名（事業名称）
+        public int IntBillID { get; set; }                  // 会計区分
+        public string TextTmpPayNum { get; set; }           // 仮払番号
+        public string TextBizCDTmp { get; set; }            // 事業コード（仮払い）
+        public string TextBizNameTmp { get; set; }          // 事業名称
+        public string TextTmpPayPurpose { get; set; }       // 目的
+        public int IntTmpPayPrice { get; set; }             // 金額
+        public DateTime DateTmpPayDay { get; set; }         // 仮払日付
+        public string TextClientCDTmp { get; set; }         // 支払先コード（取引先コード）
+        public string TextClientNameTmp { get; set; }       // 支払先名
+        public DateTime DateAdjustDay { get; set; }         // 計上日付
+        public DateTime DateTransferDay { get; set; }       // 振込日付
+        public DateTime DateJournalDay { get; set; }        // 仕訳作成日
+        public DateTime DatePCAOutputDay { get; set; }      // PCA作成日付
+        public int IntAdjPayType { get; set; }              // 精算方法種別
+        public string TextBankCD { get; set; }              // 振込先銀行コード
+        public string TextBankName { get; set; }            // 振込先銀行名
+        public string TextBranchCD { get; set; }            // 振込先支店コード
+        public string TextBranchName { get; set; }          // 振込先支店名
+        public string TextAccountHolderKANA { get; set; }   // 振込先口座名義名カナ
+        public int IntAccountType { get; set; }             // 振込先口座種別
+        public string TextAccountNum { get; set; }          // 振込先口座番号
+        public int IntRecNumber { get; set; }               // 振込元銀行口座連番
 
         public frmIndivRecExpense1()
         {
@@ -24,16 +51,114 @@ namespace JBA_BizSupport
             this.gAMA_BUSINESSTableAdapter.Fill(this.jBADBDataSet.GAMA_BUSINESS);
             // 列ヘッダの背景色の変更
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.PeachPuff;
-            // 精算方法のデフォルト値挿入
-            comboBox16.Text = "振込";
-            dataGridView1.Columns["PRICE"].ValueType = typeof(int);
-            dataGridView1.Columns["DEPOSIT"].ValueType = typeof(int);
-            textBox12.Text = "0";
-            textBox13.Text = "0";
-            dateTimePicker1.Value = DateTime.Now;
-            label7.Text = "";
-            label9.Text = "";
+            // データグリッドビューダブルクリック・選択ボタンクリックか新規作成ボタンクリックかで初期設定を変更
+            if (ListButtonFLG == "GridDoubleClick" || ListButtonFLG == "ButtonClick")
+            {
+                // 初期表示設定
+                textBox1.Text = TextAdjustNum;
+                comboBox11.Visible = true;
+                comboBox11.Text = TextBizCDAdj;
+                textBox3.Visible = false;
+                textBox2.Text = TextBizItemName;
+                switch (IntBillID)
+                {
+                    case 1:
+                        label5.Text = "公益";
+                        break;
+                    case 2:
+                        label5.Text = "事業";
+                        break;
+                    case 3:
+                        label5.Text = "収益";
+                        break;
+                }
+                dateTimePicker1.Visible = false;
+                textBox17.Visible = true;
+                textBox17.Text = DateAdjustDay.ToString("d");
+                textBox20.ReadOnly = true;
+                textBox20.BackColor = Color.FromKnownColor(KnownColor.Control);
+                textBox20.Text = DateTransferDay.ToString("d");
+                textBox21.ReadOnly = true;
+                textBox21.BackColor = Color.FromKnownColor(KnownColor.Control);
+                textBox21.Text = DateJournalDay.ToString("d");
+                textBox22.ReadOnly = true;
+                textBox22.BackColor = Color.FromKnownColor(KnownColor.Control);
+                textBox22.Text = DatePCAOutputDay.ToString("d");
+                comboBox3.Visible = false;
+                textBox23.Visible = true;
+                textBox23.ReadOnly = true;
+                textBox23.BackColor = Color.FromKnownColor(KnownColor.Control);
+                switch (IntAdjPayType)
+                {
+                    case 1:
+                        textBox23.Text = "現金";
+                        //comboBox3.SelectedIndex = 1;
+                        break;
+                    case 2:
+                        textBox23.Text = "振込";
+                        //comboBox3.SelectedIndex = 0;
+                        break;
+                }
+                label6.Text = TextBankCD;
+                label7.Text = TextBankName;
+                label8.Text = TextBranchCD;
+                label9.Text = TextBranchName;
+                textBox9.Text = TextAccountHolderKANA;
+                comboBox10.Visible = true;
+                textBox20.Visible = true;
+                switch (IntAccountType)
+                {
+                    case 0:
+                        comboBox10.SelectedIndex = -1;
+                        break;
+                    case 1:
+                        comboBox10.SelectedIndex = 0;
+                        break;
+                    case 2:
+                        comboBox10.SelectedIndex = 1;
+                        break;
+                    case 4:
+                        comboBox10.SelectedIndex = 2;
+                        break;
+                }
+                textBox10.Text = TextAccountNum;
+                dateTimePicker3.Visible = false;
+                textBox24.Visible = true;
+                textBox24.Text = DateTransferDay.ToString("d");
+                comboBox2.SelectedIndex = IntRecNumber;
+                // 仮払い有無ラジオボタン表示
+                if (TextTmpPayNum!="" || TextTmpPayNum == string.Empty || TextTmpPayNum == null)
+                {
+                    radioButton3.Checked = false;
+                    radioButton4.Checked = true;
+                }
+                else
+                {
+                    radioButton3.Checked = true;
+                    radioButton4.Checked = false;
+                }
+                //// UserControl部分（PCA仕訳伝票番号）表示
+                //string TextPCADataNum = this.pCA_DATA_DETAILTableAdapter.ScalarQueryPCADataNumber(TmpPayNumber).ToString();
+                //// GADA_PCA_DATA_DETAILテーブルのPCA仕訳伝票番号（第1引数）毎のタブ番号（第2引数）の存在有無（0：存在しない 1：存在する）
+                //byte TabNum = byte.Parse(this.pCA_DATA_DETAILTableAdapter.ScalarQueryTabNumber(TextPCADataNum, 1).ToString() ?? "0");
+                //userControl71.TmpPayNumber = TextAdjustNum;
+                //userControl71.TabNumber = TabNum;
+                //userControl71.LabelText = TextPCADataNum + "-" + TabNum.ToString("D3");
+            }
+            else if (ListButtonFLG == "CreateNewClick")
+            {
+                // 初期表示設定
 
+                // 精算方法のデフォルト値挿入
+                comboBox3.Text = "振込";
+                dataGridView1.Columns["PRICE"].ValueType = typeof(int);
+                dataGridView1.Columns["DEPOSIT"].ValueType = typeof(int);
+                textBox12.Text = "0";
+                textBox13.Text = "0";
+                dateTimePicker1.Value = DateTime.Now;
+                label7.Text = "";
+                label9.Text = "";
+            }
         }
 
         // 一覧へ戻るボタンクリック
@@ -194,12 +319,12 @@ namespace JBA_BizSupport
         // 精算方法コンボボックス変更
         private void comboBox16_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox16.SelectedIndex == 0)
+            if (comboBox3.SelectedIndex == 0)
             {
                 button8.Text = "銀行振込依頼\r\nデータ作成";
                 comboBox2.Enabled = true;
             }
-            else if (comboBox16.SelectedIndex == 1)
+            else if (comboBox3.SelectedIndex == 1)
             {
                 button8.Text = "仮払い金受領書\r\n発行";
                 comboBox2.Enabled = false;
@@ -406,6 +531,19 @@ namespace JBA_BizSupport
         private void button9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //CellEnterイベントハンドラ（DataGridViewのコンボボックスのドロップダウンリストを一回のクリックで表示する）
+        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+
+            if ((dgv.Columns[e.ColumnIndex].Name == "BUSINESS_NAME" || dgv.Columns[e.ColumnIndex].Name == "HIMOKU_NAME1"
+                 || dgv.Columns[e.ColumnIndex].Name == "HIMOKU_NAME2") &&
+               dgv.Columns[e.ColumnIndex] is DataGridViewComboBoxColumn)
+            {
+                SendKeys.Send("{F4}");
+            }
         }
     }
 }

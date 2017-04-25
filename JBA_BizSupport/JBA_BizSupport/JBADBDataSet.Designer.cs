@@ -42,6 +42,10 @@ namespace JBA_BizSupport {
         
         private PCA_DATA_DETAILDataTable tablePCA_DATA_DETAIL;
         
+        private GADA_ADJUSTMENT_DETAILDataTable tableGADA_ADJUSTMENT_DETAIL;
+        
+        private GADA_ADJUSTMENTDataTable tableGADA_ADJUSTMENT;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -96,6 +100,12 @@ namespace JBA_BizSupport {
                 }
                 if ((ds.Tables["PCA_DATA_DETAIL"] != null)) {
                     base.Tables.Add(new PCA_DATA_DETAILDataTable(ds.Tables["PCA_DATA_DETAIL"]));
+                }
+                if ((ds.Tables["GADA_ADJUSTMENT_DETAIL"] != null)) {
+                    base.Tables.Add(new GADA_ADJUSTMENT_DETAILDataTable(ds.Tables["GADA_ADJUSTMENT_DETAIL"]));
+                }
+                if ((ds.Tables["GADA_ADJUSTMENT"] != null)) {
+                    base.Tables.Add(new GADA_ADJUSTMENTDataTable(ds.Tables["GADA_ADJUSTMENT"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -207,6 +217,26 @@ namespace JBA_BizSupport {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public GADA_ADJUSTMENT_DETAILDataTable GADA_ADJUSTMENT_DETAIL {
+            get {
+                return this.tableGADA_ADJUSTMENT_DETAIL;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public GADA_ADJUSTMENTDataTable GADA_ADJUSTMENT {
+            get {
+                return this.tableGADA_ADJUSTMENT;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -299,6 +329,12 @@ namespace JBA_BizSupport {
                 if ((ds.Tables["PCA_DATA_DETAIL"] != null)) {
                     base.Tables.Add(new PCA_DATA_DETAILDataTable(ds.Tables["PCA_DATA_DETAIL"]));
                 }
+                if ((ds.Tables["GADA_ADJUSTMENT_DETAIL"] != null)) {
+                    base.Tables.Add(new GADA_ADJUSTMENT_DETAILDataTable(ds.Tables["GADA_ADJUSTMENT_DETAIL"]));
+                }
+                if ((ds.Tables["GADA_ADJUSTMENT"] != null)) {
+                    base.Tables.Add(new GADA_ADJUSTMENTDataTable(ds.Tables["GADA_ADJUSTMENT"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -386,6 +422,18 @@ namespace JBA_BizSupport {
                     this.tablePCA_DATA_DETAIL.InitVars();
                 }
             }
+            this.tableGADA_ADJUSTMENT_DETAIL = ((GADA_ADJUSTMENT_DETAILDataTable)(base.Tables["GADA_ADJUSTMENT_DETAIL"]));
+            if ((initTable == true)) {
+                if ((this.tableGADA_ADJUSTMENT_DETAIL != null)) {
+                    this.tableGADA_ADJUSTMENT_DETAIL.InitVars();
+                }
+            }
+            this.tableGADA_ADJUSTMENT = ((GADA_ADJUSTMENTDataTable)(base.Tables["GADA_ADJUSTMENT"]));
+            if ((initTable == true)) {
+                if ((this.tableGADA_ADJUSTMENT != null)) {
+                    this.tableGADA_ADJUSTMENT.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -414,6 +462,10 @@ namespace JBA_BizSupport {
             base.Tables.Add(this.tablePROGRESS_LOG);
             this.tablePCA_DATA_DETAIL = new PCA_DATA_DETAILDataTable();
             base.Tables.Add(this.tablePCA_DATA_DETAIL);
+            this.tableGADA_ADJUSTMENT_DETAIL = new GADA_ADJUSTMENT_DETAILDataTable();
+            base.Tables.Add(this.tableGADA_ADJUSTMENT_DETAIL);
+            this.tableGADA_ADJUSTMENT = new GADA_ADJUSTMENTDataTable();
+            base.Tables.Add(this.tableGADA_ADJUSTMENT);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -467,6 +519,18 @@ namespace JBA_BizSupport {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializePCA_DATA_DETAIL() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeGADA_ADJUSTMENT_DETAIL() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeGADA_ADJUSTMENT() {
             return false;
         }
         
@@ -551,6 +615,12 @@ namespace JBA_BizSupport {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void PCA_DATA_DETAILRowChangeEventHandler(object sender, PCA_DATA_DETAILRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void GADA_ADJUSTMENT_DETAILRowChangeEventHandler(object sender, GADA_ADJUSTMENT_DETAILRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void GADA_ADJUSTMENTRowChangeEventHandler(object sender, GADA_ADJUSTMENTRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -4195,6 +4265,1185 @@ namespace JBA_BizSupport {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class GADA_ADJUSTMENT_DETAILDataTable : global::System.Data.TypedTableBase<GADA_ADJUSTMENT_DETAILRow> {
+            
+            private global::System.Data.DataColumn columnADJUST_NUMBER;
+            
+            private global::System.Data.DataColumn columnLINE_NUMBER;
+            
+            private global::System.Data.DataColumn columnBUSINESS_CD;
+            
+            private global::System.Data.DataColumn columnPAYMENT_CLIENT_CD;
+            
+            private global::System.Data.DataColumn columnPAYMENT_HIMOKU_CD;
+            
+            private global::System.Data.DataColumn columnPAYMENT_OUTLINE;
+            
+            private global::System.Data.DataColumn columnPAYMENT_PRICE;
+            
+            private global::System.Data.DataColumn columnDEPOSIT_HIMOKU_CD;
+            
+            private global::System.Data.DataColumn columnDEPOSIT_PRICE;
+            
+            private global::System.Data.DataColumn columnPAYMENT_DAY;
+            
+            private global::System.Data.DataColumn columnBANK_CD;
+            
+            private global::System.Data.DataColumn columnOFFICE_CD;
+            
+            private global::System.Data.DataColumn columnACCOUNT_TYPE;
+            
+            private global::System.Data.DataColumn columnACCOUNT_HOLDER_KANA;
+            
+            private global::System.Data.DataColumn columnACCOUNT_NUMBER;
+            
+            private global::System.Data.DataColumn columnREC_NUMBER;
+            
+            private global::System.Data.DataColumn columnDELETE_FLG;
+            
+            private global::System.Data.DataColumn columnMANUAL_UPDATE;
+            
+            private global::System.Data.DataColumn columnADMIN_NUMBER;
+            
+            private global::System.Data.DataColumn columnSYSTEM_UPDATE;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GADA_ADJUSTMENT_DETAILDataTable() {
+                this.TableName = "GADA_ADJUSTMENT_DETAIL";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal GADA_ADJUSTMENT_DETAILDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected GADA_ADJUSTMENT_DETAILDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ADJUST_NUMBERColumn {
+                get {
+                    return this.columnADJUST_NUMBER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LINE_NUMBERColumn {
+                get {
+                    return this.columnLINE_NUMBER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BUSINESS_CDColumn {
+                get {
+                    return this.columnBUSINESS_CD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PAYMENT_CLIENT_CDColumn {
+                get {
+                    return this.columnPAYMENT_CLIENT_CD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PAYMENT_HIMOKU_CDColumn {
+                get {
+                    return this.columnPAYMENT_HIMOKU_CD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PAYMENT_OUTLINEColumn {
+                get {
+                    return this.columnPAYMENT_OUTLINE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PAYMENT_PRICEColumn {
+                get {
+                    return this.columnPAYMENT_PRICE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DEPOSIT_HIMOKU_CDColumn {
+                get {
+                    return this.columnDEPOSIT_HIMOKU_CD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DEPOSIT_PRICEColumn {
+                get {
+                    return this.columnDEPOSIT_PRICE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PAYMENT_DAYColumn {
+                get {
+                    return this.columnPAYMENT_DAY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BANK_CDColumn {
+                get {
+                    return this.columnBANK_CD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn OFFICE_CDColumn {
+                get {
+                    return this.columnOFFICE_CD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ACCOUNT_TYPEColumn {
+                get {
+                    return this.columnACCOUNT_TYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ACCOUNT_HOLDER_KANAColumn {
+                get {
+                    return this.columnACCOUNT_HOLDER_KANA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ACCOUNT_NUMBERColumn {
+                get {
+                    return this.columnACCOUNT_NUMBER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn REC_NUMBERColumn {
+                get {
+                    return this.columnREC_NUMBER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DELETE_FLGColumn {
+                get {
+                    return this.columnDELETE_FLG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MANUAL_UPDATEColumn {
+                get {
+                    return this.columnMANUAL_UPDATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ADMIN_NUMBERColumn {
+                get {
+                    return this.columnADMIN_NUMBER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SYSTEM_UPDATEColumn {
+                get {
+                    return this.columnSYSTEM_UPDATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GADA_ADJUSTMENT_DETAILRow this[int index] {
+                get {
+                    return ((GADA_ADJUSTMENT_DETAILRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event GADA_ADJUSTMENT_DETAILRowChangeEventHandler GADA_ADJUSTMENT_DETAILRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event GADA_ADJUSTMENT_DETAILRowChangeEventHandler GADA_ADJUSTMENT_DETAILRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event GADA_ADJUSTMENT_DETAILRowChangeEventHandler GADA_ADJUSTMENT_DETAILRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event GADA_ADJUSTMENT_DETAILRowChangeEventHandler GADA_ADJUSTMENT_DETAILRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddGADA_ADJUSTMENT_DETAILRow(GADA_ADJUSTMENT_DETAILRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GADA_ADJUSTMENT_DETAILRow AddGADA_ADJUSTMENT_DETAILRow(
+                        string ADJUST_NUMBER, 
+                        byte LINE_NUMBER, 
+                        string BUSINESS_CD, 
+                        string PAYMENT_CLIENT_CD, 
+                        string PAYMENT_HIMOKU_CD, 
+                        string PAYMENT_OUTLINE, 
+                        int PAYMENT_PRICE, 
+                        string DEPOSIT_HIMOKU_CD, 
+                        int DEPOSIT_PRICE, 
+                        System.DateTime PAYMENT_DAY, 
+                        string BANK_CD, 
+                        string OFFICE_CD, 
+                        byte ACCOUNT_TYPE, 
+                        string ACCOUNT_HOLDER_KANA, 
+                        string ACCOUNT_NUMBER, 
+                        byte REC_NUMBER, 
+                        byte DELETE_FLG, 
+                        System.DateTime MANUAL_UPDATE, 
+                        byte ADMIN_NUMBER, 
+                        System.DateTime SYSTEM_UPDATE) {
+                GADA_ADJUSTMENT_DETAILRow rowGADA_ADJUSTMENT_DETAILRow = ((GADA_ADJUSTMENT_DETAILRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ADJUST_NUMBER,
+                        LINE_NUMBER,
+                        BUSINESS_CD,
+                        PAYMENT_CLIENT_CD,
+                        PAYMENT_HIMOKU_CD,
+                        PAYMENT_OUTLINE,
+                        PAYMENT_PRICE,
+                        DEPOSIT_HIMOKU_CD,
+                        DEPOSIT_PRICE,
+                        PAYMENT_DAY,
+                        BANK_CD,
+                        OFFICE_CD,
+                        ACCOUNT_TYPE,
+                        ACCOUNT_HOLDER_KANA,
+                        ACCOUNT_NUMBER,
+                        REC_NUMBER,
+                        DELETE_FLG,
+                        MANUAL_UPDATE,
+                        ADMIN_NUMBER,
+                        SYSTEM_UPDATE};
+                rowGADA_ADJUSTMENT_DETAILRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGADA_ADJUSTMENT_DETAILRow);
+                return rowGADA_ADJUSTMENT_DETAILRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GADA_ADJUSTMENT_DETAILRow FindByADJUST_NUMBERLINE_NUMBER(string ADJUST_NUMBER, byte LINE_NUMBER) {
+                return ((GADA_ADJUSTMENT_DETAILRow)(this.Rows.Find(new object[] {
+                            ADJUST_NUMBER,
+                            LINE_NUMBER})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                GADA_ADJUSTMENT_DETAILDataTable cln = ((GADA_ADJUSTMENT_DETAILDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new GADA_ADJUSTMENT_DETAILDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnADJUST_NUMBER = base.Columns["ADJUST_NUMBER"];
+                this.columnLINE_NUMBER = base.Columns["LINE_NUMBER"];
+                this.columnBUSINESS_CD = base.Columns["BUSINESS_CD"];
+                this.columnPAYMENT_CLIENT_CD = base.Columns["PAYMENT_CLIENT_CD"];
+                this.columnPAYMENT_HIMOKU_CD = base.Columns["PAYMENT_HIMOKU_CD"];
+                this.columnPAYMENT_OUTLINE = base.Columns["PAYMENT_OUTLINE"];
+                this.columnPAYMENT_PRICE = base.Columns["PAYMENT_PRICE"];
+                this.columnDEPOSIT_HIMOKU_CD = base.Columns["DEPOSIT_HIMOKU_CD"];
+                this.columnDEPOSIT_PRICE = base.Columns["DEPOSIT_PRICE"];
+                this.columnPAYMENT_DAY = base.Columns["PAYMENT_DAY"];
+                this.columnBANK_CD = base.Columns["BANK_CD"];
+                this.columnOFFICE_CD = base.Columns["OFFICE_CD"];
+                this.columnACCOUNT_TYPE = base.Columns["ACCOUNT_TYPE"];
+                this.columnACCOUNT_HOLDER_KANA = base.Columns["ACCOUNT_HOLDER_KANA"];
+                this.columnACCOUNT_NUMBER = base.Columns["ACCOUNT_NUMBER"];
+                this.columnREC_NUMBER = base.Columns["REC_NUMBER"];
+                this.columnDELETE_FLG = base.Columns["DELETE_FLG"];
+                this.columnMANUAL_UPDATE = base.Columns["MANUAL_UPDATE"];
+                this.columnADMIN_NUMBER = base.Columns["ADMIN_NUMBER"];
+                this.columnSYSTEM_UPDATE = base.Columns["SYSTEM_UPDATE"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnADJUST_NUMBER = new global::System.Data.DataColumn("ADJUST_NUMBER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnADJUST_NUMBER);
+                this.columnLINE_NUMBER = new global::System.Data.DataColumn("LINE_NUMBER", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLINE_NUMBER);
+                this.columnBUSINESS_CD = new global::System.Data.DataColumn("BUSINESS_CD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBUSINESS_CD);
+                this.columnPAYMENT_CLIENT_CD = new global::System.Data.DataColumn("PAYMENT_CLIENT_CD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPAYMENT_CLIENT_CD);
+                this.columnPAYMENT_HIMOKU_CD = new global::System.Data.DataColumn("PAYMENT_HIMOKU_CD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPAYMENT_HIMOKU_CD);
+                this.columnPAYMENT_OUTLINE = new global::System.Data.DataColumn("PAYMENT_OUTLINE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPAYMENT_OUTLINE);
+                this.columnPAYMENT_PRICE = new global::System.Data.DataColumn("PAYMENT_PRICE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPAYMENT_PRICE);
+                this.columnDEPOSIT_HIMOKU_CD = new global::System.Data.DataColumn("DEPOSIT_HIMOKU_CD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDEPOSIT_HIMOKU_CD);
+                this.columnDEPOSIT_PRICE = new global::System.Data.DataColumn("DEPOSIT_PRICE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDEPOSIT_PRICE);
+                this.columnPAYMENT_DAY = new global::System.Data.DataColumn("PAYMENT_DAY", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPAYMENT_DAY);
+                this.columnBANK_CD = new global::System.Data.DataColumn("BANK_CD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBANK_CD);
+                this.columnOFFICE_CD = new global::System.Data.DataColumn("OFFICE_CD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOFFICE_CD);
+                this.columnACCOUNT_TYPE = new global::System.Data.DataColumn("ACCOUNT_TYPE", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnACCOUNT_TYPE);
+                this.columnACCOUNT_HOLDER_KANA = new global::System.Data.DataColumn("ACCOUNT_HOLDER_KANA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnACCOUNT_HOLDER_KANA);
+                this.columnACCOUNT_NUMBER = new global::System.Data.DataColumn("ACCOUNT_NUMBER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnACCOUNT_NUMBER);
+                this.columnREC_NUMBER = new global::System.Data.DataColumn("REC_NUMBER", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREC_NUMBER);
+                this.columnDELETE_FLG = new global::System.Data.DataColumn("DELETE_FLG", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDELETE_FLG);
+                this.columnMANUAL_UPDATE = new global::System.Data.DataColumn("MANUAL_UPDATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMANUAL_UPDATE);
+                this.columnADMIN_NUMBER = new global::System.Data.DataColumn("ADMIN_NUMBER", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnADMIN_NUMBER);
+                this.columnSYSTEM_UPDATE = new global::System.Data.DataColumn("SYSTEM_UPDATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSYSTEM_UPDATE);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnADJUST_NUMBER,
+                                this.columnLINE_NUMBER}, true));
+                this.columnADJUST_NUMBER.AllowDBNull = false;
+                this.columnADJUST_NUMBER.MaxLength = 12;
+                this.columnLINE_NUMBER.AllowDBNull = false;
+                this.columnBUSINESS_CD.MaxLength = 4;
+                this.columnPAYMENT_CLIENT_CD.MaxLength = 5;
+                this.columnPAYMENT_HIMOKU_CD.MaxLength = 4;
+                this.columnPAYMENT_OUTLINE.MaxLength = 100;
+                this.columnDEPOSIT_HIMOKU_CD.MaxLength = 4;
+                this.columnBANK_CD.MaxLength = 4;
+                this.columnOFFICE_CD.MaxLength = 3;
+                this.columnACCOUNT_HOLDER_KANA.MaxLength = 100;
+                this.columnACCOUNT_NUMBER.MaxLength = 7;
+                this.columnDELETE_FLG.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GADA_ADJUSTMENT_DETAILRow NewGADA_ADJUSTMENT_DETAILRow() {
+                return ((GADA_ADJUSTMENT_DETAILRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new GADA_ADJUSTMENT_DETAILRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(GADA_ADJUSTMENT_DETAILRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.GADA_ADJUSTMENT_DETAILRowChanged != null)) {
+                    this.GADA_ADJUSTMENT_DETAILRowChanged(this, new GADA_ADJUSTMENT_DETAILRowChangeEvent(((GADA_ADJUSTMENT_DETAILRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.GADA_ADJUSTMENT_DETAILRowChanging != null)) {
+                    this.GADA_ADJUSTMENT_DETAILRowChanging(this, new GADA_ADJUSTMENT_DETAILRowChangeEvent(((GADA_ADJUSTMENT_DETAILRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.GADA_ADJUSTMENT_DETAILRowDeleted != null)) {
+                    this.GADA_ADJUSTMENT_DETAILRowDeleted(this, new GADA_ADJUSTMENT_DETAILRowChangeEvent(((GADA_ADJUSTMENT_DETAILRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.GADA_ADJUSTMENT_DETAILRowDeleting != null)) {
+                    this.GADA_ADJUSTMENT_DETAILRowDeleting(this, new GADA_ADJUSTMENT_DETAILRowChangeEvent(((GADA_ADJUSTMENT_DETAILRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveGADA_ADJUSTMENT_DETAILRow(GADA_ADJUSTMENT_DETAILRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                JBADBDataSet ds = new JBADBDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "GADA_ADJUSTMENT_DETAILDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class GADA_ADJUSTMENTDataTable : global::System.Data.TypedTableBase<GADA_ADJUSTMENTRow> {
+            
+            private global::System.Data.DataColumn columnADJUST_NUMBER;
+            
+            private global::System.Data.DataColumn columnPUBLIC_FLG;
+            
+            private global::System.Data.DataColumn columnBUSINESS_CD;
+            
+            private global::System.Data.DataColumn columnBUSINESS_ITEM_NAME;
+            
+            private global::System.Data.DataColumn columnBILL_ID;
+            
+            private global::System.Data.DataColumn columnCLIENT_CD;
+            
+            private global::System.Data.DataColumn columnCLIENT_NAME;
+            
+            private global::System.Data.DataColumn columnTEMP_PAY_NUMBER;
+            
+            private global::System.Data.DataColumn columnADJUST_DATE;
+            
+            private global::System.Data.DataColumn columnADJUST_PAY_TYPE;
+            
+            private global::System.Data.DataColumn columnBANK_CD;
+            
+            private global::System.Data.DataColumn columnOFFICE_CD;
+            
+            private global::System.Data.DataColumn columnACCOUNT_TYPE;
+            
+            private global::System.Data.DataColumn columnACCOUNT_HOLDER_KANA;
+            
+            private global::System.Data.DataColumn columnACCOUNT_NUMBER;
+            
+            private global::System.Data.DataColumn columnREC_NUMBER;
+            
+            private global::System.Data.DataColumn columnMANUAL_UPDATE;
+            
+            private global::System.Data.DataColumn columnADMIN_NUMBER;
+            
+            private global::System.Data.DataColumn columnSYSTEM_UPDATE;
+            
+            private global::System.Data.DataColumn columnPCA_OUTPUT_DATE;
+            
+            private global::System.Data.DataColumn columnpayment_flg;
+            
+            private global::System.Data.DataColumn columnadjustment_row_cnt;
+            
+            private global::System.Data.DataColumn columnbank_name;
+            
+            private global::System.Data.DataColumn columnbranch_name;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GADA_ADJUSTMENTDataTable() {
+                this.TableName = "GADA_ADJUSTMENT";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal GADA_ADJUSTMENTDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected GADA_ADJUSTMENTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ADJUST_NUMBERColumn {
+                get {
+                    return this.columnADJUST_NUMBER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PUBLIC_FLGColumn {
+                get {
+                    return this.columnPUBLIC_FLG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BUSINESS_CDColumn {
+                get {
+                    return this.columnBUSINESS_CD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BUSINESS_ITEM_NAMEColumn {
+                get {
+                    return this.columnBUSINESS_ITEM_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BILL_IDColumn {
+                get {
+                    return this.columnBILL_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CLIENT_CDColumn {
+                get {
+                    return this.columnCLIENT_CD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CLIENT_NAMEColumn {
+                get {
+                    return this.columnCLIENT_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TEMP_PAY_NUMBERColumn {
+                get {
+                    return this.columnTEMP_PAY_NUMBER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ADJUST_DATEColumn {
+                get {
+                    return this.columnADJUST_DATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ADJUST_PAY_TYPEColumn {
+                get {
+                    return this.columnADJUST_PAY_TYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BANK_CDColumn {
+                get {
+                    return this.columnBANK_CD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn OFFICE_CDColumn {
+                get {
+                    return this.columnOFFICE_CD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ACCOUNT_TYPEColumn {
+                get {
+                    return this.columnACCOUNT_TYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ACCOUNT_HOLDER_KANAColumn {
+                get {
+                    return this.columnACCOUNT_HOLDER_KANA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ACCOUNT_NUMBERColumn {
+                get {
+                    return this.columnACCOUNT_NUMBER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn REC_NUMBERColumn {
+                get {
+                    return this.columnREC_NUMBER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MANUAL_UPDATEColumn {
+                get {
+                    return this.columnMANUAL_UPDATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ADMIN_NUMBERColumn {
+                get {
+                    return this.columnADMIN_NUMBER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SYSTEM_UPDATEColumn {
+                get {
+                    return this.columnSYSTEM_UPDATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PCA_OUTPUT_DATEColumn {
+                get {
+                    return this.columnPCA_OUTPUT_DATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn payment_flgColumn {
+                get {
+                    return this.columnpayment_flg;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn adjustment_row_cntColumn {
+                get {
+                    return this.columnadjustment_row_cnt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn bank_nameColumn {
+                get {
+                    return this.columnbank_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn branch_nameColumn {
+                get {
+                    return this.columnbranch_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GADA_ADJUSTMENTRow this[int index] {
+                get {
+                    return ((GADA_ADJUSTMENTRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event GADA_ADJUSTMENTRowChangeEventHandler GADA_ADJUSTMENTRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event GADA_ADJUSTMENTRowChangeEventHandler GADA_ADJUSTMENTRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event GADA_ADJUSTMENTRowChangeEventHandler GADA_ADJUSTMENTRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event GADA_ADJUSTMENTRowChangeEventHandler GADA_ADJUSTMENTRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddGADA_ADJUSTMENTRow(GADA_ADJUSTMENTRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GADA_ADJUSTMENTRow AddGADA_ADJUSTMENTRow(
+                        string ADJUST_NUMBER, 
+                        bool PUBLIC_FLG, 
+                        string BUSINESS_CD, 
+                        string BUSINESS_ITEM_NAME, 
+                        byte BILL_ID, 
+                        string CLIENT_CD, 
+                        string CLIENT_NAME, 
+                        string TEMP_PAY_NUMBER, 
+                        System.DateTime ADJUST_DATE, 
+                        byte ADJUST_PAY_TYPE, 
+                        string BANK_CD, 
+                        string OFFICE_CD, 
+                        byte ACCOUNT_TYPE, 
+                        string ACCOUNT_HOLDER_KANA, 
+                        string ACCOUNT_NUMBER, 
+                        byte REC_NUMBER, 
+                        System.DateTime MANUAL_UPDATE, 
+                        byte ADMIN_NUMBER, 
+                        System.DateTime SYSTEM_UPDATE, 
+                        System.DateTime PCA_OUTPUT_DATE, 
+                        int payment_flg, 
+                        int adjustment_row_cnt, 
+                        string bank_name, 
+                        string branch_name) {
+                GADA_ADJUSTMENTRow rowGADA_ADJUSTMENTRow = ((GADA_ADJUSTMENTRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ADJUST_NUMBER,
+                        PUBLIC_FLG,
+                        BUSINESS_CD,
+                        BUSINESS_ITEM_NAME,
+                        BILL_ID,
+                        CLIENT_CD,
+                        CLIENT_NAME,
+                        TEMP_PAY_NUMBER,
+                        ADJUST_DATE,
+                        ADJUST_PAY_TYPE,
+                        BANK_CD,
+                        OFFICE_CD,
+                        ACCOUNT_TYPE,
+                        ACCOUNT_HOLDER_KANA,
+                        ACCOUNT_NUMBER,
+                        REC_NUMBER,
+                        MANUAL_UPDATE,
+                        ADMIN_NUMBER,
+                        SYSTEM_UPDATE,
+                        PCA_OUTPUT_DATE,
+                        payment_flg,
+                        adjustment_row_cnt,
+                        bank_name,
+                        branch_name};
+                rowGADA_ADJUSTMENTRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGADA_ADJUSTMENTRow);
+                return rowGADA_ADJUSTMENTRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GADA_ADJUSTMENTRow FindByADJUST_NUMBER(string ADJUST_NUMBER) {
+                return ((GADA_ADJUSTMENTRow)(this.Rows.Find(new object[] {
+                            ADJUST_NUMBER})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                GADA_ADJUSTMENTDataTable cln = ((GADA_ADJUSTMENTDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new GADA_ADJUSTMENTDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnADJUST_NUMBER = base.Columns["ADJUST_NUMBER"];
+                this.columnPUBLIC_FLG = base.Columns["PUBLIC_FLG"];
+                this.columnBUSINESS_CD = base.Columns["BUSINESS_CD"];
+                this.columnBUSINESS_ITEM_NAME = base.Columns["BUSINESS_ITEM_NAME"];
+                this.columnBILL_ID = base.Columns["BILL_ID"];
+                this.columnCLIENT_CD = base.Columns["CLIENT_CD"];
+                this.columnCLIENT_NAME = base.Columns["CLIENT_NAME"];
+                this.columnTEMP_PAY_NUMBER = base.Columns["TEMP_PAY_NUMBER"];
+                this.columnADJUST_DATE = base.Columns["ADJUST_DATE"];
+                this.columnADJUST_PAY_TYPE = base.Columns["ADJUST_PAY_TYPE"];
+                this.columnBANK_CD = base.Columns["BANK_CD"];
+                this.columnOFFICE_CD = base.Columns["OFFICE_CD"];
+                this.columnACCOUNT_TYPE = base.Columns["ACCOUNT_TYPE"];
+                this.columnACCOUNT_HOLDER_KANA = base.Columns["ACCOUNT_HOLDER_KANA"];
+                this.columnACCOUNT_NUMBER = base.Columns["ACCOUNT_NUMBER"];
+                this.columnREC_NUMBER = base.Columns["REC_NUMBER"];
+                this.columnMANUAL_UPDATE = base.Columns["MANUAL_UPDATE"];
+                this.columnADMIN_NUMBER = base.Columns["ADMIN_NUMBER"];
+                this.columnSYSTEM_UPDATE = base.Columns["SYSTEM_UPDATE"];
+                this.columnPCA_OUTPUT_DATE = base.Columns["PCA_OUTPUT_DATE"];
+                this.columnpayment_flg = base.Columns["payment_flg"];
+                this.columnadjustment_row_cnt = base.Columns["adjustment_row_cnt"];
+                this.columnbank_name = base.Columns["bank_name"];
+                this.columnbranch_name = base.Columns["branch_name"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnADJUST_NUMBER = new global::System.Data.DataColumn("ADJUST_NUMBER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnADJUST_NUMBER);
+                this.columnPUBLIC_FLG = new global::System.Data.DataColumn("PUBLIC_FLG", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPUBLIC_FLG);
+                this.columnBUSINESS_CD = new global::System.Data.DataColumn("BUSINESS_CD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBUSINESS_CD);
+                this.columnBUSINESS_ITEM_NAME = new global::System.Data.DataColumn("BUSINESS_ITEM_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBUSINESS_ITEM_NAME);
+                this.columnBILL_ID = new global::System.Data.DataColumn("BILL_ID", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBILL_ID);
+                this.columnCLIENT_CD = new global::System.Data.DataColumn("CLIENT_CD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCLIENT_CD);
+                this.columnCLIENT_NAME = new global::System.Data.DataColumn("CLIENT_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCLIENT_NAME);
+                this.columnTEMP_PAY_NUMBER = new global::System.Data.DataColumn("TEMP_PAY_NUMBER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTEMP_PAY_NUMBER);
+                this.columnADJUST_DATE = new global::System.Data.DataColumn("ADJUST_DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnADJUST_DATE);
+                this.columnADJUST_PAY_TYPE = new global::System.Data.DataColumn("ADJUST_PAY_TYPE", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnADJUST_PAY_TYPE);
+                this.columnBANK_CD = new global::System.Data.DataColumn("BANK_CD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBANK_CD);
+                this.columnOFFICE_CD = new global::System.Data.DataColumn("OFFICE_CD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOFFICE_CD);
+                this.columnACCOUNT_TYPE = new global::System.Data.DataColumn("ACCOUNT_TYPE", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnACCOUNT_TYPE);
+                this.columnACCOUNT_HOLDER_KANA = new global::System.Data.DataColumn("ACCOUNT_HOLDER_KANA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnACCOUNT_HOLDER_KANA);
+                this.columnACCOUNT_NUMBER = new global::System.Data.DataColumn("ACCOUNT_NUMBER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnACCOUNT_NUMBER);
+                this.columnREC_NUMBER = new global::System.Data.DataColumn("REC_NUMBER", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREC_NUMBER);
+                this.columnMANUAL_UPDATE = new global::System.Data.DataColumn("MANUAL_UPDATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMANUAL_UPDATE);
+                this.columnADMIN_NUMBER = new global::System.Data.DataColumn("ADMIN_NUMBER", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnADMIN_NUMBER);
+                this.columnSYSTEM_UPDATE = new global::System.Data.DataColumn("SYSTEM_UPDATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSYSTEM_UPDATE);
+                this.columnPCA_OUTPUT_DATE = new global::System.Data.DataColumn("PCA_OUTPUT_DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPCA_OUTPUT_DATE);
+                this.columnpayment_flg = new global::System.Data.DataColumn("payment_flg", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpayment_flg);
+                this.columnadjustment_row_cnt = new global::System.Data.DataColumn("adjustment_row_cnt", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnadjustment_row_cnt);
+                this.columnbank_name = new global::System.Data.DataColumn("bank_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbank_name);
+                this.columnbranch_name = new global::System.Data.DataColumn("branch_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbranch_name);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnADJUST_NUMBER}, true));
+                this.columnADJUST_NUMBER.AllowDBNull = false;
+                this.columnADJUST_NUMBER.Unique = true;
+                this.columnADJUST_NUMBER.MaxLength = 12;
+                this.columnPUBLIC_FLG.AllowDBNull = false;
+                this.columnBUSINESS_CD.MaxLength = 4;
+                this.columnBUSINESS_ITEM_NAME.MaxLength = 100;
+                this.columnCLIENT_CD.MaxLength = 5;
+                this.columnCLIENT_NAME.AllowDBNull = false;
+                this.columnCLIENT_NAME.MaxLength = 100;
+                this.columnTEMP_PAY_NUMBER.MaxLength = 12;
+                this.columnBANK_CD.MaxLength = 4;
+                this.columnOFFICE_CD.MaxLength = 3;
+                this.columnACCOUNT_HOLDER_KANA.MaxLength = 100;
+                this.columnACCOUNT_NUMBER.MaxLength = 7;
+                this.columnpayment_flg.ReadOnly = true;
+                this.columnadjustment_row_cnt.ReadOnly = true;
+                this.columnbank_name.ReadOnly = true;
+                this.columnbank_name.MaxLength = 100;
+                this.columnbranch_name.ReadOnly = true;
+                this.columnbranch_name.MaxLength = 100;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GADA_ADJUSTMENTRow NewGADA_ADJUSTMENTRow() {
+                return ((GADA_ADJUSTMENTRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new GADA_ADJUSTMENTRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(GADA_ADJUSTMENTRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.GADA_ADJUSTMENTRowChanged != null)) {
+                    this.GADA_ADJUSTMENTRowChanged(this, new GADA_ADJUSTMENTRowChangeEvent(((GADA_ADJUSTMENTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.GADA_ADJUSTMENTRowChanging != null)) {
+                    this.GADA_ADJUSTMENTRowChanging(this, new GADA_ADJUSTMENTRowChangeEvent(((GADA_ADJUSTMENTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.GADA_ADJUSTMENTRowDeleted != null)) {
+                    this.GADA_ADJUSTMENTRowDeleted(this, new GADA_ADJUSTMENTRowChangeEvent(((GADA_ADJUSTMENTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.GADA_ADJUSTMENTRowDeleting != null)) {
+                    this.GADA_ADJUSTMENTRowDeleting(this, new GADA_ADJUSTMENTRowChangeEvent(((GADA_ADJUSTMENTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveGADA_ADJUSTMENTRow(GADA_ADJUSTMENTRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                JBADBDataSet ds = new JBADBDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "GADA_ADJUSTMENTDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class GAMA_BUSINESSRow : global::System.Data.DataRow {
@@ -6395,6 +7644,1166 @@ namespace JBA_BizSupport {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class GADA_ADJUSTMENT_DETAILRow : global::System.Data.DataRow {
+            
+            private GADA_ADJUSTMENT_DETAILDataTable tableGADA_ADJUSTMENT_DETAIL;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal GADA_ADJUSTMENT_DETAILRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableGADA_ADJUSTMENT_DETAIL = ((GADA_ADJUSTMENT_DETAILDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ADJUST_NUMBER {
+                get {
+                    return ((string)(this[this.tableGADA_ADJUSTMENT_DETAIL.ADJUST_NUMBERColumn]));
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.ADJUST_NUMBERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte LINE_NUMBER {
+                get {
+                    return ((byte)(this[this.tableGADA_ADJUSTMENT_DETAIL.LINE_NUMBERColumn]));
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.LINE_NUMBERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BUSINESS_CD {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT_DETAIL.BUSINESS_CDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'BUSINESS_CD\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.BUSINESS_CDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PAYMENT_CLIENT_CD {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_CLIENT_CDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'PAYMENT_CLIENT_CD\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_CLIENT_CDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PAYMENT_HIMOKU_CD {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_HIMOKU_CDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'PAYMENT_HIMOKU_CD\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_HIMOKU_CDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PAYMENT_OUTLINE {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_OUTLINEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'PAYMENT_OUTLINE\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_OUTLINEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int PAYMENT_PRICE {
+                get {
+                    try {
+                        return ((int)(this[this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_PRICEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'PAYMENT_PRICE\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_PRICEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DEPOSIT_HIMOKU_CD {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT_DETAIL.DEPOSIT_HIMOKU_CDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'DEPOSIT_HIMOKU_CD\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.DEPOSIT_HIMOKU_CDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int DEPOSIT_PRICE {
+                get {
+                    try {
+                        return ((int)(this[this.tableGADA_ADJUSTMENT_DETAIL.DEPOSIT_PRICEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'DEPOSIT_PRICE\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.DEPOSIT_PRICEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime PAYMENT_DAY {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_DAYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'PAYMENT_DAY\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_DAYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BANK_CD {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT_DETAIL.BANK_CDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'BANK_CD\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.BANK_CDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string OFFICE_CD {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT_DETAIL.OFFICE_CDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'OFFICE_CD\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.OFFICE_CDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte ACCOUNT_TYPE {
+                get {
+                    try {
+                        return ((byte)(this[this.tableGADA_ADJUSTMENT_DETAIL.ACCOUNT_TYPEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'ACCOUNT_TYPE\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.ACCOUNT_TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ACCOUNT_HOLDER_KANA {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT_DETAIL.ACCOUNT_HOLDER_KANAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'ACCOUNT_HOLDER_KANA\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.ACCOUNT_HOLDER_KANAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ACCOUNT_NUMBER {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT_DETAIL.ACCOUNT_NUMBERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'ACCOUNT_NUMBER\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.ACCOUNT_NUMBERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte REC_NUMBER {
+                get {
+                    try {
+                        return ((byte)(this[this.tableGADA_ADJUSTMENT_DETAIL.REC_NUMBERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'REC_NUMBER\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.REC_NUMBERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte DELETE_FLG {
+                get {
+                    return ((byte)(this[this.tableGADA_ADJUSTMENT_DETAIL.DELETE_FLGColumn]));
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.DELETE_FLGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime MANUAL_UPDATE {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableGADA_ADJUSTMENT_DETAIL.MANUAL_UPDATEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'MANUAL_UPDATE\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.MANUAL_UPDATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte ADMIN_NUMBER {
+                get {
+                    try {
+                        return ((byte)(this[this.tableGADA_ADJUSTMENT_DETAIL.ADMIN_NUMBERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'ADMIN_NUMBER\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.ADMIN_NUMBERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime SYSTEM_UPDATE {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableGADA_ADJUSTMENT_DETAIL.SYSTEM_UPDATEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT_DETAIL\' にある列 \'SYSTEM_UPDATE\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT_DETAIL.SYSTEM_UPDATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBUSINESS_CDNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.BUSINESS_CDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBUSINESS_CDNull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.BUSINESS_CDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPAYMENT_CLIENT_CDNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_CLIENT_CDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPAYMENT_CLIENT_CDNull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_CLIENT_CDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPAYMENT_HIMOKU_CDNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_HIMOKU_CDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPAYMENT_HIMOKU_CDNull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_HIMOKU_CDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPAYMENT_OUTLINENull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_OUTLINEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPAYMENT_OUTLINENull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_OUTLINEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPAYMENT_PRICENull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_PRICEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPAYMENT_PRICENull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_PRICEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDEPOSIT_HIMOKU_CDNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.DEPOSIT_HIMOKU_CDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDEPOSIT_HIMOKU_CDNull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.DEPOSIT_HIMOKU_CDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDEPOSIT_PRICENull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.DEPOSIT_PRICEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDEPOSIT_PRICENull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.DEPOSIT_PRICEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPAYMENT_DAYNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_DAYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPAYMENT_DAYNull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.PAYMENT_DAYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBANK_CDNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.BANK_CDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBANK_CDNull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.BANK_CDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsOFFICE_CDNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.OFFICE_CDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetOFFICE_CDNull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.OFFICE_CDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsACCOUNT_TYPENull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.ACCOUNT_TYPEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetACCOUNT_TYPENull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.ACCOUNT_TYPEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsACCOUNT_HOLDER_KANANull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.ACCOUNT_HOLDER_KANAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetACCOUNT_HOLDER_KANANull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.ACCOUNT_HOLDER_KANAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsACCOUNT_NUMBERNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.ACCOUNT_NUMBERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetACCOUNT_NUMBERNull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.ACCOUNT_NUMBERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsREC_NUMBERNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.REC_NUMBERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetREC_NUMBERNull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.REC_NUMBERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMANUAL_UPDATENull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.MANUAL_UPDATEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMANUAL_UPDATENull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.MANUAL_UPDATEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsADMIN_NUMBERNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.ADMIN_NUMBERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetADMIN_NUMBERNull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.ADMIN_NUMBERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSYSTEM_UPDATENull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT_DETAIL.SYSTEM_UPDATEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSYSTEM_UPDATENull() {
+                this[this.tableGADA_ADJUSTMENT_DETAIL.SYSTEM_UPDATEColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class GADA_ADJUSTMENTRow : global::System.Data.DataRow {
+            
+            private GADA_ADJUSTMENTDataTable tableGADA_ADJUSTMENT;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal GADA_ADJUSTMENTRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableGADA_ADJUSTMENT = ((GADA_ADJUSTMENTDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ADJUST_NUMBER {
+                get {
+                    return ((string)(this[this.tableGADA_ADJUSTMENT.ADJUST_NUMBERColumn]));
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.ADJUST_NUMBERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool PUBLIC_FLG {
+                get {
+                    return ((bool)(this[this.tableGADA_ADJUSTMENT.PUBLIC_FLGColumn]));
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.PUBLIC_FLGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BUSINESS_CD {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT.BUSINESS_CDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'BUSINESS_CD\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.BUSINESS_CDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BUSINESS_ITEM_NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT.BUSINESS_ITEM_NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'BUSINESS_ITEM_NAME\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.BUSINESS_ITEM_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte BILL_ID {
+                get {
+                    try {
+                        return ((byte)(this[this.tableGADA_ADJUSTMENT.BILL_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'BILL_ID\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.BILL_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CLIENT_CD {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT.CLIENT_CDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'CLIENT_CD\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.CLIENT_CDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CLIENT_NAME {
+                get {
+                    return ((string)(this[this.tableGADA_ADJUSTMENT.CLIENT_NAMEColumn]));
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.CLIENT_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TEMP_PAY_NUMBER {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT.TEMP_PAY_NUMBERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'TEMP_PAY_NUMBER\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.TEMP_PAY_NUMBERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime ADJUST_DATE {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableGADA_ADJUSTMENT.ADJUST_DATEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'ADJUST_DATE\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.ADJUST_DATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte ADJUST_PAY_TYPE {
+                get {
+                    try {
+                        return ((byte)(this[this.tableGADA_ADJUSTMENT.ADJUST_PAY_TYPEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'ADJUST_PAY_TYPE\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.ADJUST_PAY_TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BANK_CD {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT.BANK_CDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'BANK_CD\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.BANK_CDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string OFFICE_CD {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT.OFFICE_CDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'OFFICE_CD\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.OFFICE_CDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte ACCOUNT_TYPE {
+                get {
+                    try {
+                        return ((byte)(this[this.tableGADA_ADJUSTMENT.ACCOUNT_TYPEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'ACCOUNT_TYPE\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.ACCOUNT_TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ACCOUNT_HOLDER_KANA {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT.ACCOUNT_HOLDER_KANAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'ACCOUNT_HOLDER_KANA\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.ACCOUNT_HOLDER_KANAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ACCOUNT_NUMBER {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT.ACCOUNT_NUMBERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'ACCOUNT_NUMBER\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.ACCOUNT_NUMBERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte REC_NUMBER {
+                get {
+                    try {
+                        return ((byte)(this[this.tableGADA_ADJUSTMENT.REC_NUMBERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'REC_NUMBER\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.REC_NUMBERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime MANUAL_UPDATE {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableGADA_ADJUSTMENT.MANUAL_UPDATEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'MANUAL_UPDATE\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.MANUAL_UPDATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte ADMIN_NUMBER {
+                get {
+                    try {
+                        return ((byte)(this[this.tableGADA_ADJUSTMENT.ADMIN_NUMBERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'ADMIN_NUMBER\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.ADMIN_NUMBERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime SYSTEM_UPDATE {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableGADA_ADJUSTMENT.SYSTEM_UPDATEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'SYSTEM_UPDATE\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.SYSTEM_UPDATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime PCA_OUTPUT_DATE {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableGADA_ADJUSTMENT.PCA_OUTPUT_DATEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'PCA_OUTPUT_DATE\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.PCA_OUTPUT_DATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int payment_flg {
+                get {
+                    try {
+                        return ((int)(this[this.tableGADA_ADJUSTMENT.payment_flgColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'payment_flg\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.payment_flgColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int adjustment_row_cnt {
+                get {
+                    try {
+                        return ((int)(this[this.tableGADA_ADJUSTMENT.adjustment_row_cntColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'adjustment_row_cnt\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.adjustment_row_cntColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string bank_name {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT.bank_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'bank_name\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.bank_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string branch_name {
+                get {
+                    try {
+                        return ((string)(this[this.tableGADA_ADJUSTMENT.branch_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'GADA_ADJUSTMENT\' にある列 \'branch_name\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableGADA_ADJUSTMENT.branch_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBUSINESS_CDNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.BUSINESS_CDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBUSINESS_CDNull() {
+                this[this.tableGADA_ADJUSTMENT.BUSINESS_CDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBUSINESS_ITEM_NAMENull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.BUSINESS_ITEM_NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBUSINESS_ITEM_NAMENull() {
+                this[this.tableGADA_ADJUSTMENT.BUSINESS_ITEM_NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBILL_IDNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.BILL_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBILL_IDNull() {
+                this[this.tableGADA_ADJUSTMENT.BILL_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCLIENT_CDNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.CLIENT_CDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCLIENT_CDNull() {
+                this[this.tableGADA_ADJUSTMENT.CLIENT_CDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTEMP_PAY_NUMBERNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.TEMP_PAY_NUMBERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTEMP_PAY_NUMBERNull() {
+                this[this.tableGADA_ADJUSTMENT.TEMP_PAY_NUMBERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsADJUST_DATENull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.ADJUST_DATEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetADJUST_DATENull() {
+                this[this.tableGADA_ADJUSTMENT.ADJUST_DATEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsADJUST_PAY_TYPENull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.ADJUST_PAY_TYPEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetADJUST_PAY_TYPENull() {
+                this[this.tableGADA_ADJUSTMENT.ADJUST_PAY_TYPEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBANK_CDNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.BANK_CDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBANK_CDNull() {
+                this[this.tableGADA_ADJUSTMENT.BANK_CDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsOFFICE_CDNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.OFFICE_CDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetOFFICE_CDNull() {
+                this[this.tableGADA_ADJUSTMENT.OFFICE_CDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsACCOUNT_TYPENull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.ACCOUNT_TYPEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetACCOUNT_TYPENull() {
+                this[this.tableGADA_ADJUSTMENT.ACCOUNT_TYPEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsACCOUNT_HOLDER_KANANull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.ACCOUNT_HOLDER_KANAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetACCOUNT_HOLDER_KANANull() {
+                this[this.tableGADA_ADJUSTMENT.ACCOUNT_HOLDER_KANAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsACCOUNT_NUMBERNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.ACCOUNT_NUMBERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetACCOUNT_NUMBERNull() {
+                this[this.tableGADA_ADJUSTMENT.ACCOUNT_NUMBERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsREC_NUMBERNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.REC_NUMBERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetREC_NUMBERNull() {
+                this[this.tableGADA_ADJUSTMENT.REC_NUMBERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMANUAL_UPDATENull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.MANUAL_UPDATEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMANUAL_UPDATENull() {
+                this[this.tableGADA_ADJUSTMENT.MANUAL_UPDATEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsADMIN_NUMBERNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.ADMIN_NUMBERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetADMIN_NUMBERNull() {
+                this[this.tableGADA_ADJUSTMENT.ADMIN_NUMBERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSYSTEM_UPDATENull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.SYSTEM_UPDATEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSYSTEM_UPDATENull() {
+                this[this.tableGADA_ADJUSTMENT.SYSTEM_UPDATEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPCA_OUTPUT_DATENull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.PCA_OUTPUT_DATEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPCA_OUTPUT_DATENull() {
+                this[this.tableGADA_ADJUSTMENT.PCA_OUTPUT_DATEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ispayment_flgNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.payment_flgColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setpayment_flgNull() {
+                this[this.tableGADA_ADJUSTMENT.payment_flgColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isadjustment_row_cntNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.adjustment_row_cntColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setadjustment_row_cntNull() {
+                this[this.tableGADA_ADJUSTMENT.adjustment_row_cntColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isbank_nameNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.bank_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setbank_nameNull() {
+                this[this.tableGADA_ADJUSTMENT.bank_nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isbranch_nameNull() {
+                return this.IsNull(this.tableGADA_ADJUSTMENT.branch_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setbranch_nameNull() {
+                this[this.tableGADA_ADJUSTMENT.branch_nameColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -6686,6 +9095,74 @@ namespace JBA_BizSupport {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PCA_DATA_DETAILRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class GADA_ADJUSTMENT_DETAILRowChangeEvent : global::System.EventArgs {
+            
+            private GADA_ADJUSTMENT_DETAILRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GADA_ADJUSTMENT_DETAILRowChangeEvent(GADA_ADJUSTMENT_DETAILRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GADA_ADJUSTMENT_DETAILRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class GADA_ADJUSTMENTRowChangeEvent : global::System.EventArgs {
+            
+            private GADA_ADJUSTMENTRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GADA_ADJUSTMENTRowChangeEvent(GADA_ADJUSTMENTRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GADA_ADJUSTMENTRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -9356,164 +11833,406 @@ WHERE                       (COALESCE (BANK_OR_OFFICE_NAME, NULL) LIKE '%' + @Br
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[11];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT     GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_PERSON_NAME, GADA" +
-                "_TEMP_PAY.BUSINESS_CD, \r\n           GADA_TEMP_PAY.TEMP_PAY_PURPOSE, GADA_TEMP_PA" +
-                "Y.CLIENT_CD, GADA_TEMP_PAY.TEMP_PAY_PRICE, \r\n           GADA_TEMP_PAY.TEMP_PAY_D" +
-                "AY, GADA_TEMP_PAY.TEMP_PAY_TYPE, GADA_TEMP_PAY.PROGRESS_STATUS_CD, \r\n           " +
-                "GADA_TEMP_PAY.TEMP_PAY_OUTPUT_DANDT, GADA_TEMP_PAY.TEMP_PAY_ADMIN_NUMBER, \r\n    " +
-                "       GADA_TEMP_PAY.PCA_FILE_OUTPUT_DANDT, GADA_TEMP_PAY.PCA_FILE_ADMIN_NUMBER," +
-                " \r\n           GADA_TEMP_PAY.TEMP_PAY_OUTLINE, GADA_TEMP_PAY.BANK_CD, GADA_TEMP_P" +
-                "AY.OFFICE_CD, \r\n           GADA_TEMP_PAY.ACCOUNT_TYPE, GADA_TEMP_PAY.ACCOUNT_HOL" +
-                "DER_KANA, \r\n           GADA_TEMP_PAY.ACCOUNT_NUMBER, GADA_TEMP_PAY.REC_NUMBER, G" +
-                "ADA_TEMP_PAY.DELETE_FLG, \r\n           GADA_TEMP_PAY.MANUAL_UPDATE, GADA_TEMP_PAY" +
-                ".ADMIN_NUMBER, GADA_TEMP_PAY.SYSTEM_UPDATE, \r\n           GAMA_BUSINESS.BUSINESS_" +
-                "NAME, GAMA_CLIENT.CLIENT_NAME, GAMA_BUSINESS.BILL_ID,\r\n\t       COALESCE((SELECT " +
-                "GAMA_BANK.BANK_OR_OFFICE_NAME \r\n\t\t\t\t\tFROM GAMA_BANK \r\n\t\t\t\t\tWHERE GADA_TEMP_PAY.B" +
-                "ANK_CD = GAMA_BANK.BANK_CD \r\n\t\t\t\t\tAND GAMA_BANK.OFFICE_FLG = 1 \r\n\t\t\t\t\tAND GAMA_B" +
-                "ANK.DELETE_FLG = 0)\r\n\t\t\t\t\t, NULL) AS bank_name,\r\n\t\t   COALESCE((SELECT GAMA_BANK" +
-                ".BANK_OR_OFFICE_NAME \r\n\t\t\t\t\tFROM GAMA_BANK \r\n\t\t\t\t\tWHERE GADA_TEMP_PAY.BANK_CD = " +
-                "GAMA_BANK.BANK_CD \r\n\t\t\t\t\tAND GADA_TEMP_PAY.OFFICE_CD = GAMA_BANK.OFFICE_CD\r\n\t\t\t\t" +
-                "\tAND GAMA_BANK.OFFICE_FLG = 2 \r\n\t\t\t\t\tAND GAMA_BANK.DELETE_FLG = 0)\r\n\t\t\t\t\t, NULL)" +
-                " AS branch_name\r\nFROM       GADA_TEMP_PAY LEFT OUTER JOIN\r\n           GAMA_BUSIN" +
-                "ESS ON GADA_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN\r\n  " +
-                "         GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CLIENT_CD\r\nWHERE  " +
-                "    (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BUSINESS.DELETE_FLG = 0) AND (GAMA_" +
-                "CLIENT.DELETE_FLG = 0) \r\nORDER BY TEMP_PAY_NUMBER\r\n";
+            this._commandCollection[0].CommandText = "SELECT                      GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_" +
+                "PERSON_NAME, GADA_TEMP_PAY.BUSINESS_CD, \r\n                                      " +
+                "GADA_TEMP_PAY.TEMP_PAY_PURPOSE, GADA_TEMP_PAY.CLIENT_CD, GADA_TEMP_PAY.TEMP_PAY_" +
+                "PRICE, \r\n                                      GADA_TEMP_PAY.TEMP_PAY_DAY, GADA_" +
+                "TEMP_PAY.TEMP_PAY_TYPE, GADA_TEMP_PAY.PROGRESS_STATUS_CD, \r\n                    " +
+                "                  GADA_TEMP_PAY.TEMP_PAY_OUTPUT_DANDT, GADA_TEMP_PAY.TEMP_PAY_AD" +
+                "MIN_NUMBER, \r\n                                      GADA_TEMP_PAY.PCA_FILE_OUTPU" +
+                "T_DANDT, GADA_TEMP_PAY.PCA_FILE_ADMIN_NUMBER, \r\n                                " +
+                "      GADA_TEMP_PAY.TEMP_PAY_OUTLINE, GADA_TEMP_PAY.BANK_CD, GADA_TEMP_PAY.OFFIC" +
+                "E_CD, \r\n                                      GADA_TEMP_PAY.ACCOUNT_TYPE, GADA_T" +
+                "EMP_PAY.ACCOUNT_HOLDER_KANA, \r\n                                      GADA_TEMP_P" +
+                "AY.ACCOUNT_NUMBER, GADA_TEMP_PAY.REC_NUMBER, GADA_TEMP_PAY.DELETE_FLG, \r\n       " +
+                "                               GADA_TEMP_PAY.MANUAL_UPDATE, GADA_TEMP_PAY.ADMIN_" +
+                "NUMBER, GADA_TEMP_PAY.SYSTEM_UPDATE, \r\n                                      GAM" +
+                "A_BUSINESS.BUSINESS_NAME, GAMA_CLIENT.CLIENT_NAME, GAMA_BUSINESS.BILL_ID, COALES" +
+                "CE\r\n                                          ((SELECT                      BANK" +
+                "_OR_OFFICE_NAME\r\n                                                  FROM         " +
+                "                GAMA_BANK\r\n                                                  WHE" +
+                "RE                       (GADA_TEMP_PAY.BANK_CD = BANK_CD) AND (OFFICE_FLG = 1) " +
+                "AND (DELETE_FLG = 0)), NULL)\r\n                                       AS bank_nam" +
+                "e, COALESCE\r\n                                          ((SELECT                 " +
+                "     BANK_OR_OFFICE_NAME\r\n                                                  FROM" +
+                "                         GAMA_BANK AS GAMA_BANK_1\r\n                             " +
+                "                     WHERE                       (GADA_TEMP_PAY.BANK_CD = BANK_C" +
+                "D) AND (GADA_TEMP_PAY.OFFICE_CD = OFFICE_CD) \r\n                                 " +
+                "                                                       AND (OFFICE_FLG = 2) AND " +
+                "(DELETE_FLG = 0)), NULL) AS branch_name\r\nFROM                         GADA_TEMP_" +
+                "PAY LEFT OUTER JOIN\r\n                                      GAMA_BUSINESS ON GADA" +
+                "_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN\r\n             " +
+                "                         GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CL" +
+                "IENT_CD\r\nWHERE                       (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BU" +
+                "SINESS.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FLG = 0) \r\n                      " +
+                "                AND (GADA_TEMP_PAY.TEMP_PAY_PURPOSE LIKE \'%\' + @TmpPayPurpose + " +
+                "\'%\')\r\nORDER BY               GADA_TEMP_PAY.TEMP_PAY_NUMBER";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TmpPayPurpose", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "TEMP_PAY_PURPOSE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT     GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_PERSON_NAME, GADA" +
-                "_TEMP_PAY.BUSINESS_CD, \r\n           GADA_TEMP_PAY.TEMP_PAY_PURPOSE, GADA_TEMP_PA" +
-                "Y.CLIENT_CD, GADA_TEMP_PAY.TEMP_PAY_PRICE, \r\n           GADA_TEMP_PAY.TEMP_PAY_D" +
-                "AY, GADA_TEMP_PAY.TEMP_PAY_TYPE, GADA_TEMP_PAY.PROGRESS_STATUS_CD, \r\n           " +
-                "GADA_TEMP_PAY.TEMP_PAY_OUTPUT_DANDT, GADA_TEMP_PAY.TEMP_PAY_ADMIN_NUMBER, \r\n    " +
-                "       GADA_TEMP_PAY.PCA_FILE_OUTPUT_DANDT, GADA_TEMP_PAY.PCA_FILE_ADMIN_NUMBER," +
-                " \r\n           GADA_TEMP_PAY.TEMP_PAY_OUTLINE, GADA_TEMP_PAY.BANK_CD, GADA_TEMP_P" +
-                "AY.OFFICE_CD, \r\n           GADA_TEMP_PAY.ACCOUNT_TYPE, GADA_TEMP_PAY.ACCOUNT_HOL" +
-                "DER_KANA, \r\n           GADA_TEMP_PAY.ACCOUNT_NUMBER, GADA_TEMP_PAY.REC_NUMBER, G" +
-                "ADA_TEMP_PAY.DELETE_FLG, \r\n           GADA_TEMP_PAY.MANUAL_UPDATE, GADA_TEMP_PAY" +
-                ".ADMIN_NUMBER, GADA_TEMP_PAY.SYSTEM_UPDATE, \r\n           GAMA_BUSINESS.BUSINESS_" +
-                "NAME, GAMA_CLIENT.CLIENT_NAME, GAMA_BUSINESS.BILL_ID,\r\n\t       COALESCE((SELECT " +
-                "GAMA_BANK.BANK_OR_OFFICE_NAME \r\n\t\t\t\t\tFROM GAMA_BANK \r\n\t\t\t\t\tWHERE GADA_TEMP_PAY.B" +
-                "ANK_CD = GAMA_BANK.BANK_CD \r\n\t\t\t\t\tAND GAMA_BANK.OFFICE_FLG = 1 \r\n\t\t\t\t\tAND GAMA_B" +
-                "ANK.DELETE_FLG = 0)\r\n\t\t\t\t\t, NULL) AS bank_name,\r\n\t\t   COALESCE((SELECT GAMA_BANK" +
-                ".BANK_OR_OFFICE_NAME \r\n\t\t\t\t\tFROM GAMA_BANK \r\n\t\t\t\t\tWHERE GADA_TEMP_PAY.BANK_CD = " +
-                "GAMA_BANK.BANK_CD \r\n\t\t\t\t\tAND GADA_TEMP_PAY.OFFICE_CD = GAMA_BANK.OFFICE_CD\r\n\t\t\t\t" +
-                "\tAND GAMA_BANK.OFFICE_FLG = 2 \r\n\t\t\t\t\tAND GAMA_BANK.DELETE_FLG = 0)\r\n\t\t\t\t\t, NULL)" +
-                " AS branch_name\r\nFROM       GADA_TEMP_PAY LEFT OUTER JOIN\r\n           GAMA_BUSIN" +
-                "ESS ON GADA_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN\r\n  " +
-                "         GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CLIENT_CD\r\nWHERE  " +
-                "    (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BUSINESS.DELETE_FLG = 0) AND (GAMA_" +
-                "CLIENT.DELETE_FLG = 0) \r\n\t\t   AND (COALESCE(GADA_TEMP_PAY.TEMP_PAY_PURPOSE,NULL)" +
-                " LIKE \'%\' + @TmpPayPurpose + \'%\') AND (GADA_TEMP_PAY.TEMP_PAY_TYPE = 1)\r\nORDER B" +
-                "Y TEMP_PAY_NUMBER\r\n";
+            this._commandCollection[1].CommandText = "SELECT                      GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_" +
+                "PERSON_NAME, GADA_TEMP_PAY.BUSINESS_CD, \r\n                                      " +
+                "GADA_TEMP_PAY.TEMP_PAY_PURPOSE, GADA_TEMP_PAY.CLIENT_CD, GADA_TEMP_PAY.TEMP_PAY_" +
+                "PRICE, \r\n                                      GADA_TEMP_PAY.TEMP_PAY_DAY, GADA_" +
+                "TEMP_PAY.TEMP_PAY_TYPE, GADA_TEMP_PAY.PROGRESS_STATUS_CD, \r\n                    " +
+                "                  GADA_TEMP_PAY.TEMP_PAY_OUTPUT_DANDT, GADA_TEMP_PAY.TEMP_PAY_AD" +
+                "MIN_NUMBER, \r\n                                      GADA_TEMP_PAY.PCA_FILE_OUTPU" +
+                "T_DANDT, GADA_TEMP_PAY.PCA_FILE_ADMIN_NUMBER, \r\n                                " +
+                "      GADA_TEMP_PAY.TEMP_PAY_OUTLINE, GADA_TEMP_PAY.BANK_CD, GADA_TEMP_PAY.OFFIC" +
+                "E_CD, \r\n                                      GADA_TEMP_PAY.ACCOUNT_TYPE, GADA_T" +
+                "EMP_PAY.ACCOUNT_HOLDER_KANA, \r\n                                      GADA_TEMP_P" +
+                "AY.ACCOUNT_NUMBER, GADA_TEMP_PAY.REC_NUMBER, GADA_TEMP_PAY.DELETE_FLG, \r\n       " +
+                "                               GADA_TEMP_PAY.MANUAL_UPDATE, GADA_TEMP_PAY.ADMIN_" +
+                "NUMBER, GADA_TEMP_PAY.SYSTEM_UPDATE, \r\n                                      GAM" +
+                "A_BUSINESS.BUSINESS_NAME, GAMA_CLIENT.CLIENT_NAME, GAMA_BUSINESS.BILL_ID, COALES" +
+                "CE\r\n                                          ((SELECT                      BANK" +
+                "_OR_OFFICE_NAME\r\n                                                  FROM         " +
+                "                GAMA_BANK\r\n                                                  WHE" +
+                "RE                       (GADA_TEMP_PAY.BANK_CD = BANK_CD) AND (OFFICE_FLG = 1) " +
+                "AND (DELETE_FLG = 0)), NULL)\r\n                                       AS bank_nam" +
+                "e, COALESCE\r\n                                          ((SELECT                 " +
+                "     BANK_OR_OFFICE_NAME\r\n                                                  FROM" +
+                "                         GAMA_BANK AS GAMA_BANK_1\r\n                             " +
+                "                     WHERE                       (GADA_TEMP_PAY.BANK_CD = BANK_C" +
+                "D) AND (GADA_TEMP_PAY.OFFICE_CD = OFFICE_CD) \r\n                                 " +
+                "                                                       AND (OFFICE_FLG = 2) AND " +
+                "(DELETE_FLG = 0)), NULL) AS branch_name\r\nFROM                         GADA_TEMP_" +
+                "PAY LEFT OUTER JOIN\r\n                                      GAMA_BUSINESS ON GADA" +
+                "_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN\r\n             " +
+                "                         GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CL" +
+                "IENT_CD\r\nWHERE                       (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BU" +
+                "SINESS.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FLG = 0)\r\nORDER BY               " +
+                "GADA_TEMP_PAY.TEMP_PAY_NUMBER";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TmpPayPurpose", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT     GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_PERSON_NAME, GADA" +
-                "_TEMP_PAY.BUSINESS_CD, \r\n           GADA_TEMP_PAY.TEMP_PAY_PURPOSE, GADA_TEMP_PA" +
-                "Y.CLIENT_CD, GADA_TEMP_PAY.TEMP_PAY_PRICE, \r\n           GADA_TEMP_PAY.TEMP_PAY_D" +
-                "AY, GADA_TEMP_PAY.TEMP_PAY_TYPE, GADA_TEMP_PAY.PROGRESS_STATUS_CD, \r\n           " +
-                "GADA_TEMP_PAY.TEMP_PAY_OUTPUT_DANDT, GADA_TEMP_PAY.TEMP_PAY_ADMIN_NUMBER, \r\n    " +
-                "       GADA_TEMP_PAY.PCA_FILE_OUTPUT_DANDT, GADA_TEMP_PAY.PCA_FILE_ADMIN_NUMBER," +
-                " \r\n           GADA_TEMP_PAY.TEMP_PAY_OUTLINE, GADA_TEMP_PAY.BANK_CD, GADA_TEMP_P" +
-                "AY.OFFICE_CD, \r\n           GADA_TEMP_PAY.ACCOUNT_TYPE, GADA_TEMP_PAY.ACCOUNT_HOL" +
-                "DER_KANA, \r\n           GADA_TEMP_PAY.ACCOUNT_NUMBER, GADA_TEMP_PAY.REC_NUMBER, G" +
-                "ADA_TEMP_PAY.DELETE_FLG, \r\n           GADA_TEMP_PAY.MANUAL_UPDATE, GADA_TEMP_PAY" +
-                ".ADMIN_NUMBER, GADA_TEMP_PAY.SYSTEM_UPDATE, \r\n           GAMA_BUSINESS.BUSINESS_" +
-                "NAME, GAMA_CLIENT.CLIENT_NAME, GAMA_BUSINESS.BILL_ID,\r\n\t       COALESCE((SELECT " +
-                "GAMA_BANK.BANK_OR_OFFICE_NAME \r\n\t\t\t\t\tFROM GAMA_BANK \r\n\t\t\t\t\tWHERE GADA_TEMP_PAY.B" +
-                "ANK_CD = GAMA_BANK.BANK_CD \r\n\t\t\t\t\tAND GAMA_BANK.OFFICE_FLG = 1 \r\n\t\t\t\t\tAND GAMA_B" +
-                "ANK.DELETE_FLG = 0)\r\n\t\t\t\t\t, NULL) AS bank_name,\r\n\t\t   COALESCE((SELECT GAMA_BANK" +
-                ".BANK_OR_OFFICE_NAME \r\n\t\t\t\t\tFROM GAMA_BANK \r\n\t\t\t\t\tWHERE GADA_TEMP_PAY.BANK_CD = " +
-                "GAMA_BANK.BANK_CD \r\n\t\t\t\t\tAND GADA_TEMP_PAY.OFFICE_CD = GAMA_BANK.OFFICE_CD\r\n\t\t\t\t" +
-                "\tAND GAMA_BANK.OFFICE_FLG = 2 \r\n\t\t\t\t\tAND GAMA_BANK.DELETE_FLG = 0)\r\n\t\t\t\t\t, NULL)" +
-                " AS branch_name\r\nFROM       GADA_TEMP_PAY LEFT OUTER JOIN\r\n           GAMA_BUSIN" +
-                "ESS ON GADA_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN\r\n  " +
-                "         GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CLIENT_CD\r\nWHERE  " +
-                "    (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BUSINESS.DELETE_FLG = 0) AND (GAMA_" +
-                "CLIENT.DELETE_FLG = 0) \r\n\t\t   AND (COALESCE(GADA_TEMP_PAY.TEMP_PAY_PURPOSE,NULL)" +
-                " LIKE \'%\' + @TmpPayPurpose + \'%\') AND (GADA_TEMP_PAY.TEMP_PAY_TYPE = 2)\r\nORDER B" +
-                "Y TEMP_PAY_NUMBER\r\n";
+            this._commandCollection[2].CommandText = "SELECT                      GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_" +
+                "PERSON_NAME, GADA_TEMP_PAY.BUSINESS_CD, \r\n                                      " +
+                "GADA_TEMP_PAY.TEMP_PAY_PURPOSE, GADA_TEMP_PAY.CLIENT_CD, GADA_TEMP_PAY.TEMP_PAY_" +
+                "PRICE, \r\n                                      GADA_TEMP_PAY.TEMP_PAY_DAY, GADA_" +
+                "TEMP_PAY.TEMP_PAY_TYPE, GADA_TEMP_PAY.PROGRESS_STATUS_CD, \r\n                    " +
+                "                  GADA_TEMP_PAY.TEMP_PAY_OUTPUT_DANDT, GADA_TEMP_PAY.TEMP_PAY_AD" +
+                "MIN_NUMBER, \r\n                                      GADA_TEMP_PAY.PCA_FILE_OUTPU" +
+                "T_DANDT, GADA_TEMP_PAY.PCA_FILE_ADMIN_NUMBER, \r\n                                " +
+                "      GADA_TEMP_PAY.TEMP_PAY_OUTLINE, GADA_TEMP_PAY.BANK_CD, GADA_TEMP_PAY.OFFIC" +
+                "E_CD, \r\n                                      GADA_TEMP_PAY.ACCOUNT_TYPE, GADA_T" +
+                "EMP_PAY.ACCOUNT_HOLDER_KANA, \r\n                                      GADA_TEMP_P" +
+                "AY.ACCOUNT_NUMBER, GADA_TEMP_PAY.REC_NUMBER, GADA_TEMP_PAY.DELETE_FLG, \r\n       " +
+                "                               GADA_TEMP_PAY.MANUAL_UPDATE, GADA_TEMP_PAY.ADMIN_" +
+                "NUMBER, GADA_TEMP_PAY.SYSTEM_UPDATE, \r\n                                      GAM" +
+                "A_BUSINESS.BUSINESS_NAME, GAMA_CLIENT.CLIENT_NAME, GAMA_BUSINESS.BILL_ID, COALES" +
+                "CE\r\n                                          ((SELECT                      BANK" +
+                "_OR_OFFICE_NAME\r\n                                                  FROM         " +
+                "                GAMA_BANK\r\n                                                  WHE" +
+                "RE                       (GADA_TEMP_PAY.BANK_CD = BANK_CD) AND (OFFICE_FLG = 1) " +
+                "AND (DELETE_FLG = 0)), NULL)\r\n                                       AS bank_nam" +
+                "e, COALESCE\r\n                                          ((SELECT                 " +
+                "     BANK_OR_OFFICE_NAME\r\n                                                  FROM" +
+                "                         GAMA_BANK AS GAMA_BANK_1\r\n                             " +
+                "                     WHERE                       (GADA_TEMP_PAY.BANK_CD = BANK_C" +
+                "D) AND (GADA_TEMP_PAY.OFFICE_CD = OFFICE_CD) \r\n                                 " +
+                "                                                       AND (OFFICE_FLG = 2) AND " +
+                "(DELETE_FLG = 0)), NULL) AS branch_name\r\nFROM                         GADA_TEMP_" +
+                "PAY LEFT OUTER JOIN\r\n                                      GAMA_BUSINESS ON GADA" +
+                "_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN\r\n             " +
+                "                         GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CL" +
+                "IENT_CD\r\nWHERE                       (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BU" +
+                "SINESS.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FLG = 0) \r\n                      " +
+                "                AND (GADA_TEMP_PAY.TEMP_PAY_PURPOSE LIKE \'%\' + @TmpPayPurpose + " +
+                "\'%\') AND \r\n                                      (GADA_TEMP_PAY.TEMP_PAY_TYPE = " +
+                "1)\r\nORDER BY               GADA_TEMP_PAY.TEMP_PAY_NUMBER";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TmpPayPurpose", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TmpPayPurpose", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "TEMP_PAY_PURPOSE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT     GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_PERSON_NAME, GADA" +
-                "_TEMP_PAY.BUSINESS_CD, \r\n           GADA_TEMP_PAY.TEMP_PAY_PURPOSE, GADA_TEMP_PA" +
-                "Y.CLIENT_CD, GADA_TEMP_PAY.TEMP_PAY_PRICE, \r\n           GADA_TEMP_PAY.TEMP_PAY_D" +
-                "AY, GADA_TEMP_PAY.TEMP_PAY_TYPE, GADA_TEMP_PAY.PROGRESS_STATUS_CD, \r\n           " +
-                "GADA_TEMP_PAY.TEMP_PAY_OUTPUT_DANDT, GADA_TEMP_PAY.TEMP_PAY_ADMIN_NUMBER, \r\n    " +
-                "       GADA_TEMP_PAY.PCA_FILE_OUTPUT_DANDT, GADA_TEMP_PAY.PCA_FILE_ADMIN_NUMBER," +
-                " \r\n           GADA_TEMP_PAY.TEMP_PAY_OUTLINE, GADA_TEMP_PAY.BANK_CD, GADA_TEMP_P" +
-                "AY.OFFICE_CD, \r\n           GADA_TEMP_PAY.ACCOUNT_TYPE, GADA_TEMP_PAY.ACCOUNT_HOL" +
-                "DER_KANA, \r\n           GADA_TEMP_PAY.ACCOUNT_NUMBER, GADA_TEMP_PAY.REC_NUMBER, G" +
-                "ADA_TEMP_PAY.DELETE_FLG, \r\n           GADA_TEMP_PAY.MANUAL_UPDATE, GADA_TEMP_PAY" +
-                ".ADMIN_NUMBER, GADA_TEMP_PAY.SYSTEM_UPDATE, \r\n           GAMA_BUSINESS.BUSINESS_" +
-                "NAME, GAMA_CLIENT.CLIENT_NAME, GAMA_BUSINESS.BILL_ID,\r\n\t       COALESCE((SELECT " +
-                "GAMA_BANK.BANK_OR_OFFICE_NAME \r\n\t\t\t\t\tFROM GAMA_BANK \r\n\t\t\t\t\tWHERE GADA_TEMP_PAY.B" +
-                "ANK_CD = GAMA_BANK.BANK_CD \r\n\t\t\t\t\tAND GAMA_BANK.OFFICE_FLG = 1 \r\n\t\t\t\t\tAND GAMA_B" +
-                "ANK.DELETE_FLG = 0)\r\n\t\t\t\t\t, NULL) AS bank_name,\r\n\t\t   COALESCE((SELECT GAMA_BANK" +
-                ".BANK_OR_OFFICE_NAME \r\n\t\t\t\t\tFROM GAMA_BANK \r\n\t\t\t\t\tWHERE GADA_TEMP_PAY.BANK_CD = " +
-                "GAMA_BANK.BANK_CD \r\n\t\t\t\t\tAND GADA_TEMP_PAY.OFFICE_CD = GAMA_BANK.OFFICE_CD\r\n\t\t\t\t" +
-                "\tAND GAMA_BANK.OFFICE_FLG = 2 \r\n\t\t\t\t\tAND GAMA_BANK.DELETE_FLG = 0)\r\n\t\t\t\t\t, NULL)" +
-                " AS branch_name\r\nFROM       GADA_TEMP_PAY LEFT OUTER JOIN\r\n           GAMA_BUSIN" +
-                "ESS ON GADA_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN\r\n  " +
-                "         GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CLIENT_CD\r\nWHERE  " +
-                "    (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BUSINESS.DELETE_FLG = 0) AND (GAMA_" +
-                "CLIENT.DELETE_FLG = 0) \r\n\t\t   AND (COALESCE(GADA_TEMP_PAY.TEMP_PAY_PURPOSE,NULL)" +
-                " LIKE \'%\' + @TmpPayPurpose + \'%\') AND (GADA_TEMP_PAY.PROGRESS_STATUS_CD = 20)\r\nO" +
-                "RDER BY TEMP_PAY_NUMBER\r\n";
+            this._commandCollection[3].CommandText = "SELECT                      GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_" +
+                "PERSON_NAME, GADA_TEMP_PAY.BUSINESS_CD, \r\n                                      " +
+                "GADA_TEMP_PAY.TEMP_PAY_PURPOSE, GADA_TEMP_PAY.CLIENT_CD, GADA_TEMP_PAY.TEMP_PAY_" +
+                "PRICE, \r\n                                      GADA_TEMP_PAY.TEMP_PAY_DAY, GADA_" +
+                "TEMP_PAY.TEMP_PAY_TYPE, GADA_TEMP_PAY.PROGRESS_STATUS_CD, \r\n                    " +
+                "                  GADA_TEMP_PAY.TEMP_PAY_OUTPUT_DANDT, GADA_TEMP_PAY.TEMP_PAY_AD" +
+                "MIN_NUMBER, \r\n                                      GADA_TEMP_PAY.PCA_FILE_OUTPU" +
+                "T_DANDT, GADA_TEMP_PAY.PCA_FILE_ADMIN_NUMBER, \r\n                                " +
+                "      GADA_TEMP_PAY.TEMP_PAY_OUTLINE, GADA_TEMP_PAY.BANK_CD, GADA_TEMP_PAY.OFFIC" +
+                "E_CD, \r\n                                      GADA_TEMP_PAY.ACCOUNT_TYPE, GADA_T" +
+                "EMP_PAY.ACCOUNT_HOLDER_KANA, \r\n                                      GADA_TEMP_P" +
+                "AY.ACCOUNT_NUMBER, GADA_TEMP_PAY.REC_NUMBER, GADA_TEMP_PAY.DELETE_FLG, \r\n       " +
+                "                               GADA_TEMP_PAY.MANUAL_UPDATE, GADA_TEMP_PAY.ADMIN_" +
+                "NUMBER, GADA_TEMP_PAY.SYSTEM_UPDATE, \r\n                                      GAM" +
+                "A_BUSINESS.BUSINESS_NAME, GAMA_CLIENT.CLIENT_NAME, GAMA_BUSINESS.BILL_ID, COALES" +
+                "CE\r\n                                          ((SELECT                      BANK" +
+                "_OR_OFFICE_NAME\r\n                                                  FROM         " +
+                "                GAMA_BANK\r\n                                                  WHE" +
+                "RE                       (GADA_TEMP_PAY.BANK_CD = BANK_CD) AND (OFFICE_FLG = 1) " +
+                "AND (DELETE_FLG = 0)), NULL)\r\n                                       AS bank_nam" +
+                "e, COALESCE\r\n                                          ((SELECT                 " +
+                "     BANK_OR_OFFICE_NAME\r\n                                                  FROM" +
+                "                         GAMA_BANK AS GAMA_BANK_1\r\n                             " +
+                "                     WHERE                       (GADA_TEMP_PAY.BANK_CD = BANK_C" +
+                "D) AND (GADA_TEMP_PAY.OFFICE_CD = OFFICE_CD) \r\n                                 " +
+                "                                                       AND (OFFICE_FLG = 2) AND " +
+                "(DELETE_FLG = 0)), NULL) AS branch_name\r\nFROM                         GADA_TEMP_" +
+                "PAY LEFT OUTER JOIN\r\n                                      GAMA_BUSINESS ON GADA" +
+                "_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN\r\n             " +
+                "                         GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CL" +
+                "IENT_CD\r\nWHERE                       (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BU" +
+                "SINESS.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FLG = 0) \r\n                      " +
+                "                AND (GADA_TEMP_PAY.TEMP_PAY_TYPE = 1)\r\nORDER BY               GA" +
+                "DA_TEMP_PAY.TEMP_PAY_NUMBER";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TmpPayPurpose", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT     GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_PERSON_NAME, GADA" +
-                "_TEMP_PAY.BUSINESS_CD, \r\n           GADA_TEMP_PAY.TEMP_PAY_PURPOSE, GADA_TEMP_PA" +
-                "Y.CLIENT_CD, GADA_TEMP_PAY.TEMP_PAY_PRICE, \r\n           GADA_TEMP_PAY.TEMP_PAY_D" +
-                "AY, GADA_TEMP_PAY.TEMP_PAY_TYPE, GADA_TEMP_PAY.PROGRESS_STATUS_CD, \r\n           " +
-                "GADA_TEMP_PAY.TEMP_PAY_OUTPUT_DANDT, GADA_TEMP_PAY.TEMP_PAY_ADMIN_NUMBER, \r\n    " +
-                "       GADA_TEMP_PAY.PCA_FILE_OUTPUT_DANDT, GADA_TEMP_PAY.PCA_FILE_ADMIN_NUMBER," +
-                " \r\n           GADA_TEMP_PAY.TEMP_PAY_OUTLINE, GADA_TEMP_PAY.BANK_CD, GADA_TEMP_P" +
-                "AY.OFFICE_CD, \r\n           GADA_TEMP_PAY.ACCOUNT_TYPE, GADA_TEMP_PAY.ACCOUNT_HOL" +
-                "DER_KANA, \r\n           GADA_TEMP_PAY.ACCOUNT_NUMBER, GADA_TEMP_PAY.REC_NUMBER, G" +
-                "ADA_TEMP_PAY.DELETE_FLG, \r\n           GADA_TEMP_PAY.MANUAL_UPDATE, GADA_TEMP_PAY" +
-                ".ADMIN_NUMBER, GADA_TEMP_PAY.SYSTEM_UPDATE, \r\n           GAMA_BUSINESS.BUSINESS_" +
-                "NAME, GAMA_CLIENT.CLIENT_NAME, GAMA_BUSINESS.BILL_ID,\r\n\t       COALESCE((SELECT " +
-                "GAMA_BANK.BANK_OR_OFFICE_NAME \r\n\t\t\t\t\tFROM GAMA_BANK \r\n\t\t\t\t\tWHERE GADA_TEMP_PAY.B" +
-                "ANK_CD = GAMA_BANK.BANK_CD \r\n\t\t\t\t\tAND GAMA_BANK.OFFICE_FLG = 1 \r\n\t\t\t\t\tAND GAMA_B" +
-                "ANK.DELETE_FLG = 0)\r\n\t\t\t\t\t, NULL) AS bank_name,\r\n\t\t   COALESCE((SELECT GAMA_BANK" +
-                ".BANK_OR_OFFICE_NAME \r\n\t\t\t\t\tFROM GAMA_BANK \r\n\t\t\t\t\tWHERE GADA_TEMP_PAY.BANK_CD = " +
-                "GAMA_BANK.BANK_CD \r\n\t\t\t\t\tAND GADA_TEMP_PAY.OFFICE_CD = GAMA_BANK.OFFICE_CD\r\n\t\t\t\t" +
-                "\tAND GAMA_BANK.OFFICE_FLG = 2 \r\n\t\t\t\t\tAND GAMA_BANK.DELETE_FLG = 0)\r\n\t\t\t\t\t, NULL)" +
-                " AS branch_name\r\nFROM       GADA_TEMP_PAY LEFT OUTER JOIN\r\n           GAMA_BUSIN" +
-                "ESS ON GADA_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN\r\n  " +
-                "         GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CLIENT_CD\r\nWHERE  " +
-                "    (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BUSINESS.DELETE_FLG = 0) AND (GAMA_" +
-                "CLIENT.DELETE_FLG = 0) \r\n\t\t   AND (COALESCE(GADA_TEMP_PAY.TEMP_PAY_PURPOSE,NULL)" +
-                " LIKE \'%\' + @TmpPayPurpose + \'%\') AND (GADA_TEMP_PAY.PROGRESS_STATUS_CD < 60)\r\nO" +
-                "RDER BY TEMP_PAY_NUMBER\r\n";
+            this._commandCollection[4].CommandText = "SELECT                      GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_" +
+                "PERSON_NAME, GADA_TEMP_PAY.BUSINESS_CD, \r\n                                      " +
+                "GADA_TEMP_PAY.TEMP_PAY_PURPOSE, GADA_TEMP_PAY.CLIENT_CD, GADA_TEMP_PAY.TEMP_PAY_" +
+                "PRICE, \r\n                                      GADA_TEMP_PAY.TEMP_PAY_DAY, GADA_" +
+                "TEMP_PAY.TEMP_PAY_TYPE, GADA_TEMP_PAY.PROGRESS_STATUS_CD, \r\n                    " +
+                "                  GADA_TEMP_PAY.TEMP_PAY_OUTPUT_DANDT, GADA_TEMP_PAY.TEMP_PAY_AD" +
+                "MIN_NUMBER, \r\n                                      GADA_TEMP_PAY.PCA_FILE_OUTPU" +
+                "T_DANDT, GADA_TEMP_PAY.PCA_FILE_ADMIN_NUMBER, \r\n                                " +
+                "      GADA_TEMP_PAY.TEMP_PAY_OUTLINE, GADA_TEMP_PAY.BANK_CD, GADA_TEMP_PAY.OFFIC" +
+                "E_CD, \r\n                                      GADA_TEMP_PAY.ACCOUNT_TYPE, GADA_T" +
+                "EMP_PAY.ACCOUNT_HOLDER_KANA, \r\n                                      GADA_TEMP_P" +
+                "AY.ACCOUNT_NUMBER, GADA_TEMP_PAY.REC_NUMBER, GADA_TEMP_PAY.DELETE_FLG, \r\n       " +
+                "                               GADA_TEMP_PAY.MANUAL_UPDATE, GADA_TEMP_PAY.ADMIN_" +
+                "NUMBER, GADA_TEMP_PAY.SYSTEM_UPDATE, \r\n                                      GAM" +
+                "A_BUSINESS.BUSINESS_NAME, GAMA_CLIENT.CLIENT_NAME, GAMA_BUSINESS.BILL_ID, COALES" +
+                "CE\r\n                                          ((SELECT                      BANK" +
+                "_OR_OFFICE_NAME\r\n                                                  FROM         " +
+                "                GAMA_BANK\r\n                                                  WHE" +
+                "RE                       (GADA_TEMP_PAY.BANK_CD = BANK_CD) AND (OFFICE_FLG = 1) " +
+                "AND (DELETE_FLG = 0)), NULL)\r\n                                       AS bank_nam" +
+                "e, COALESCE\r\n                                          ((SELECT                 " +
+                "     BANK_OR_OFFICE_NAME\r\n                                                  FROM" +
+                "                         GAMA_BANK AS GAMA_BANK_1\r\n                             " +
+                "                     WHERE                       (GADA_TEMP_PAY.BANK_CD = BANK_C" +
+                "D) AND (GADA_TEMP_PAY.OFFICE_CD = OFFICE_CD) \r\n                                 " +
+                "                                                       AND (OFFICE_FLG = 2) AND " +
+                "(DELETE_FLG = 0)), NULL) AS branch_name\r\nFROM                         GADA_TEMP_" +
+                "PAY LEFT OUTER JOIN\r\n                                      GAMA_BUSINESS ON GADA" +
+                "_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN\r\n             " +
+                "                         GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CL" +
+                "IENT_CD\r\nWHERE                       (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BU" +
+                "SINESS.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FLG = 0) \r\n                      " +
+                "                AND (GADA_TEMP_PAY.TEMP_PAY_PURPOSE LIKE \'%\' + @TmpPayPurpose + " +
+                "\'%\') AND \r\n                                      (GADA_TEMP_PAY.TEMP_PAY_TYPE = " +
+                "2)\r\nORDER BY               GADA_TEMP_PAY.TEMP_PAY_NUMBER";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TmpPayPurpose", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TmpPayPurpose", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "TEMP_PAY_PURPOSE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "SELECT     COUNT(TEMP_PAY_NUMBER)\r\nFROM      GADA_TEMP_PAY\r\nWHERE    SUBSTRING(TE" +
+            this._commandCollection[5].CommandText = "SELECT                      GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_" +
+                "PERSON_NAME, GADA_TEMP_PAY.BUSINESS_CD, \r\n                                      " +
+                "GADA_TEMP_PAY.TEMP_PAY_PURPOSE, GADA_TEMP_PAY.CLIENT_CD, GADA_TEMP_PAY.TEMP_PAY_" +
+                "PRICE, \r\n                                      GADA_TEMP_PAY.TEMP_PAY_DAY, GADA_" +
+                "TEMP_PAY.TEMP_PAY_TYPE, GADA_TEMP_PAY.PROGRESS_STATUS_CD, \r\n                    " +
+                "                  GADA_TEMP_PAY.TEMP_PAY_OUTPUT_DANDT, GADA_TEMP_PAY.TEMP_PAY_AD" +
+                "MIN_NUMBER, \r\n                                      GADA_TEMP_PAY.PCA_FILE_OUTPU" +
+                "T_DANDT, GADA_TEMP_PAY.PCA_FILE_ADMIN_NUMBER, \r\n                                " +
+                "      GADA_TEMP_PAY.TEMP_PAY_OUTLINE, GADA_TEMP_PAY.BANK_CD, GADA_TEMP_PAY.OFFIC" +
+                "E_CD, \r\n                                      GADA_TEMP_PAY.ACCOUNT_TYPE, GADA_T" +
+                "EMP_PAY.ACCOUNT_HOLDER_KANA, \r\n                                      GADA_TEMP_P" +
+                "AY.ACCOUNT_NUMBER, GADA_TEMP_PAY.REC_NUMBER, GADA_TEMP_PAY.DELETE_FLG, \r\n       " +
+                "                               GADA_TEMP_PAY.MANUAL_UPDATE, GADA_TEMP_PAY.ADMIN_" +
+                "NUMBER, GADA_TEMP_PAY.SYSTEM_UPDATE, \r\n                                      GAM" +
+                "A_BUSINESS.BUSINESS_NAME, GAMA_CLIENT.CLIENT_NAME, GAMA_BUSINESS.BILL_ID, COALES" +
+                "CE\r\n                                          ((SELECT                      BANK" +
+                "_OR_OFFICE_NAME\r\n                                                  FROM         " +
+                "                GAMA_BANK\r\n                                                  WHE" +
+                "RE                       (GADA_TEMP_PAY.BANK_CD = BANK_CD) AND (OFFICE_FLG = 1) " +
+                "AND (DELETE_FLG = 0)), NULL)\r\n                                       AS bank_nam" +
+                "e, COALESCE\r\n                                          ((SELECT                 " +
+                "     BANK_OR_OFFICE_NAME\r\n                                                  FROM" +
+                "                         GAMA_BANK AS GAMA_BANK_1\r\n                             " +
+                "                     WHERE                       (GADA_TEMP_PAY.BANK_CD = BANK_C" +
+                "D) AND (GADA_TEMP_PAY.OFFICE_CD = OFFICE_CD) \r\n                                 " +
+                "                                                       AND (OFFICE_FLG = 2) AND " +
+                "(DELETE_FLG = 0)), NULL) AS branch_name\r\nFROM                         GADA_TEMP_" +
+                "PAY LEFT OUTER JOIN\r\n                                      GAMA_BUSINESS ON GADA" +
+                "_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN\r\n             " +
+                "                         GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CL" +
+                "IENT_CD\r\nWHERE                       (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BU" +
+                "SINESS.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FLG = 0) \r\n                      " +
+                "                AND (GADA_TEMP_PAY.TEMP_PAY_TYPE = 2)\r\nORDER BY               GA" +
+                "DA_TEMP_PAY.TEMP_PAY_NUMBER";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].CommandText = "SELECT                      GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_" +
+                "PERSON_NAME, GADA_TEMP_PAY.BUSINESS_CD, \r\n                                      " +
+                "GADA_TEMP_PAY.TEMP_PAY_PURPOSE, GADA_TEMP_PAY.CLIENT_CD, GADA_TEMP_PAY.TEMP_PAY_" +
+                "PRICE, \r\n                                      GADA_TEMP_PAY.TEMP_PAY_DAY, GADA_" +
+                "TEMP_PAY.TEMP_PAY_TYPE, GADA_TEMP_PAY.PROGRESS_STATUS_CD, \r\n                    " +
+                "                  GADA_TEMP_PAY.TEMP_PAY_OUTPUT_DANDT, GADA_TEMP_PAY.TEMP_PAY_AD" +
+                "MIN_NUMBER, \r\n                                      GADA_TEMP_PAY.PCA_FILE_OUTPU" +
+                "T_DANDT, GADA_TEMP_PAY.PCA_FILE_ADMIN_NUMBER, \r\n                                " +
+                "      GADA_TEMP_PAY.TEMP_PAY_OUTLINE, GADA_TEMP_PAY.BANK_CD, GADA_TEMP_PAY.OFFIC" +
+                "E_CD, \r\n                                      GADA_TEMP_PAY.ACCOUNT_TYPE, GADA_T" +
+                "EMP_PAY.ACCOUNT_HOLDER_KANA, \r\n                                      GADA_TEMP_P" +
+                "AY.ACCOUNT_NUMBER, GADA_TEMP_PAY.REC_NUMBER, GADA_TEMP_PAY.DELETE_FLG, \r\n       " +
+                "                               GADA_TEMP_PAY.MANUAL_UPDATE, GADA_TEMP_PAY.ADMIN_" +
+                "NUMBER, GADA_TEMP_PAY.SYSTEM_UPDATE, \r\n                                      GAM" +
+                "A_BUSINESS.BUSINESS_NAME, GAMA_CLIENT.CLIENT_NAME, GAMA_BUSINESS.BILL_ID, COALES" +
+                "CE\r\n                                          ((SELECT                      BANK" +
+                "_OR_OFFICE_NAME\r\n                                                  FROM         " +
+                "                GAMA_BANK\r\n                                                  WHE" +
+                "RE                       (GADA_TEMP_PAY.BANK_CD = BANK_CD) AND (OFFICE_FLG = 1) " +
+                "AND (DELETE_FLG = 0)), NULL)\r\n                                       AS bank_nam" +
+                "e, COALESCE\r\n                                          ((SELECT                 " +
+                "     BANK_OR_OFFICE_NAME\r\n                                                  FROM" +
+                "                         GAMA_BANK AS GAMA_BANK_1\r\n                             " +
+                "                     WHERE                       (GADA_TEMP_PAY.BANK_CD = BANK_C" +
+                "D) AND (GADA_TEMP_PAY.OFFICE_CD = OFFICE_CD) \r\n                                 " +
+                "                                                       AND (OFFICE_FLG = 2) AND " +
+                "(DELETE_FLG = 0)), NULL) AS branch_name\r\nFROM                         GADA_TEMP_" +
+                "PAY LEFT OUTER JOIN\r\n                                      GAMA_BUSINESS ON GADA" +
+                "_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN\r\n             " +
+                "                         GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CL" +
+                "IENT_CD\r\nWHERE                       (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BU" +
+                "SINESS.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FLG = 0) \r\n                      " +
+                "                AND (GADA_TEMP_PAY.TEMP_PAY_PURPOSE LIKE \'%\' + @TmpPayPurpose + " +
+                "\'%\') AND \r\n                                      (GADA_TEMP_PAY.PROGRESS_STATUS_" +
+                "CD = 20)\r\nORDER BY               GADA_TEMP_PAY.TEMP_PAY_NUMBER";
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TmpPayPurpose", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "TEMP_PAY_PURPOSE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[7].Connection = this.Connection;
+            this._commandCollection[7].CommandText = "SELECT                      GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_" +
+                "PERSON_NAME, GADA_TEMP_PAY.BUSINESS_CD, \r\n                                      " +
+                "GADA_TEMP_PAY.TEMP_PAY_PURPOSE, GADA_TEMP_PAY.CLIENT_CD, GADA_TEMP_PAY.TEMP_PAY_" +
+                "PRICE, \r\n                                      GADA_TEMP_PAY.TEMP_PAY_DAY, GADA_" +
+                "TEMP_PAY.TEMP_PAY_TYPE, GADA_TEMP_PAY.PROGRESS_STATUS_CD, \r\n                    " +
+                "                  GADA_TEMP_PAY.TEMP_PAY_OUTPUT_DANDT, GADA_TEMP_PAY.TEMP_PAY_AD" +
+                "MIN_NUMBER, \r\n                                      GADA_TEMP_PAY.PCA_FILE_OUTPU" +
+                "T_DANDT, GADA_TEMP_PAY.PCA_FILE_ADMIN_NUMBER, \r\n                                " +
+                "      GADA_TEMP_PAY.TEMP_PAY_OUTLINE, GADA_TEMP_PAY.BANK_CD, GADA_TEMP_PAY.OFFIC" +
+                "E_CD, \r\n                                      GADA_TEMP_PAY.ACCOUNT_TYPE, GADA_T" +
+                "EMP_PAY.ACCOUNT_HOLDER_KANA, \r\n                                      GADA_TEMP_P" +
+                "AY.ACCOUNT_NUMBER, GADA_TEMP_PAY.REC_NUMBER, GADA_TEMP_PAY.DELETE_FLG, \r\n       " +
+                "                               GADA_TEMP_PAY.MANUAL_UPDATE, GADA_TEMP_PAY.ADMIN_" +
+                "NUMBER, GADA_TEMP_PAY.SYSTEM_UPDATE, \r\n                                      GAM" +
+                "A_BUSINESS.BUSINESS_NAME, GAMA_CLIENT.CLIENT_NAME, GAMA_BUSINESS.BILL_ID, COALES" +
+                "CE\r\n                                          ((SELECT                      BANK" +
+                "_OR_OFFICE_NAME\r\n                                                  FROM         " +
+                "                GAMA_BANK\r\n                                                  WHE" +
+                "RE                       (GADA_TEMP_PAY.BANK_CD = BANK_CD) AND (OFFICE_FLG = 1) " +
+                "AND (DELETE_FLG = 0)), NULL)\r\n                                       AS bank_nam" +
+                "e, COALESCE\r\n                                          ((SELECT                 " +
+                "     BANK_OR_OFFICE_NAME\r\n                                                  FROM" +
+                "                         GAMA_BANK AS GAMA_BANK_1\r\n                             " +
+                "                     WHERE                       (GADA_TEMP_PAY.BANK_CD = BANK_C" +
+                "D) AND (GADA_TEMP_PAY.OFFICE_CD = OFFICE_CD) \r\n                                 " +
+                "                                                       AND (OFFICE_FLG = 2) AND " +
+                "(DELETE_FLG = 0)), NULL) AS branch_name\r\nFROM                         GADA_TEMP_" +
+                "PAY LEFT OUTER JOIN\r\n                                      GAMA_BUSINESS ON GADA" +
+                "_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN\r\n             " +
+                "                         GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CL" +
+                "IENT_CD\r\nWHERE                       (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BU" +
+                "SINESS.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FLG = 0) \r\n                      " +
+                "                AND (GADA_TEMP_PAY.PROGRESS_STATUS_CD = 20)\r\nORDER BY           " +
+                "    GADA_TEMP_PAY.TEMP_PAY_NUMBER";
+            this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[8].Connection = this.Connection;
+            this._commandCollection[8].CommandText = "SELECT                      GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_" +
+                "PERSON_NAME, GADA_TEMP_PAY.BUSINESS_CD, \r\n                                      " +
+                "GADA_TEMP_PAY.TEMP_PAY_PURPOSE, GADA_TEMP_PAY.CLIENT_CD, GADA_TEMP_PAY.TEMP_PAY_" +
+                "PRICE, \r\n                                      GADA_TEMP_PAY.TEMP_PAY_DAY, GADA_" +
+                "TEMP_PAY.TEMP_PAY_TYPE, GADA_TEMP_PAY.PROGRESS_STATUS_CD, \r\n                    " +
+                "                  GADA_TEMP_PAY.TEMP_PAY_OUTPUT_DANDT, GADA_TEMP_PAY.TEMP_PAY_AD" +
+                "MIN_NUMBER, \r\n                                      GADA_TEMP_PAY.PCA_FILE_OUTPU" +
+                "T_DANDT, GADA_TEMP_PAY.PCA_FILE_ADMIN_NUMBER, \r\n                                " +
+                "      GADA_TEMP_PAY.TEMP_PAY_OUTLINE, GADA_TEMP_PAY.BANK_CD, GADA_TEMP_PAY.OFFIC" +
+                "E_CD, \r\n                                      GADA_TEMP_PAY.ACCOUNT_TYPE, GADA_T" +
+                "EMP_PAY.ACCOUNT_HOLDER_KANA, \r\n                                      GADA_TEMP_P" +
+                "AY.ACCOUNT_NUMBER, GADA_TEMP_PAY.REC_NUMBER, GADA_TEMP_PAY.DELETE_FLG, \r\n       " +
+                "                               GADA_TEMP_PAY.MANUAL_UPDATE, GADA_TEMP_PAY.ADMIN_" +
+                "NUMBER, GADA_TEMP_PAY.SYSTEM_UPDATE, \r\n                                      GAM" +
+                "A_BUSINESS.BUSINESS_NAME, GAMA_CLIENT.CLIENT_NAME, GAMA_BUSINESS.BILL_ID, COALES" +
+                "CE\r\n                                          ((SELECT                      BANK" +
+                "_OR_OFFICE_NAME\r\n                                                  FROM         " +
+                "                GAMA_BANK\r\n                                                  WHE" +
+                "RE                       (GADA_TEMP_PAY.BANK_CD = BANK_CD) AND (OFFICE_FLG = 1) " +
+                "AND (DELETE_FLG = 0)), NULL)\r\n                                       AS bank_nam" +
+                "e, COALESCE\r\n                                          ((SELECT                 " +
+                "     BANK_OR_OFFICE_NAME\r\n                                                  FROM" +
+                "                         GAMA_BANK AS GAMA_BANK_1\r\n                             " +
+                "                     WHERE                       (GADA_TEMP_PAY.BANK_CD = BANK_C" +
+                "D) AND (GADA_TEMP_PAY.OFFICE_CD = OFFICE_CD) \r\n                                 " +
+                "                                                       AND (OFFICE_FLG = 2) AND " +
+                "(DELETE_FLG = 0)), NULL) AS branch_name\r\nFROM                         GADA_TEMP_" +
+                "PAY LEFT OUTER JOIN\r\n                                      GAMA_BUSINESS ON GADA" +
+                "_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN\r\n             " +
+                "                         GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CL" +
+                "IENT_CD\r\nWHERE                       (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BU" +
+                "SINESS.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FLG = 0) \r\n                      " +
+                "                AND (GADA_TEMP_PAY.TEMP_PAY_PURPOSE LIKE \'%\' + @TmpPayPurpose + " +
+                "\'%\') AND \r\n                                      (GADA_TEMP_PAY.PROGRESS_STATUS_" +
+                "CD < 60)\r\nORDER BY               GADA_TEMP_PAY.TEMP_PAY_NUMBER";
+            this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TmpPayPurpose", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "TEMP_PAY_PURPOSE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[9].Connection = this.Connection;
+            this._commandCollection[9].CommandText = "SELECT                      GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_" +
+                "PERSON_NAME, GADA_TEMP_PAY.BUSINESS_CD, \r\n                                      " +
+                "GADA_TEMP_PAY.TEMP_PAY_PURPOSE, GADA_TEMP_PAY.CLIENT_CD, GADA_TEMP_PAY.TEMP_PAY_" +
+                "PRICE, \r\n                                      GADA_TEMP_PAY.TEMP_PAY_DAY, GADA_" +
+                "TEMP_PAY.TEMP_PAY_TYPE, GADA_TEMP_PAY.PROGRESS_STATUS_CD, \r\n                    " +
+                "                  GADA_TEMP_PAY.TEMP_PAY_OUTPUT_DANDT, GADA_TEMP_PAY.TEMP_PAY_AD" +
+                "MIN_NUMBER, \r\n                                      GADA_TEMP_PAY.PCA_FILE_OUTPU" +
+                "T_DANDT, GADA_TEMP_PAY.PCA_FILE_ADMIN_NUMBER, \r\n                                " +
+                "      GADA_TEMP_PAY.TEMP_PAY_OUTLINE, GADA_TEMP_PAY.BANK_CD, GADA_TEMP_PAY.OFFIC" +
+                "E_CD, \r\n                                      GADA_TEMP_PAY.ACCOUNT_TYPE, GADA_T" +
+                "EMP_PAY.ACCOUNT_HOLDER_KANA, \r\n                                      GADA_TEMP_P" +
+                "AY.ACCOUNT_NUMBER, GADA_TEMP_PAY.REC_NUMBER, GADA_TEMP_PAY.DELETE_FLG, \r\n       " +
+                "                               GADA_TEMP_PAY.MANUAL_UPDATE, GADA_TEMP_PAY.ADMIN_" +
+                "NUMBER, GADA_TEMP_PAY.SYSTEM_UPDATE, \r\n                                      GAM" +
+                "A_BUSINESS.BUSINESS_NAME, GAMA_CLIENT.CLIENT_NAME, GAMA_BUSINESS.BILL_ID, COALES" +
+                "CE\r\n                                          ((SELECT                      BANK" +
+                "_OR_OFFICE_NAME\r\n                                                  FROM         " +
+                "                GAMA_BANK\r\n                                                  WHE" +
+                "RE                       (GADA_TEMP_PAY.BANK_CD = BANK_CD) AND (OFFICE_FLG = 1) " +
+                "AND (DELETE_FLG = 0)), NULL)\r\n                                       AS bank_nam" +
+                "e, COALESCE\r\n                                          ((SELECT                 " +
+                "     BANK_OR_OFFICE_NAME\r\n                                                  FROM" +
+                "                         GAMA_BANK AS GAMA_BANK_1\r\n                             " +
+                "                     WHERE                       (GADA_TEMP_PAY.BANK_CD = BANK_C" +
+                "D) AND (GADA_TEMP_PAY.OFFICE_CD = OFFICE_CD) \r\n                                 " +
+                "                                                       AND (OFFICE_FLG = 2) AND " +
+                "(DELETE_FLG = 0)), NULL) AS branch_name\r\nFROM                         GADA_TEMP_" +
+                "PAY LEFT OUTER JOIN\r\n                                      GAMA_BUSINESS ON GADA" +
+                "_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN\r\n             " +
+                "                         GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CL" +
+                "IENT_CD\r\nWHERE                       (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BU" +
+                "SINESS.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FLG = 0) \r\n                      " +
+                "                AND (GADA_TEMP_PAY.PROGRESS_STATUS_CD < 60)\r\nORDER BY           " +
+                "    GADA_TEMP_PAY.TEMP_PAY_NUMBER";
+            this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[10] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[10].Connection = this.Connection;
+            this._commandCollection[10].CommandText = "SELECT     COUNT(TEMP_PAY_NUMBER)\r\nFROM      GADA_TEMP_PAY\r\nWHERE    SUBSTRING(TE" +
                 "MP_PAY_NUMBER, 3, 4) = YEAR(GETDATE())\r\n                         AND SUBSTRING(T" +
                 "EMP_PAY_NUMBER, 7, 2) = MONTH(GETDATE())\r\n                         AND DELETE_FL" +
                 "G = 0\r\n";
-            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[10].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(JBADBDataSet.GADA_TEMP_PAYDataTable dataTable) {
+        public virtual int Fill(JBADBDataSet.GADA_TEMP_PAYDataTable dataTable, string TmpPayPurpose) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((TmpPayPurpose == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(TmpPayPurpose));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -9525,8 +12244,14 @@ WHERE                       (COALESCE (BANK_OR_OFFICE_NAME, NULL) LIKE '%' + @Br
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual JBADBDataSet.GADA_TEMP_PAYDataTable GetData() {
+        public virtual JBADBDataSet.GADA_TEMP_PAYDataTable GetData(string TmpPayPurpose) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((TmpPayPurpose == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(TmpPayPurpose));
+            }
             JBADBDataSet.GADA_TEMP_PAYDataTable dataTable = new JBADBDataSet.GADA_TEMP_PAYDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -9536,14 +12261,40 @@ WHERE                       (COALESCE (BANK_OR_OFFICE_NAME, NULL) LIKE '%' + @Br
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByTmpPayCash(JBADBDataSet.GADA_TEMP_PAYDataTable dataTable, string TmpPayPurpose) {
+        public virtual int FillByEmpty(JBADBDataSet.GADA_TEMP_PAYDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByTmpPayCash(JBADBDataSet.GADA_TEMP_PAYDataTable dataTable, string TmpPayPurpose) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((TmpPayPurpose == null)) {
-                throw new global::System.ArgumentNullException("TmpPayPurpose");
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(TmpPayPurpose));
             }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByTmpPayCashEmpty(JBADBDataSet.GADA_TEMP_PAYDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -9556,13 +12307,26 @@ WHERE                       (COALESCE (BANK_OR_OFFICE_NAME, NULL) LIKE '%' + @Br
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByTmpPayTransfer(JBADBDataSet.GADA_TEMP_PAYDataTable dataTable, string TmpPayPurpose) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand = this.CommandCollection[4];
             if ((TmpPayPurpose == null)) {
-                throw new global::System.ArgumentNullException("TmpPayPurpose");
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(TmpPayPurpose));
             }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByTmpPayTransferEmpty(JBADBDataSet.GADA_TEMP_PAYDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[5];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -9575,9 +12339,9 @@ WHERE                       (COALESCE (BANK_OR_OFFICE_NAME, NULL) LIKE '%' + @Br
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByTmpSave(JBADBDataSet.GADA_TEMP_PAYDataTable dataTable, string TmpPayPurpose) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand = this.CommandCollection[6];
             if ((TmpPayPurpose == null)) {
-                throw new global::System.ArgumentNullException("TmpPayPurpose");
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(TmpPayPurpose));
@@ -9593,10 +12357,23 @@ WHERE                       (COALESCE (BANK_OR_OFFICE_NAME, NULL) LIKE '%' + @Br
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByTmpSaveEmpty(JBADBDataSet.GADA_TEMP_PAYDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[7];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByUnsettled(JBADBDataSet.GADA_TEMP_PAYDataTable dataTable, string TmpPayPurpose) {
-            this.Adapter.SelectCommand = this.CommandCollection[4];
+            this.Adapter.SelectCommand = this.CommandCollection[8];
             if ((TmpPayPurpose == null)) {
-                throw new global::System.ArgumentNullException("TmpPayPurpose");
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(TmpPayPurpose));
@@ -9611,8 +12388,21 @@ WHERE                       (COALESCE (BANK_OR_OFFICE_NAME, NULL) LIKE '%' + @Br
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByUnsettledEmpty(JBADBDataSet.GADA_TEMP_PAYDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[9];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual global::System.Nullable<int> ScalarQueryTmpPaySeq() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[10];
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10697,6 +13487,2374 @@ WHERE                       (A.DELETE_FLG = 0) AND (B.DELETE_FLG = 0) AND (C.DEL
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class GADA_ADJUSTMENT_DETAILTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public GADA_ADJUSTMENT_DETAILTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "GADA_ADJUSTMENT_DETAIL";
+            tableMapping.ColumnMappings.Add("ADJUST_NUMBER", "ADJUST_NUMBER");
+            tableMapping.ColumnMappings.Add("LINE_NUMBER", "LINE_NUMBER");
+            tableMapping.ColumnMappings.Add("BUSINESS_CD", "BUSINESS_CD");
+            tableMapping.ColumnMappings.Add("PAYMENT_CLIENT_CD", "PAYMENT_CLIENT_CD");
+            tableMapping.ColumnMappings.Add("PAYMENT_HIMOKU_CD", "PAYMENT_HIMOKU_CD");
+            tableMapping.ColumnMappings.Add("PAYMENT_OUTLINE", "PAYMENT_OUTLINE");
+            tableMapping.ColumnMappings.Add("PAYMENT_PRICE", "PAYMENT_PRICE");
+            tableMapping.ColumnMappings.Add("DEPOSIT_HIMOKU_CD", "DEPOSIT_HIMOKU_CD");
+            tableMapping.ColumnMappings.Add("DEPOSIT_PRICE", "DEPOSIT_PRICE");
+            tableMapping.ColumnMappings.Add("PAYMENT_DAY", "PAYMENT_DAY");
+            tableMapping.ColumnMappings.Add("BANK_CD", "BANK_CD");
+            tableMapping.ColumnMappings.Add("OFFICE_CD", "OFFICE_CD");
+            tableMapping.ColumnMappings.Add("ACCOUNT_TYPE", "ACCOUNT_TYPE");
+            tableMapping.ColumnMappings.Add("ACCOUNT_HOLDER_KANA", "ACCOUNT_HOLDER_KANA");
+            tableMapping.ColumnMappings.Add("ACCOUNT_NUMBER", "ACCOUNT_NUMBER");
+            tableMapping.ColumnMappings.Add("REC_NUMBER", "REC_NUMBER");
+            tableMapping.ColumnMappings.Add("DELETE_FLG", "DELETE_FLG");
+            tableMapping.ColumnMappings.Add("MANUAL_UPDATE", "MANUAL_UPDATE");
+            tableMapping.ColumnMappings.Add("ADMIN_NUMBER", "ADMIN_NUMBER");
+            tableMapping.ColumnMappings.Add("SYSTEM_UPDATE", "SYSTEM_UPDATE");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [GADA_ADJUSTMENT_DETAIL] WHERE (([ADJUST_NUMBER] = @Original_ADJUST_N" +
+                "UMBER) AND ([LINE_NUMBER] = @Original_LINE_NUMBER) AND ((@IsNull_BUSINESS_CD = 1" +
+                " AND [BUSINESS_CD] IS NULL) OR ([BUSINESS_CD] = @Original_BUSINESS_CD)) AND ((@I" +
+                "sNull_PAYMENT_CLIENT_CD = 1 AND [PAYMENT_CLIENT_CD] IS NULL) OR ([PAYMENT_CLIENT" +
+                "_CD] = @Original_PAYMENT_CLIENT_CD)) AND ((@IsNull_PAYMENT_HIMOKU_CD = 1 AND [PA" +
+                "YMENT_HIMOKU_CD] IS NULL) OR ([PAYMENT_HIMOKU_CD] = @Original_PAYMENT_HIMOKU_CD)" +
+                ") AND ((@IsNull_PAYMENT_OUTLINE = 1 AND [PAYMENT_OUTLINE] IS NULL) OR ([PAYMENT_" +
+                "OUTLINE] = @Original_PAYMENT_OUTLINE)) AND ((@IsNull_PAYMENT_PRICE = 1 AND [PAYM" +
+                "ENT_PRICE] IS NULL) OR ([PAYMENT_PRICE] = @Original_PAYMENT_PRICE)) AND ((@IsNul" +
+                "l_DEPOSIT_HIMOKU_CD = 1 AND [DEPOSIT_HIMOKU_CD] IS NULL) OR ([DEPOSIT_HIMOKU_CD]" +
+                " = @Original_DEPOSIT_HIMOKU_CD)) AND ((@IsNull_DEPOSIT_PRICE = 1 AND [DEPOSIT_PR" +
+                "ICE] IS NULL) OR ([DEPOSIT_PRICE] = @Original_DEPOSIT_PRICE)) AND ((@IsNull_PAYM" +
+                "ENT_DAY = 1 AND [PAYMENT_DAY] IS NULL) OR ([PAYMENT_DAY] = @Original_PAYMENT_DAY" +
+                ")) AND ((@IsNull_BANK_CD = 1 AND [BANK_CD] IS NULL) OR ([BANK_CD] = @Original_BA" +
+                "NK_CD)) AND ((@IsNull_OFFICE_CD = 1 AND [OFFICE_CD] IS NULL) OR ([OFFICE_CD] = @" +
+                "Original_OFFICE_CD)) AND ((@IsNull_ACCOUNT_TYPE = 1 AND [ACCOUNT_TYPE] IS NULL) " +
+                "OR ([ACCOUNT_TYPE] = @Original_ACCOUNT_TYPE)) AND ((@IsNull_ACCOUNT_HOLDER_KANA " +
+                "= 1 AND [ACCOUNT_HOLDER_KANA] IS NULL) OR ([ACCOUNT_HOLDER_KANA] = @Original_ACC" +
+                "OUNT_HOLDER_KANA)) AND ((@IsNull_ACCOUNT_NUMBER = 1 AND [ACCOUNT_NUMBER] IS NULL" +
+                ") OR ([ACCOUNT_NUMBER] = @Original_ACCOUNT_NUMBER)) AND ((@IsNull_REC_NUMBER = 1" +
+                " AND [REC_NUMBER] IS NULL) OR ([REC_NUMBER] = @Original_REC_NUMBER)) AND ([DELET" +
+                "E_FLG] = @Original_DELETE_FLG) AND ((@IsNull_MANUAL_UPDATE = 1 AND [MANUAL_UPDAT" +
+                "E] IS NULL) OR ([MANUAL_UPDATE] = @Original_MANUAL_UPDATE)) AND ((@IsNull_ADMIN_" +
+                "NUMBER = 1 AND [ADMIN_NUMBER] IS NULL) OR ([ADMIN_NUMBER] = @Original_ADMIN_NUMB" +
+                "ER)) AND ((@IsNull_SYSTEM_UPDATE = 1 AND [SYSTEM_UPDATE] IS NULL) OR ([SYSTEM_UP" +
+                "DATE] = @Original_SYSTEM_UPDATE)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ADJUST_NUMBER", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ADJUST_NUMBER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LINE_NUMBER", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LINE_NUMBER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BUSINESS_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BUSINESS_CD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BUSINESS_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BUSINESS_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PAYMENT_CLIENT_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_CLIENT_CD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PAYMENT_CLIENT_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_CLIENT_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PAYMENT_HIMOKU_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_HIMOKU_CD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PAYMENT_HIMOKU_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_HIMOKU_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PAYMENT_OUTLINE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_OUTLINE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PAYMENT_OUTLINE", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_OUTLINE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PAYMENT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PAYMENT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DEPOSIT_HIMOKU_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEPOSIT_HIMOKU_CD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DEPOSIT_HIMOKU_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEPOSIT_HIMOKU_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DEPOSIT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEPOSIT_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DEPOSIT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEPOSIT_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PAYMENT_DAY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_DAY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PAYMENT_DAY", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_DAY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BANK_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BANK_CD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BANK_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BANK_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OFFICE_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OFFICE_CD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OFFICE_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OFFICE_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ACCOUNT_TYPE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_TYPE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ACCOUNT_TYPE", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_TYPE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ACCOUNT_HOLDER_KANA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_HOLDER_KANA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ACCOUNT_HOLDER_KANA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_HOLDER_KANA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ACCOUNT_NUMBER", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_NUMBER", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ACCOUNT_NUMBER", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_NUMBER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_REC_NUMBER", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "REC_NUMBER", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_REC_NUMBER", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "REC_NUMBER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DELETE_FLG", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DELETE_FLG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MANUAL_UPDATE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MANUAL_UPDATE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MANUAL_UPDATE", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MANUAL_UPDATE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ADMIN_NUMBER", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ADMIN_NUMBER", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ADMIN_NUMBER", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ADMIN_NUMBER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SYSTEM_UPDATE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SYSTEM_UPDATE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SYSTEM_UPDATE", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SYSTEM_UPDATE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [GADA_ADJUSTMENT_DETAIL] ([ADJUST_NUMBER], [LINE_NUMBER], [BUSINESS_CD], [PAYMENT_CLIENT_CD], [PAYMENT_HIMOKU_CD], [PAYMENT_OUTLINE], [PAYMENT_PRICE], [DEPOSIT_HIMOKU_CD], [DEPOSIT_PRICE], [PAYMENT_DAY], [BANK_CD], [OFFICE_CD], [ACCOUNT_TYPE], [ACCOUNT_HOLDER_KANA], [ACCOUNT_NUMBER], [REC_NUMBER], [DELETE_FLG], [MANUAL_UPDATE], [ADMIN_NUMBER], [SYSTEM_UPDATE]) VALUES (@ADJUST_NUMBER, @LINE_NUMBER, @BUSINESS_CD, @PAYMENT_CLIENT_CD, @PAYMENT_HIMOKU_CD, @PAYMENT_OUTLINE, @PAYMENT_PRICE, @DEPOSIT_HIMOKU_CD, @DEPOSIT_PRICE, @PAYMENT_DAY, @BANK_CD, @OFFICE_CD, @ACCOUNT_TYPE, @ACCOUNT_HOLDER_KANA, @ACCOUNT_NUMBER, @REC_NUMBER, @DELETE_FLG, @MANUAL_UPDATE, @ADMIN_NUMBER, @SYSTEM_UPDATE);
+SELECT ADJUST_NUMBER, LINE_NUMBER, BUSINESS_CD, PAYMENT_CLIENT_CD, PAYMENT_HIMOKU_CD, PAYMENT_OUTLINE, PAYMENT_PRICE, DEPOSIT_HIMOKU_CD, DEPOSIT_PRICE, PAYMENT_DAY, BANK_CD, OFFICE_CD, ACCOUNT_TYPE, ACCOUNT_HOLDER_KANA, ACCOUNT_NUMBER, REC_NUMBER, DELETE_FLG, MANUAL_UPDATE, ADMIN_NUMBER, SYSTEM_UPDATE FROM GADA_ADJUSTMENT_DETAIL WHERE (ADJUST_NUMBER = @ADJUST_NUMBER) AND (LINE_NUMBER = @LINE_NUMBER) ORDER BY LINE_NUMBER";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ADJUST_NUMBER", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ADJUST_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LINE_NUMBER", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LINE_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BUSINESS_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BUSINESS_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PAYMENT_CLIENT_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_CLIENT_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PAYMENT_HIMOKU_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_HIMOKU_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PAYMENT_OUTLINE", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_OUTLINE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PAYMENT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DEPOSIT_HIMOKU_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEPOSIT_HIMOKU_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DEPOSIT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEPOSIT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PAYMENT_DAY", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_DAY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BANK_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BANK_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OFFICE_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OFFICE_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ACCOUNT_TYPE", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_TYPE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ACCOUNT_HOLDER_KANA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_HOLDER_KANA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ACCOUNT_NUMBER", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@REC_NUMBER", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "REC_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DELETE_FLG", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DELETE_FLG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MANUAL_UPDATE", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MANUAL_UPDATE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ADMIN_NUMBER", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ADMIN_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SYSTEM_UPDATE", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SYSTEM_UPDATE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [GADA_ADJUSTMENT_DETAIL] SET [ADJUST_NUMBER] = @ADJUST_NUMBER, [LINE_NUMBE" +
+                "R] = @LINE_NUMBER, [BUSINESS_CD] = @BUSINESS_CD, [PAYMENT_CLIENT_CD] = @PAYMENT_" +
+                "CLIENT_CD, [PAYMENT_HIMOKU_CD] = @PAYMENT_HIMOKU_CD, [PAYMENT_OUTLINE] = @PAYMEN" +
+                "T_OUTLINE, [PAYMENT_PRICE] = @PAYMENT_PRICE, [DEPOSIT_HIMOKU_CD] = @DEPOSIT_HIMO" +
+                "KU_CD, [DEPOSIT_PRICE] = @DEPOSIT_PRICE, [PAYMENT_DAY] = @PAYMENT_DAY, [BANK_CD]" +
+                " = @BANK_CD, [OFFICE_CD] = @OFFICE_CD, [ACCOUNT_TYPE] = @ACCOUNT_TYPE, [ACCOUNT_" +
+                "HOLDER_KANA] = @ACCOUNT_HOLDER_KANA, [ACCOUNT_NUMBER] = @ACCOUNT_NUMBER, [REC_NU" +
+                "MBER] = @REC_NUMBER, [DELETE_FLG] = @DELETE_FLG, [MANUAL_UPDATE] = @MANUAL_UPDAT" +
+                "E, [ADMIN_NUMBER] = @ADMIN_NUMBER, [SYSTEM_UPDATE] = @SYSTEM_UPDATE WHERE (([ADJ" +
+                "UST_NUMBER] = @Original_ADJUST_NUMBER) AND ([LINE_NUMBER] = @Original_LINE_NUMBE" +
+                "R) AND ((@IsNull_BUSINESS_CD = 1 AND [BUSINESS_CD] IS NULL) OR ([BUSINESS_CD] = " +
+                "@Original_BUSINESS_CD)) AND ((@IsNull_PAYMENT_CLIENT_CD = 1 AND [PAYMENT_CLIENT_" +
+                "CD] IS NULL) OR ([PAYMENT_CLIENT_CD] = @Original_PAYMENT_CLIENT_CD)) AND ((@IsNu" +
+                "ll_PAYMENT_HIMOKU_CD = 1 AND [PAYMENT_HIMOKU_CD] IS NULL) OR ([PAYMENT_HIMOKU_CD" +
+                "] = @Original_PAYMENT_HIMOKU_CD)) AND ((@IsNull_PAYMENT_OUTLINE = 1 AND [PAYMENT" +
+                "_OUTLINE] IS NULL) OR ([PAYMENT_OUTLINE] = @Original_PAYMENT_OUTLINE)) AND ((@Is" +
+                "Null_PAYMENT_PRICE = 1 AND [PAYMENT_PRICE] IS NULL) OR ([PAYMENT_PRICE] = @Origi" +
+                "nal_PAYMENT_PRICE)) AND ((@IsNull_DEPOSIT_HIMOKU_CD = 1 AND [DEPOSIT_HIMOKU_CD] " +
+                "IS NULL) OR ([DEPOSIT_HIMOKU_CD] = @Original_DEPOSIT_HIMOKU_CD)) AND ((@IsNull_D" +
+                "EPOSIT_PRICE = 1 AND [DEPOSIT_PRICE] IS NULL) OR ([DEPOSIT_PRICE] = @Original_DE" +
+                "POSIT_PRICE)) AND ((@IsNull_PAYMENT_DAY = 1 AND [PAYMENT_DAY] IS NULL) OR ([PAYM" +
+                "ENT_DAY] = @Original_PAYMENT_DAY)) AND ((@IsNull_BANK_CD = 1 AND [BANK_CD] IS NU" +
+                "LL) OR ([BANK_CD] = @Original_BANK_CD)) AND ((@IsNull_OFFICE_CD = 1 AND [OFFICE_" +
+                "CD] IS NULL) OR ([OFFICE_CD] = @Original_OFFICE_CD)) AND ((@IsNull_ACCOUNT_TYPE " +
+                "= 1 AND [ACCOUNT_TYPE] IS NULL) OR ([ACCOUNT_TYPE] = @Original_ACCOUNT_TYPE)) AN" +
+                "D ((@IsNull_ACCOUNT_HOLDER_KANA = 1 AND [ACCOUNT_HOLDER_KANA] IS NULL) OR ([ACCO" +
+                "UNT_HOLDER_KANA] = @Original_ACCOUNT_HOLDER_KANA)) AND ((@IsNull_ACCOUNT_NUMBER " +
+                "= 1 AND [ACCOUNT_NUMBER] IS NULL) OR ([ACCOUNT_NUMBER] = @Original_ACCOUNT_NUMBE" +
+                "R)) AND ((@IsNull_REC_NUMBER = 1 AND [REC_NUMBER] IS NULL) OR ([REC_NUMBER] = @O" +
+                "riginal_REC_NUMBER)) AND ([DELETE_FLG] = @Original_DELETE_FLG) AND ((@IsNull_MAN" +
+                "UAL_UPDATE = 1 AND [MANUAL_UPDATE] IS NULL) OR ([MANUAL_UPDATE] = @Original_MANU" +
+                "AL_UPDATE)) AND ((@IsNull_ADMIN_NUMBER = 1 AND [ADMIN_NUMBER] IS NULL) OR ([ADMI" +
+                "N_NUMBER] = @Original_ADMIN_NUMBER)) AND ((@IsNull_SYSTEM_UPDATE = 1 AND [SYSTEM" +
+                "_UPDATE] IS NULL) OR ([SYSTEM_UPDATE] = @Original_SYSTEM_UPDATE)));\r\nSELECT ADJU" +
+                "ST_NUMBER, LINE_NUMBER, BUSINESS_CD, PAYMENT_CLIENT_CD, PAYMENT_HIMOKU_CD, PAYME" +
+                "NT_OUTLINE, PAYMENT_PRICE, DEPOSIT_HIMOKU_CD, DEPOSIT_PRICE, PAYMENT_DAY, BANK_C" +
+                "D, OFFICE_CD, ACCOUNT_TYPE, ACCOUNT_HOLDER_KANA, ACCOUNT_NUMBER, REC_NUMBER, DEL" +
+                "ETE_FLG, MANUAL_UPDATE, ADMIN_NUMBER, SYSTEM_UPDATE FROM GADA_ADJUSTMENT_DETAIL " +
+                "WHERE (ADJUST_NUMBER = @ADJUST_NUMBER) AND (LINE_NUMBER = @LINE_NUMBER) ORDER BY" +
+                " LINE_NUMBER";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ADJUST_NUMBER", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ADJUST_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LINE_NUMBER", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LINE_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BUSINESS_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BUSINESS_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PAYMENT_CLIENT_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_CLIENT_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PAYMENT_HIMOKU_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_HIMOKU_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PAYMENT_OUTLINE", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_OUTLINE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PAYMENT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DEPOSIT_HIMOKU_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEPOSIT_HIMOKU_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DEPOSIT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEPOSIT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PAYMENT_DAY", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_DAY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BANK_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BANK_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OFFICE_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OFFICE_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ACCOUNT_TYPE", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_TYPE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ACCOUNT_HOLDER_KANA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_HOLDER_KANA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ACCOUNT_NUMBER", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@REC_NUMBER", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "REC_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DELETE_FLG", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DELETE_FLG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MANUAL_UPDATE", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MANUAL_UPDATE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ADMIN_NUMBER", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ADMIN_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SYSTEM_UPDATE", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SYSTEM_UPDATE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ADJUST_NUMBER", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ADJUST_NUMBER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LINE_NUMBER", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LINE_NUMBER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BUSINESS_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BUSINESS_CD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BUSINESS_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BUSINESS_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PAYMENT_CLIENT_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_CLIENT_CD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PAYMENT_CLIENT_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_CLIENT_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PAYMENT_HIMOKU_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_HIMOKU_CD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PAYMENT_HIMOKU_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_HIMOKU_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PAYMENT_OUTLINE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_OUTLINE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PAYMENT_OUTLINE", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_OUTLINE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PAYMENT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PAYMENT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DEPOSIT_HIMOKU_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEPOSIT_HIMOKU_CD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DEPOSIT_HIMOKU_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEPOSIT_HIMOKU_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DEPOSIT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEPOSIT_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DEPOSIT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEPOSIT_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PAYMENT_DAY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_DAY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PAYMENT_DAY", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAYMENT_DAY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BANK_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BANK_CD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BANK_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BANK_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OFFICE_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OFFICE_CD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OFFICE_CD", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OFFICE_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ACCOUNT_TYPE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_TYPE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ACCOUNT_TYPE", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_TYPE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ACCOUNT_HOLDER_KANA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_HOLDER_KANA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ACCOUNT_HOLDER_KANA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_HOLDER_KANA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ACCOUNT_NUMBER", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_NUMBER", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ACCOUNT_NUMBER", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT_NUMBER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_REC_NUMBER", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "REC_NUMBER", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_REC_NUMBER", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "REC_NUMBER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DELETE_FLG", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DELETE_FLG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MANUAL_UPDATE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MANUAL_UPDATE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MANUAL_UPDATE", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MANUAL_UPDATE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ADMIN_NUMBER", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ADMIN_NUMBER", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ADMIN_NUMBER", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ADMIN_NUMBER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SYSTEM_UPDATE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SYSTEM_UPDATE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SYSTEM_UPDATE", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SYSTEM_UPDATE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::JBA_BizSupport.Properties.Settings.Default.JBADBConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT                      ADJUST_NUMBER, LINE_NUMBER, BUSINESS_CD, PAYMENT_CLIENT_CD, PAYMENT_HIMOKU_CD, PAYMENT_OUTLINE, 
+                                      PAYMENT_PRICE, DEPOSIT_HIMOKU_CD, DEPOSIT_PRICE, PAYMENT_DAY, BANK_CD, OFFICE_CD, ACCOUNT_TYPE, 
+                                      ACCOUNT_HOLDER_KANA, ACCOUNT_NUMBER, REC_NUMBER, DELETE_FLG, MANUAL_UPDATE, ADMIN_NUMBER, 
+                                      SYSTEM_UPDATE
+FROM                         GADA_ADJUSTMENT_DETAIL
+WHERE                       (DELETE_FLG = 0) AND (ADJUST_NUMBER = @AdjustNumber)
+ORDER BY               LINE_NUMBER";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdjustNumber", global::System.Data.SqlDbType.Char, 12, global::System.Data.ParameterDirection.Input, 0, 0, "ADJUST_NUMBER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int FillByAdjustNumber(JBADBDataSet.GADA_ADJUSTMENT_DETAILDataTable dataTable, string AdjustNumber) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((AdjustNumber == null)) {
+                throw new global::System.ArgumentNullException("AdjustNumber");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(AdjustNumber));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual JBADBDataSet.GADA_ADJUSTMENT_DETAILDataTable GetData(string AdjustNumber) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((AdjustNumber == null)) {
+                throw new global::System.ArgumentNullException("AdjustNumber");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(AdjustNumber));
+            }
+            JBADBDataSet.GADA_ADJUSTMENT_DETAILDataTable dataTable = new JBADBDataSet.GADA_ADJUSTMENT_DETAILDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(JBADBDataSet.GADA_ADJUSTMENT_DETAILDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(JBADBDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "GADA_ADJUSTMENT_DETAIL");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(
+                    string Original_ADJUST_NUMBER, 
+                    byte Original_LINE_NUMBER, 
+                    string Original_BUSINESS_CD, 
+                    string Original_PAYMENT_CLIENT_CD, 
+                    string Original_PAYMENT_HIMOKU_CD, 
+                    string Original_PAYMENT_OUTLINE, 
+                    global::System.Nullable<int> Original_PAYMENT_PRICE, 
+                    string Original_DEPOSIT_HIMOKU_CD, 
+                    global::System.Nullable<int> Original_DEPOSIT_PRICE, 
+                    global::System.Nullable<global::System.DateTime> Original_PAYMENT_DAY, 
+                    string Original_BANK_CD, 
+                    string Original_OFFICE_CD, 
+                    global::System.Nullable<byte> Original_ACCOUNT_TYPE, 
+                    string Original_ACCOUNT_HOLDER_KANA, 
+                    string Original_ACCOUNT_NUMBER, 
+                    global::System.Nullable<byte> Original_REC_NUMBER, 
+                    byte Original_DELETE_FLG, 
+                    global::System.Nullable<global::System.DateTime> Original_MANUAL_UPDATE, 
+                    global::System.Nullable<byte> Original_ADMIN_NUMBER, 
+                    global::System.Nullable<global::System.DateTime> Original_SYSTEM_UPDATE) {
+            if ((Original_ADJUST_NUMBER == null)) {
+                throw new global::System.ArgumentNullException("Original_ADJUST_NUMBER");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_ADJUST_NUMBER));
+            }
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((byte)(Original_LINE_NUMBER));
+            if ((Original_BUSINESS_CD == null)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_BUSINESS_CD));
+            }
+            if ((Original_PAYMENT_CLIENT_CD == null)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_PAYMENT_CLIENT_CD));
+            }
+            if ((Original_PAYMENT_HIMOKU_CD == null)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_PAYMENT_HIMOKU_CD));
+            }
+            if ((Original_PAYMENT_OUTLINE == null)) {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_PAYMENT_OUTLINE));
+            }
+            if ((Original_PAYMENT_PRICE.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_PAYMENT_PRICE.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DEPOSIT_HIMOKU_CD == null)) {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_DEPOSIT_HIMOKU_CD));
+            }
+            if ((Original_DEPOSIT_PRICE.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((int)(Original_DEPOSIT_PRICE.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PAYMENT_DAY.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((System.DateTime)(Original_PAYMENT_DAY.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Original_BANK_CD == null)) {
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((string)(Original_BANK_CD));
+            }
+            if ((Original_OFFICE_CD == null)) {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((string)(Original_OFFICE_CD));
+            }
+            if ((Original_ACCOUNT_TYPE.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((byte)(Original_ACCOUNT_TYPE.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ACCOUNT_HOLDER_KANA == null)) {
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((string)(Original_ACCOUNT_HOLDER_KANA));
+            }
+            if ((Original_ACCOUNT_NUMBER == null)) {
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((string)(Original_ACCOUNT_NUMBER));
+            }
+            if ((Original_REC_NUMBER.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((byte)(Original_REC_NUMBER.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[30].Value = ((byte)(Original_DELETE_FLG));
+            if ((Original_MANUAL_UPDATE.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((System.DateTime)(Original_MANUAL_UPDATE.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ADMIN_NUMBER.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((byte)(Original_ADMIN_NUMBER.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SYSTEM_UPDATE.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((System.DateTime)(Original_SYSTEM_UPDATE.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    string ADJUST_NUMBER, 
+                    byte LINE_NUMBER, 
+                    string BUSINESS_CD, 
+                    string PAYMENT_CLIENT_CD, 
+                    string PAYMENT_HIMOKU_CD, 
+                    string PAYMENT_OUTLINE, 
+                    global::System.Nullable<int> PAYMENT_PRICE, 
+                    string DEPOSIT_HIMOKU_CD, 
+                    global::System.Nullable<int> DEPOSIT_PRICE, 
+                    global::System.Nullable<global::System.DateTime> PAYMENT_DAY, 
+                    string BANK_CD, 
+                    string OFFICE_CD, 
+                    global::System.Nullable<byte> ACCOUNT_TYPE, 
+                    string ACCOUNT_HOLDER_KANA, 
+                    string ACCOUNT_NUMBER, 
+                    global::System.Nullable<byte> REC_NUMBER, 
+                    byte DELETE_FLG, 
+                    global::System.Nullable<global::System.DateTime> MANUAL_UPDATE, 
+                    global::System.Nullable<byte> ADMIN_NUMBER, 
+                    global::System.Nullable<global::System.DateTime> SYSTEM_UPDATE) {
+            if ((ADJUST_NUMBER == null)) {
+                throw new global::System.ArgumentNullException("ADJUST_NUMBER");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ADJUST_NUMBER));
+            }
+            this.Adapter.InsertCommand.Parameters[1].Value = ((byte)(LINE_NUMBER));
+            if ((BUSINESS_CD == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(BUSINESS_CD));
+            }
+            if ((PAYMENT_CLIENT_CD == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(PAYMENT_CLIENT_CD));
+            }
+            if ((PAYMENT_HIMOKU_CD == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(PAYMENT_HIMOKU_CD));
+            }
+            if ((PAYMENT_OUTLINE == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(PAYMENT_OUTLINE));
+            }
+            if ((PAYMENT_PRICE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(PAYMENT_PRICE.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((DEPOSIT_HIMOKU_CD == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(DEPOSIT_HIMOKU_CD));
+            }
+            if ((DEPOSIT_PRICE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(DEPOSIT_PRICE.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((PAYMENT_DAY.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(PAYMENT_DAY.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((BANK_CD == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(BANK_CD));
+            }
+            if ((OFFICE_CD == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(OFFICE_CD));
+            }
+            if ((ACCOUNT_TYPE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((byte)(ACCOUNT_TYPE.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((ACCOUNT_HOLDER_KANA == null)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(ACCOUNT_HOLDER_KANA));
+            }
+            if ((ACCOUNT_NUMBER == null)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(ACCOUNT_NUMBER));
+            }
+            if ((REC_NUMBER.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((byte)(REC_NUMBER.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[16].Value = ((byte)(DELETE_FLG));
+            if ((MANUAL_UPDATE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((System.DateTime)(MANUAL_UPDATE.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((ADMIN_NUMBER.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((byte)(ADMIN_NUMBER.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((SYSTEM_UPDATE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((System.DateTime)(SYSTEM_UPDATE.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string ADJUST_NUMBER, 
+                    byte LINE_NUMBER, 
+                    string BUSINESS_CD, 
+                    string PAYMENT_CLIENT_CD, 
+                    string PAYMENT_HIMOKU_CD, 
+                    string PAYMENT_OUTLINE, 
+                    global::System.Nullable<int> PAYMENT_PRICE, 
+                    string DEPOSIT_HIMOKU_CD, 
+                    global::System.Nullable<int> DEPOSIT_PRICE, 
+                    global::System.Nullable<global::System.DateTime> PAYMENT_DAY, 
+                    string BANK_CD, 
+                    string OFFICE_CD, 
+                    global::System.Nullable<byte> ACCOUNT_TYPE, 
+                    string ACCOUNT_HOLDER_KANA, 
+                    string ACCOUNT_NUMBER, 
+                    global::System.Nullable<byte> REC_NUMBER, 
+                    byte DELETE_FLG, 
+                    global::System.Nullable<global::System.DateTime> MANUAL_UPDATE, 
+                    global::System.Nullable<byte> ADMIN_NUMBER, 
+                    global::System.Nullable<global::System.DateTime> SYSTEM_UPDATE, 
+                    string Original_ADJUST_NUMBER, 
+                    byte Original_LINE_NUMBER, 
+                    string Original_BUSINESS_CD, 
+                    string Original_PAYMENT_CLIENT_CD, 
+                    string Original_PAYMENT_HIMOKU_CD, 
+                    string Original_PAYMENT_OUTLINE, 
+                    global::System.Nullable<int> Original_PAYMENT_PRICE, 
+                    string Original_DEPOSIT_HIMOKU_CD, 
+                    global::System.Nullable<int> Original_DEPOSIT_PRICE, 
+                    global::System.Nullable<global::System.DateTime> Original_PAYMENT_DAY, 
+                    string Original_BANK_CD, 
+                    string Original_OFFICE_CD, 
+                    global::System.Nullable<byte> Original_ACCOUNT_TYPE, 
+                    string Original_ACCOUNT_HOLDER_KANA, 
+                    string Original_ACCOUNT_NUMBER, 
+                    global::System.Nullable<byte> Original_REC_NUMBER, 
+                    byte Original_DELETE_FLG, 
+                    global::System.Nullable<global::System.DateTime> Original_MANUAL_UPDATE, 
+                    global::System.Nullable<byte> Original_ADMIN_NUMBER, 
+                    global::System.Nullable<global::System.DateTime> Original_SYSTEM_UPDATE) {
+            if ((ADJUST_NUMBER == null)) {
+                throw new global::System.ArgumentNullException("ADJUST_NUMBER");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(ADJUST_NUMBER));
+            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((byte)(LINE_NUMBER));
+            if ((BUSINESS_CD == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(BUSINESS_CD));
+            }
+            if ((PAYMENT_CLIENT_CD == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(PAYMENT_CLIENT_CD));
+            }
+            if ((PAYMENT_HIMOKU_CD == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(PAYMENT_HIMOKU_CD));
+            }
+            if ((PAYMENT_OUTLINE == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(PAYMENT_OUTLINE));
+            }
+            if ((PAYMENT_PRICE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(PAYMENT_PRICE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((DEPOSIT_HIMOKU_CD == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(DEPOSIT_HIMOKU_CD));
+            }
+            if ((DEPOSIT_PRICE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(DEPOSIT_PRICE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((PAYMENT_DAY.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(PAYMENT_DAY.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((BANK_CD == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(BANK_CD));
+            }
+            if ((OFFICE_CD == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(OFFICE_CD));
+            }
+            if ((ACCOUNT_TYPE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((byte)(ACCOUNT_TYPE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((ACCOUNT_HOLDER_KANA == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(ACCOUNT_HOLDER_KANA));
+            }
+            if ((ACCOUNT_NUMBER == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(ACCOUNT_NUMBER));
+            }
+            if ((REC_NUMBER.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((byte)(REC_NUMBER.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((byte)(DELETE_FLG));
+            if ((MANUAL_UPDATE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(MANUAL_UPDATE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((ADMIN_NUMBER.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((byte)(ADMIN_NUMBER.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((SYSTEM_UPDATE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(SYSTEM_UPDATE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ADJUST_NUMBER == null)) {
+                throw new global::System.ArgumentNullException("Original_ADJUST_NUMBER");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_ADJUST_NUMBER));
+            }
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((byte)(Original_LINE_NUMBER));
+            if ((Original_BUSINESS_CD == null)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_BUSINESS_CD));
+            }
+            if ((Original_PAYMENT_CLIENT_CD == null)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_PAYMENT_CLIENT_CD));
+            }
+            if ((Original_PAYMENT_HIMOKU_CD == null)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_PAYMENT_HIMOKU_CD));
+            }
+            if ((Original_PAYMENT_OUTLINE == null)) {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_PAYMENT_OUTLINE));
+            }
+            if ((Original_PAYMENT_PRICE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_PAYMENT_PRICE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DEPOSIT_HIMOKU_CD == null)) {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_DEPOSIT_HIMOKU_CD));
+            }
+            if ((Original_DEPOSIT_PRICE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((int)(Original_DEPOSIT_PRICE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PAYMENT_DAY.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((System.DateTime)(Original_PAYMENT_DAY.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            if ((Original_BANK_CD == null)) {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_BANK_CD));
+            }
+            if ((Original_OFFICE_CD == null)) {
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_OFFICE_CD));
+            }
+            if ((Original_ACCOUNT_TYPE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((byte)(Original_ACCOUNT_TYPE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ACCOUNT_HOLDER_KANA == null)) {
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_ACCOUNT_HOLDER_KANA));
+            }
+            if ((Original_ACCOUNT_NUMBER == null)) {
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((string)(Original_ACCOUNT_NUMBER));
+            }
+            if ((Original_REC_NUMBER.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((byte)(Original_REC_NUMBER.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[50].Value = ((byte)(Original_DELETE_FLG));
+            if ((Original_MANUAL_UPDATE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((System.DateTime)(Original_MANUAL_UPDATE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ADMIN_NUMBER.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((byte)(Original_ADMIN_NUMBER.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SYSTEM_UPDATE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((System.DateTime)(Original_SYSTEM_UPDATE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string BUSINESS_CD, 
+                    string PAYMENT_CLIENT_CD, 
+                    string PAYMENT_HIMOKU_CD, 
+                    string PAYMENT_OUTLINE, 
+                    global::System.Nullable<int> PAYMENT_PRICE, 
+                    string DEPOSIT_HIMOKU_CD, 
+                    global::System.Nullable<int> DEPOSIT_PRICE, 
+                    global::System.Nullable<global::System.DateTime> PAYMENT_DAY, 
+                    string BANK_CD, 
+                    string OFFICE_CD, 
+                    global::System.Nullable<byte> ACCOUNT_TYPE, 
+                    string ACCOUNT_HOLDER_KANA, 
+                    string ACCOUNT_NUMBER, 
+                    global::System.Nullable<byte> REC_NUMBER, 
+                    byte DELETE_FLG, 
+                    global::System.Nullable<global::System.DateTime> MANUAL_UPDATE, 
+                    global::System.Nullable<byte> ADMIN_NUMBER, 
+                    global::System.Nullable<global::System.DateTime> SYSTEM_UPDATE, 
+                    string Original_ADJUST_NUMBER, 
+                    byte Original_LINE_NUMBER, 
+                    string Original_BUSINESS_CD, 
+                    string Original_PAYMENT_CLIENT_CD, 
+                    string Original_PAYMENT_HIMOKU_CD, 
+                    string Original_PAYMENT_OUTLINE, 
+                    global::System.Nullable<int> Original_PAYMENT_PRICE, 
+                    string Original_DEPOSIT_HIMOKU_CD, 
+                    global::System.Nullable<int> Original_DEPOSIT_PRICE, 
+                    global::System.Nullable<global::System.DateTime> Original_PAYMENT_DAY, 
+                    string Original_BANK_CD, 
+                    string Original_OFFICE_CD, 
+                    global::System.Nullable<byte> Original_ACCOUNT_TYPE, 
+                    string Original_ACCOUNT_HOLDER_KANA, 
+                    string Original_ACCOUNT_NUMBER, 
+                    global::System.Nullable<byte> Original_REC_NUMBER, 
+                    byte Original_DELETE_FLG, 
+                    global::System.Nullable<global::System.DateTime> Original_MANUAL_UPDATE, 
+                    global::System.Nullable<byte> Original_ADMIN_NUMBER, 
+                    global::System.Nullable<global::System.DateTime> Original_SYSTEM_UPDATE) {
+            return this.Update(Original_ADJUST_NUMBER, Original_LINE_NUMBER, BUSINESS_CD, PAYMENT_CLIENT_CD, PAYMENT_HIMOKU_CD, PAYMENT_OUTLINE, PAYMENT_PRICE, DEPOSIT_HIMOKU_CD, DEPOSIT_PRICE, PAYMENT_DAY, BANK_CD, OFFICE_CD, ACCOUNT_TYPE, ACCOUNT_HOLDER_KANA, ACCOUNT_NUMBER, REC_NUMBER, DELETE_FLG, MANUAL_UPDATE, ADMIN_NUMBER, SYSTEM_UPDATE, Original_ADJUST_NUMBER, Original_LINE_NUMBER, Original_BUSINESS_CD, Original_PAYMENT_CLIENT_CD, Original_PAYMENT_HIMOKU_CD, Original_PAYMENT_OUTLINE, Original_PAYMENT_PRICE, Original_DEPOSIT_HIMOKU_CD, Original_DEPOSIT_PRICE, Original_PAYMENT_DAY, Original_BANK_CD, Original_OFFICE_CD, Original_ACCOUNT_TYPE, Original_ACCOUNT_HOLDER_KANA, Original_ACCOUNT_NUMBER, Original_REC_NUMBER, Original_DELETE_FLG, Original_MANUAL_UPDATE, Original_ADMIN_NUMBER, Original_SYSTEM_UPDATE);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class GADA_ADJUSTMENTTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public GADA_ADJUSTMENTTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "GADA_ADJUSTMENT";
+            tableMapping.ColumnMappings.Add("ADJUST_NUMBER", "ADJUST_NUMBER");
+            tableMapping.ColumnMappings.Add("PUBLIC_FLG", "PUBLIC_FLG");
+            tableMapping.ColumnMappings.Add("BUSINESS_CD", "BUSINESS_CD");
+            tableMapping.ColumnMappings.Add("BUSINESS_ITEM_NAME", "BUSINESS_ITEM_NAME");
+            tableMapping.ColumnMappings.Add("BILL_ID", "BILL_ID");
+            tableMapping.ColumnMappings.Add("CLIENT_CD", "CLIENT_CD");
+            tableMapping.ColumnMappings.Add("CLIENT_NAME", "CLIENT_NAME");
+            tableMapping.ColumnMappings.Add("TEMP_PAY_NUMBER", "TEMP_PAY_NUMBER");
+            tableMapping.ColumnMappings.Add("ADJUST_DATE", "ADJUST_DATE");
+            tableMapping.ColumnMappings.Add("ADJUST_PAY_TYPE", "ADJUST_PAY_TYPE");
+            tableMapping.ColumnMappings.Add("BANK_CD", "BANK_CD");
+            tableMapping.ColumnMappings.Add("OFFICE_CD", "OFFICE_CD");
+            tableMapping.ColumnMappings.Add("ACCOUNT_TYPE", "ACCOUNT_TYPE");
+            tableMapping.ColumnMappings.Add("ACCOUNT_HOLDER_KANA", "ACCOUNT_HOLDER_KANA");
+            tableMapping.ColumnMappings.Add("ACCOUNT_NUMBER", "ACCOUNT_NUMBER");
+            tableMapping.ColumnMappings.Add("REC_NUMBER", "REC_NUMBER");
+            tableMapping.ColumnMappings.Add("MANUAL_UPDATE", "MANUAL_UPDATE");
+            tableMapping.ColumnMappings.Add("ADMIN_NUMBER", "ADMIN_NUMBER");
+            tableMapping.ColumnMappings.Add("SYSTEM_UPDATE", "SYSTEM_UPDATE");
+            tableMapping.ColumnMappings.Add("PCA_OUTPUT_DATE", "PCA_OUTPUT_DATE");
+            tableMapping.ColumnMappings.Add("payment_flg", "payment_flg");
+            tableMapping.ColumnMappings.Add("adjustment_row_cnt", "adjustment_row_cnt");
+            tableMapping.ColumnMappings.Add("bank_name", "bank_name");
+            tableMapping.ColumnMappings.Add("branch_name", "branch_name");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::JBA_BizSupport.Properties.Settings.Default.JBADBConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[13];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT DISTINCT \r\n                                      GADA_ADJUSTMENT.ADJUST_NU" +
+                "MBER, GADA_ADJUSTMENT.PUBLIC_FLG, GADA_ADJUSTMENT.BUSINESS_CD, \r\n               " +
+                "                       GADA_ADJUSTMENT.BUSINESS_ITEM_NAME, GADA_ADJUSTMENT.BILL_" +
+                "ID, GADA_ADJUSTMENT.CLIENT_CD, \r\n                                      GAMA_CLIE" +
+                "NT.CLIENT_NAME, GADA_ADJUSTMENT.TEMP_PAY_NUMBER, GADA_ADJUSTMENT.ADJUST_DATE, \r\n" +
+                "                                      GADA_ADJUSTMENT.ADJUST_PAY_TYPE, GADA_ADJU" +
+                "STMENT.BANK_CD, GADA_ADJUSTMENT.OFFICE_CD, \r\n                                   " +
+                "   GADA_ADJUSTMENT.ACCOUNT_TYPE, GADA_ADJUSTMENT.ACCOUNT_HOLDER_KANA, \r\n        " +
+                "                              GADA_ADJUSTMENT.ACCOUNT_NUMBER, GADA_ADJUSTMENT.RE" +
+                "C_NUMBER, \r\n                                      GADA_ADJUSTMENT.MANUAL_UPDATE," +
+                " GADA_ADJUSTMENT.ADMIN_NUMBER, \r\n                                      GADA_ADJU" +
+                "STMENT.SYSTEM_UPDATE, GADA_PCA_DATA_DETAIL.PCA_OUTPUT_DATE,\r\n                   " +
+                "                       (SELECT                      COUNT(ADJUST_NUMBER) AS Expr" +
+                "1\r\n                                                FROM                         " +
+                "GADA_ADJUSTMENT_DETAIL\r\n                                                WHERE   " +
+                "                    (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJUST_NUMBER) AND (PAYMENT" +
+                "_DAY IS NULL)) \r\n                                      AS payment_flg,\r\n        " +
+                "                                  (SELECT                      COUNT(ADJUST_NUMB" +
+                "ER) AS Expr2\r\n                                                FROM              " +
+                "           GADA_ADJUSTMENT_DETAIL AS GADA_ADJUSTMENT_DETAIL_1\r\n                 " +
+                "                               WHERE                       (ADJUST_NUMBER = GADA" +
+                "_ADJUSTMENT.ADJUST_NUMBER)) AS adjustment_row_cnt, \r\n                           " +
+                "           COALESCE\r\n                                          ((SELECT         " +
+                "             BANK_OR_OFFICE_NAME\r\n                                              " +
+                "    FROM                         GAMA_BANK\r\n                                    " +
+                "              WHERE                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AN" +
+                "D (OFFICE_FLG = 1) AND \r\n                                                       " +
+                "                                 (DELETE_FLG = 0)), NULL) AS bank_name, COALESCE" +
+                "\r\n                                          ((SELECT                      BANK_O" +
+                "R_OFFICE_NAME\r\n                                                  FROM           " +
+                "              GAMA_BANK AS GAMA_BANK_1\r\n                                        " +
+                "          WHERE                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND \r\n" +
+                "                                                                                " +
+                "        (GADA_ADJUSTMENT.OFFICE_CD = OFFICE_CD) AND (OFFICE_FLG = 2) AND \r\n     " +
+                "                                                                                " +
+                "   (DELETE_FLG = 0)), NULL) AS branch_name\r\nFROM                         GAMA_CL" +
+                "IENT INNER JOIN\r\n                                      GADA_ADJUSTMENT ON GAMA_C" +
+                "LIENT.CLIENT_CD = GADA_ADJUSTMENT.CLIENT_CD INNER JOIN\r\n                        " +
+                "              GADA_PCA_DATA_DETAIL INNER JOIN\r\n                                 " +
+                "     GADA_PCA_DATA ON GADA_PCA_DATA_DETAIL.PCA_DATA_NUMBER = GADA_PCA_DATA.PCA_D" +
+                "ATA_NUMBER ON \r\n                                      GADA_ADJUSTMENT.ADJUST_NUM" +
+                "BER = GADA_PCA_DATA.PATTERN_NUMBER\r\nWHERE                       (GADA_ADJUSTMENT" +
+                ".DELETE_FLG = 0) AND (GADA_PCA_DATA.DELETE_FLG = 0) AND \r\n                      " +
+                "                (GADA_PCA_DATA_DETAIL.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FL" +
+                "G = 0) AND \r\n                                      (GADA_ADJUSTMENT.BUSINESS_ITE" +
+                "M_NAME LIKE \'%\' + @BussinessItemName + \'%\')\r\nORDER BY               GADA_ADJUSTM" +
+                "ENT.ADJUST_NUMBER\r\n";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BussinessItemName", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "BUSINESS_ITEM_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT DISTINCT \r\n                                      GADA_ADJUSTMENT.ADJUST_NU" +
+                "MBER, GADA_ADJUSTMENT.PUBLIC_FLG, GADA_ADJUSTMENT.BUSINESS_CD, \r\n               " +
+                "                       GADA_ADJUSTMENT.BUSINESS_ITEM_NAME, GADA_ADJUSTMENT.BILL_" +
+                "ID, GADA_ADJUSTMENT.CLIENT_CD, \r\n                                      GAMA_CLIE" +
+                "NT.CLIENT_NAME, GADA_ADJUSTMENT.TEMP_PAY_NUMBER, GADA_ADJUSTMENT.ADJUST_DATE, \r\n" +
+                "                                      GADA_ADJUSTMENT.ADJUST_PAY_TYPE, GADA_ADJU" +
+                "STMENT.BANK_CD, GADA_ADJUSTMENT.OFFICE_CD, \r\n                                   " +
+                "   GADA_ADJUSTMENT.ACCOUNT_TYPE, GADA_ADJUSTMENT.ACCOUNT_HOLDER_KANA, \r\n        " +
+                "                              GADA_ADJUSTMENT.ACCOUNT_NUMBER, GADA_ADJUSTMENT.RE" +
+                "C_NUMBER, \r\n                                      GADA_ADJUSTMENT.MANUAL_UPDATE," +
+                " GADA_ADJUSTMENT.ADMIN_NUMBER, \r\n                                      GADA_ADJU" +
+                "STMENT.SYSTEM_UPDATE, GADA_PCA_DATA_DETAIL.PCA_OUTPUT_DATE,\r\n                   " +
+                "                       (SELECT                      COUNT(ADJUST_NUMBER) AS Expr" +
+                "1\r\n                                                FROM                         " +
+                "GADA_ADJUSTMENT_DETAIL\r\n                                                WHERE   " +
+                "                    (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJUST_NUMBER) AND (PAYMENT" +
+                "_DAY IS NULL)) \r\n                                      AS payment_flg,\r\n        " +
+                "                                  (SELECT                      COUNT(ADJUST_NUMB" +
+                "ER) AS Expr2\r\n                                                FROM              " +
+                "           GADA_ADJUSTMENT_DETAIL AS GADA_ADJUSTMENT_DETAIL_1\r\n                 " +
+                "                               WHERE                       (ADJUST_NUMBER = GADA" +
+                "_ADJUSTMENT.ADJUST_NUMBER)) AS adjustment_row_cnt, \r\n                           " +
+                "           COALESCE\r\n                                          ((SELECT         " +
+                "             BANK_OR_OFFICE_NAME\r\n                                              " +
+                "    FROM                         GAMA_BANK\r\n                                    " +
+                "              WHERE                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AN" +
+                "D (OFFICE_FLG = 1) AND \r\n                                                       " +
+                "                                 (DELETE_FLG = 0)), NULL) AS bank_name, COALESCE" +
+                "\r\n                                          ((SELECT                      BANK_O" +
+                "R_OFFICE_NAME\r\n                                                  FROM           " +
+                "              GAMA_BANK AS GAMA_BANK_1\r\n                                        " +
+                "          WHERE                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND \r\n" +
+                "                                                                                " +
+                "        (GADA_ADJUSTMENT.OFFICE_CD = OFFICE_CD) AND (OFFICE_FLG = 2) AND \r\n     " +
+                "                                                                                " +
+                "   (DELETE_FLG = 0)), NULL) AS branch_name\r\nFROM                         GAMA_CL" +
+                "IENT INNER JOIN\r\n                                      GADA_ADJUSTMENT ON GAMA_C" +
+                "LIENT.CLIENT_CD = GADA_ADJUSTMENT.CLIENT_CD INNER JOIN\r\n                        " +
+                "              GADA_PCA_DATA_DETAIL INNER JOIN\r\n                                 " +
+                "     GADA_PCA_DATA ON GADA_PCA_DATA_DETAIL.PCA_DATA_NUMBER = GADA_PCA_DATA.PCA_D" +
+                "ATA_NUMBER ON \r\n                                      GADA_ADJUSTMENT.ADJUST_NUM" +
+                "BER = GADA_PCA_DATA.PATTERN_NUMBER\r\nWHERE                       (GADA_ADJUSTMENT" +
+                ".DELETE_FLG = 0) AND (GADA_PCA_DATA.DELETE_FLG = 0) AND \r\n                      " +
+                "                (GADA_PCA_DATA_DETAIL.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FL" +
+                "G = 0)\r\nORDER BY               GADA_ADJUSTMENT.ADJUST_NUMBER\r\n";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT                      ADJUST_NUMBER, PUBLIC_FLG, BUSINESS_CD, BUSINESS_ITEM" +
+                "_NAME, BILL_ID, CLIENT_CD, CLIENT_NAME, \r\n                                      " +
+                "TEMP_PAY_NUMBER, ADJUST_DATE, ADJUST_PAY_TYPE, BANK_CD, OFFICE_CD, ACCOUNT_TYPE," +
+                " \r\n                                      ACCOUNT_HOLDER_KANA, ACCOUNT_NUMBER, RE" +
+                "C_NUMBER, MANUAL_UPDATE, ADMIN_NUMBER, \r\n                                      S" +
+                "YSTEM_UPDATE, PCA_OUTPUT_DATE, payment_flg, adjustment_row_cnt, bank_name, branc" +
+                "h_name\r\nFROM                         (SELECT DISTINCT \r\n                        " +
+                "                                                      TOP (100) PERCENT GADA_ADJ" +
+                "USTMENT.ADJUST_NUMBER, GADA_ADJUSTMENT.PUBLIC_FLG, \r\n                           " +
+                "                                                   GADA_ADJUSTMENT.BUSINESS_CD, " +
+                "GADA_ADJUSTMENT.BUSINESS_ITEM_NAME, \r\n                                          " +
+                "                                    GADA_ADJUSTMENT.BILL_ID, GADA_ADJUSTMENT.CLI" +
+                "ENT_CD, GAMA_CLIENT.CLIENT_NAME, \r\n                                             " +
+                "                                 GADA_ADJUSTMENT.TEMP_PAY_NUMBER, GADA_ADJUSTMEN" +
+                "T.ADJUST_DATE, \r\n                                                               " +
+                "               GADA_ADJUSTMENT.ADJUST_PAY_TYPE, GADA_ADJUSTMENT.BANK_CD, \r\n     " +
+                "                                                                         GADA_AD" +
+                "JUSTMENT.OFFICE_CD, GADA_ADJUSTMENT.ACCOUNT_TYPE, \r\n                            " +
+                "                                                  GADA_ADJUSTMENT.ACCOUNT_HOLDER" +
+                "_KANA, GADA_ADJUSTMENT.ACCOUNT_NUMBER, \r\n                                       " +
+                "                                       GADA_ADJUSTMENT.REC_NUMBER, GADA_ADJUSTME" +
+                "NT.MANUAL_UPDATE, \r\n                                                            " +
+                "                  GADA_ADJUSTMENT.ADMIN_NUMBER, GADA_ADJUSTMENT.SYSTEM_UPDATE, \r" +
+                "\n                                                                              G" +
+                "ADA_PCA_DATA_DETAIL.PCA_OUTPUT_DATE,\r\n                                          " +
+                "                                        (SELECT                      COUNT(ADJUS" +
+                "T_NUMBER) AS Expr1\r\n                                                            " +
+                "                            FROM                         GADA_ADJUSTMENT_DETAIL\r" +
+                "\n                                                                               " +
+                "         WHERE                       (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJUST_NUM" +
+                "BER) AND \r\n                                                                     " +
+                "                                                         (PAYMENT_DAY IS NULL)) " +
+                "AS payment_flg,\r\n                                                               " +
+                "                   (SELECT                      COUNT(ADJUST_NUMBER) AS Expr2\r\n " +
+                "                                                                                " +
+                "       FROM                         GADA_ADJUSTMENT_DETAIL AS GADA_ADJUSTMENT_DE" +
+                "TAIL_1\r\n                                                                        " +
+                "                WHERE                       (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJ" +
+                "UST_NUMBER)) \r\n                                                                 " +
+                "             AS adjustment_row_cnt, COALESCE\r\n                                  " +
+                "                                                ((SELECT                      BA" +
+                "NK_OR_OFFICE_NAME\r\n                                                             " +
+                "                             FROM                         GAMA_BANK\r\n           " +
+                "                                                                               W" +
+                "HERE                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND (OFFICE_FLG =" +
+                " 1) AND \r\n                                                                      " +
+                "                                                          (DELETE_FLG = 0)), NUL" +
+                "L) AS bank_name, COALESCE\r\n                                                     " +
+                "                             ((SELECT                      BANK_OR_OFFICE_NAME\r\n" +
+                "                                                                                " +
+                "          FROM                         GAMA_BANK AS GAMA_BANK_1\r\n               " +
+                "                                                                           WHERE" +
+                "                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND \r\n               " +
+                "                                                                                " +
+                "                                 (GADA_ADJUSTMENT.OFFICE_CD = OFFICE_CD) AND (OF" +
+                "FICE_FLG = 2) AND \r\n                                                            " +
+                "                                                                    (DELETE_FLG " +
+                "= 0)), NULL) AS branch_name\r\n                                        FROM       " +
+                "                  GAMA_CLIENT INNER JOIN\r\n                                      " +
+                "                                        GADA_ADJUSTMENT ON GAMA_CLIENT.CLIENT_CD" +
+                " = GADA_ADJUSTMENT.CLIENT_CD INNER JOIN\r\n                                       " +
+                "                                       GADA_PCA_DATA_DETAIL INNER JOIN\r\n        " +
+                "                                                                      GADA_PCA_D" +
+                "ATA ON \r\n                                                                       " +
+                "       GADA_PCA_DATA_DETAIL.PCA_DATA_NUMBER = GADA_PCA_DATA.PCA_DATA_NUMBER ON \r" +
+                "\n                                                                              G" +
+                "ADA_ADJUSTMENT.ADJUST_NUMBER = GADA_PCA_DATA.PATTERN_NUMBER\r\n                   " +
+                "                     WHERE                       (GADA_ADJUSTMENT.DELETE_FLG = 0" +
+                ") AND (GADA_PCA_DATA.DELETE_FLG = 0) AND \r\n                                     " +
+                "                                         (GADA_PCA_DATA_DETAIL.DELETE_FLG = 0) A" +
+                "ND (GAMA_CLIENT.DELETE_FLG = 0) AND \r\n                                          " +
+                "                                    (GADA_ADJUSTMENT.BUSINESS_ITEM_NAME LIKE \'%\'" +
+                " + @BussinessItemName + \'%\')\r\n                                        ORDER BY  " +
+                "             GADA_ADJUSTMENT.ADJUST_NUMBER) AS s\r\nWHERE                       (p" +
+                "ayment_flg <> adjustment_row_cnt) AND (payment_flg <> 0)\r\n";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BussinessItemName", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "BUSINESS_ITEM_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT                      ADJUST_NUMBER, PUBLIC_FLG, BUSINESS_CD, BUSINESS_ITEM" +
+                "_NAME, BILL_ID, CLIENT_CD, CLIENT_NAME, \r\n                                      " +
+                "TEMP_PAY_NUMBER, ADJUST_DATE, ADJUST_PAY_TYPE, BANK_CD, OFFICE_CD, ACCOUNT_TYPE," +
+                " \r\n                                      ACCOUNT_HOLDER_KANA, ACCOUNT_NUMBER, RE" +
+                "C_NUMBER, MANUAL_UPDATE, ADMIN_NUMBER, \r\n                                      S" +
+                "YSTEM_UPDATE, PCA_OUTPUT_DATE, payment_flg, adjustment_row_cnt, bank_name, branc" +
+                "h_name\r\nFROM                         (SELECT DISTINCT \r\n                        " +
+                "                                                      TOP (100) PERCENT GADA_ADJ" +
+                "USTMENT.ADJUST_NUMBER, GADA_ADJUSTMENT.PUBLIC_FLG, \r\n                           " +
+                "                                                   GADA_ADJUSTMENT.BUSINESS_CD, " +
+                "GADA_ADJUSTMENT.BUSINESS_ITEM_NAME, \r\n                                          " +
+                "                                    GADA_ADJUSTMENT.BILL_ID, GADA_ADJUSTMENT.CLI" +
+                "ENT_CD, GAMA_CLIENT.CLIENT_NAME, \r\n                                             " +
+                "                                 GADA_ADJUSTMENT.TEMP_PAY_NUMBER, GADA_ADJUSTMEN" +
+                "T.ADJUST_DATE, \r\n                                                               " +
+                "               GADA_ADJUSTMENT.ADJUST_PAY_TYPE, GADA_ADJUSTMENT.BANK_CD, \r\n     " +
+                "                                                                         GADA_AD" +
+                "JUSTMENT.OFFICE_CD, GADA_ADJUSTMENT.ACCOUNT_TYPE, \r\n                            " +
+                "                                                  GADA_ADJUSTMENT.ACCOUNT_HOLDER" +
+                "_KANA, GADA_ADJUSTMENT.ACCOUNT_NUMBER, \r\n                                       " +
+                "                                       GADA_ADJUSTMENT.REC_NUMBER, GADA_ADJUSTME" +
+                "NT.MANUAL_UPDATE, \r\n                                                            " +
+                "                  GADA_ADJUSTMENT.ADMIN_NUMBER, GADA_ADJUSTMENT.SYSTEM_UPDATE, \r" +
+                "\n                                                                              G" +
+                "ADA_PCA_DATA_DETAIL.PCA_OUTPUT_DATE,\r\n                                          " +
+                "                                        (SELECT                      COUNT(ADJUS" +
+                "T_NUMBER) AS Expr1\r\n                                                            " +
+                "                            FROM                         GADA_ADJUSTMENT_DETAIL\r" +
+                "\n                                                                               " +
+                "         WHERE                       (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJUST_NUM" +
+                "BER) AND \r\n                                                                     " +
+                "                                                         (PAYMENT_DAY IS NULL)) " +
+                "AS payment_flg,\r\n                                                               " +
+                "                   (SELECT                      COUNT(ADJUST_NUMBER) AS Expr2\r\n " +
+                "                                                                                " +
+                "       FROM                         GADA_ADJUSTMENT_DETAIL AS GADA_ADJUSTMENT_DE" +
+                "TAIL_1\r\n                                                                        " +
+                "                WHERE                       (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJ" +
+                "UST_NUMBER)) \r\n                                                                 " +
+                "             AS adjustment_row_cnt, COALESCE\r\n                                  " +
+                "                                                ((SELECT                      BA" +
+                "NK_OR_OFFICE_NAME\r\n                                                             " +
+                "                             FROM                         GAMA_BANK\r\n           " +
+                "                                                                               W" +
+                "HERE                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND (OFFICE_FLG =" +
+                " 1) AND \r\n                                                                      " +
+                "                                                          (DELETE_FLG = 0)), NUL" +
+                "L) AS bank_name, COALESCE\r\n                                                     " +
+                "                             ((SELECT                      BANK_OR_OFFICE_NAME\r\n" +
+                "                                                                                " +
+                "          FROM                         GAMA_BANK AS GAMA_BANK_1\r\n               " +
+                "                                                                           WHERE" +
+                "                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND \r\n               " +
+                "                                                                                " +
+                "                                 (GADA_ADJUSTMENT.OFFICE_CD = OFFICE_CD) AND (OF" +
+                "FICE_FLG = 2) AND \r\n                                                            " +
+                "                                                                    (DELETE_FLG " +
+                "= 0)), NULL) AS branch_name\r\n                                        FROM       " +
+                "                  GAMA_CLIENT INNER JOIN\r\n                                      " +
+                "                                        GADA_ADJUSTMENT ON GAMA_CLIENT.CLIENT_CD" +
+                " = GADA_ADJUSTMENT.CLIENT_CD INNER JOIN\r\n                                       " +
+                "                                       GADA_PCA_DATA_DETAIL INNER JOIN\r\n        " +
+                "                                                                      GADA_PCA_D" +
+                "ATA ON \r\n                                                                       " +
+                "       GADA_PCA_DATA_DETAIL.PCA_DATA_NUMBER = GADA_PCA_DATA.PCA_DATA_NUMBER ON \r" +
+                "\n                                                                              G" +
+                "ADA_ADJUSTMENT.ADJUST_NUMBER = GADA_PCA_DATA.PATTERN_NUMBER\r\n                   " +
+                "                     WHERE                       (GADA_ADJUSTMENT.DELETE_FLG = 0" +
+                ") AND (GADA_PCA_DATA.DELETE_FLG = 0) AND \r\n                                     " +
+                "                                         (GADA_PCA_DATA_DETAIL.DELETE_FLG = 0) A" +
+                "ND (GAMA_CLIENT.DELETE_FLG = 0)\r\n                                        ORDER B" +
+                "Y               GADA_ADJUSTMENT.ADJUST_NUMBER) AS s\r\nWHERE                      " +
+                " (payment_flg <> adjustment_row_cnt) AND (payment_flg <> 0)\r\n";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT                      ADJUST_NUMBER, PUBLIC_FLG, BUSINESS_CD, BUSINESS_ITEM" +
+                "_NAME, BILL_ID, CLIENT_CD, CLIENT_NAME, \r\n                                      " +
+                "TEMP_PAY_NUMBER, ADJUST_DATE, ADJUST_PAY_TYPE, BANK_CD, OFFICE_CD, ACCOUNT_TYPE," +
+                " \r\n                                      ACCOUNT_HOLDER_KANA, ACCOUNT_NUMBER, RE" +
+                "C_NUMBER, MANUAL_UPDATE, ADMIN_NUMBER, \r\n                                      S" +
+                "YSTEM_UPDATE, PCA_OUTPUT_DATE, payment_flg, adjustment_row_cnt, bank_name, branc" +
+                "h_name\r\nFROM                         (SELECT DISTINCT \r\n                        " +
+                "                                                      TOP (100) PERCENT GADA_ADJ" +
+                "USTMENT.ADJUST_NUMBER, GADA_ADJUSTMENT.PUBLIC_FLG, \r\n                           " +
+                "                                                   GADA_ADJUSTMENT.BUSINESS_CD, " +
+                "GADA_ADJUSTMENT.BUSINESS_ITEM_NAME, \r\n                                          " +
+                "                                    GADA_ADJUSTMENT.BILL_ID, GADA_ADJUSTMENT.CLI" +
+                "ENT_CD, GAMA_CLIENT.CLIENT_NAME, \r\n                                             " +
+                "                                 GADA_ADJUSTMENT.TEMP_PAY_NUMBER, GADA_ADJUSTMEN" +
+                "T.ADJUST_DATE, \r\n                                                               " +
+                "               GADA_ADJUSTMENT.ADJUST_PAY_TYPE, GADA_ADJUSTMENT.BANK_CD, \r\n     " +
+                "                                                                         GADA_AD" +
+                "JUSTMENT.OFFICE_CD, GADA_ADJUSTMENT.ACCOUNT_TYPE, \r\n                            " +
+                "                                                  GADA_ADJUSTMENT.ACCOUNT_HOLDER" +
+                "_KANA, GADA_ADJUSTMENT.ACCOUNT_NUMBER, \r\n                                       " +
+                "                                       GADA_ADJUSTMENT.REC_NUMBER, GADA_ADJUSTME" +
+                "NT.MANUAL_UPDATE, \r\n                                                            " +
+                "                  GADA_ADJUSTMENT.ADMIN_NUMBER, GADA_ADJUSTMENT.SYSTEM_UPDATE, \r" +
+                "\n                                                                              G" +
+                "ADA_PCA_DATA_DETAIL.PCA_OUTPUT_DATE,\r\n                                          " +
+                "                                        (SELECT                      COUNT(ADJUS" +
+                "T_NUMBER) AS Expr1\r\n                                                            " +
+                "                            FROM                         GADA_ADJUSTMENT_DETAIL\r" +
+                "\n                                                                               " +
+                "         WHERE                       (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJUST_NUM" +
+                "BER) AND \r\n                                                                     " +
+                "                                                         (PAYMENT_DAY IS NULL)) " +
+                "AS payment_flg,\r\n                                                               " +
+                "                   (SELECT                      COUNT(ADJUST_NUMBER) AS Expr2\r\n " +
+                "                                                                                " +
+                "       FROM                         GADA_ADJUSTMENT_DETAIL AS GADA_ADJUSTMENT_DE" +
+                "TAIL_1\r\n                                                                        " +
+                "                WHERE                       (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJ" +
+                "UST_NUMBER)) \r\n                                                                 " +
+                "             AS adjustment_row_cnt, COALESCE\r\n                                  " +
+                "                                                ((SELECT                      BA" +
+                "NK_OR_OFFICE_NAME\r\n                                                             " +
+                "                             FROM                         GAMA_BANK\r\n           " +
+                "                                                                               W" +
+                "HERE                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND (OFFICE_FLG =" +
+                " 1) AND \r\n                                                                      " +
+                "                                                          (DELETE_FLG = 0)), NUL" +
+                "L) AS bank_name, COALESCE\r\n                                                     " +
+                "                             ((SELECT                      BANK_OR_OFFICE_NAME\r\n" +
+                "                                                                                " +
+                "          FROM                         GAMA_BANK AS GAMA_BANK_1\r\n               " +
+                "                                                                           WHERE" +
+                "                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND \r\n               " +
+                "                                                                                " +
+                "                                 (GADA_ADJUSTMENT.OFFICE_CD = OFFICE_CD) AND (OF" +
+                "FICE_FLG = 2) AND \r\n                                                            " +
+                "                                                                    (DELETE_FLG " +
+                "= 0)), NULL) AS branch_name\r\n                                        FROM       " +
+                "                  GAMA_CLIENT INNER JOIN\r\n                                      " +
+                "                                        GADA_ADJUSTMENT ON GAMA_CLIENT.CLIENT_CD" +
+                " = GADA_ADJUSTMENT.CLIENT_CD INNER JOIN\r\n                                       " +
+                "                                       GADA_PCA_DATA_DETAIL INNER JOIN\r\n        " +
+                "                                                                      GADA_PCA_D" +
+                "ATA ON \r\n                                                                       " +
+                "       GADA_PCA_DATA_DETAIL.PCA_DATA_NUMBER = GADA_PCA_DATA.PCA_DATA_NUMBER ON \r" +
+                "\n                                                                              G" +
+                "ADA_ADJUSTMENT.ADJUST_NUMBER = GADA_PCA_DATA.PATTERN_NUMBER\r\n                   " +
+                "                     WHERE                       (GADA_ADJUSTMENT.PUBLIC_FLG = @" +
+                "PublicFlg) AND (GADA_ADJUSTMENT.DELETE_FLG = 0) AND \r\n                          " +
+                "                                                    (GADA_PCA_DATA.DELETE_FLG = " +
+                "0) AND (GADA_PCA_DATA_DETAIL.DELETE_FLG = 0) AND \r\n                             " +
+                "                                                 (GAMA_CLIENT.DELETE_FLG = 0) AN" +
+                "D \r\n                                                                            " +
+                "  (GADA_ADJUSTMENT.BUSINESS_ITEM_NAME LIKE \'%\' + @BussinessItemName + \'%\')\r\n    " +
+                "                                    ORDER BY               GADA_ADJUSTMENT.ADJUS" +
+                "T_NUMBER) AS s\r\nWHERE                       (payment_flg <> adjustment_row_cnt) " +
+                "AND (payment_flg <> 0)\r\n";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PublicFlg", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_FLG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BussinessItemName", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "BUSINESS_ITEM_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "SELECT                      ADJUST_NUMBER, PUBLIC_FLG, BUSINESS_CD, BUSINESS_ITEM" +
+                "_NAME, BILL_ID, CLIENT_CD, CLIENT_NAME, \r\n                                      " +
+                "TEMP_PAY_NUMBER, ADJUST_DATE, ADJUST_PAY_TYPE, BANK_CD, OFFICE_CD, ACCOUNT_TYPE," +
+                " \r\n                                      ACCOUNT_HOLDER_KANA, ACCOUNT_NUMBER, RE" +
+                "C_NUMBER, MANUAL_UPDATE, ADMIN_NUMBER, \r\n                                      S" +
+                "YSTEM_UPDATE, PCA_OUTPUT_DATE, payment_flg, adjustment_row_cnt, bank_name, branc" +
+                "h_name\r\nFROM                         (SELECT DISTINCT \r\n                        " +
+                "                                                      TOP (100) PERCENT GADA_ADJ" +
+                "USTMENT.ADJUST_NUMBER, GADA_ADJUSTMENT.PUBLIC_FLG, \r\n                           " +
+                "                                                   GADA_ADJUSTMENT.BUSINESS_CD, " +
+                "GADA_ADJUSTMENT.BUSINESS_ITEM_NAME, \r\n                                          " +
+                "                                    GADA_ADJUSTMENT.BILL_ID, GADA_ADJUSTMENT.CLI" +
+                "ENT_CD, GAMA_CLIENT.CLIENT_NAME, \r\n                                             " +
+                "                                 GADA_ADJUSTMENT.TEMP_PAY_NUMBER, GADA_ADJUSTMEN" +
+                "T.ADJUST_DATE, \r\n                                                               " +
+                "               GADA_ADJUSTMENT.ADJUST_PAY_TYPE, GADA_ADJUSTMENT.BANK_CD, \r\n     " +
+                "                                                                         GADA_AD" +
+                "JUSTMENT.OFFICE_CD, GADA_ADJUSTMENT.ACCOUNT_TYPE, \r\n                            " +
+                "                                                  GADA_ADJUSTMENT.ACCOUNT_HOLDER" +
+                "_KANA, GADA_ADJUSTMENT.ACCOUNT_NUMBER, \r\n                                       " +
+                "                                       GADA_ADJUSTMENT.REC_NUMBER, GADA_ADJUSTME" +
+                "NT.MANUAL_UPDATE, \r\n                                                            " +
+                "                  GADA_ADJUSTMENT.ADMIN_NUMBER, GADA_ADJUSTMENT.SYSTEM_UPDATE, \r" +
+                "\n                                                                              G" +
+                "ADA_PCA_DATA_DETAIL.PCA_OUTPUT_DATE,\r\n                                          " +
+                "                                        (SELECT                      COUNT(ADJUS" +
+                "T_NUMBER) AS Expr1\r\n                                                            " +
+                "                            FROM                         GADA_ADJUSTMENT_DETAIL\r" +
+                "\n                                                                               " +
+                "         WHERE                       (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJUST_NUM" +
+                "BER) AND \r\n                                                                     " +
+                "                                                         (PAYMENT_DAY IS NULL)) " +
+                "AS payment_flg,\r\n                                                               " +
+                "                   (SELECT                      COUNT(ADJUST_NUMBER) AS Expr2\r\n " +
+                "                                                                                " +
+                "       FROM                         GADA_ADJUSTMENT_DETAIL AS GADA_ADJUSTMENT_DE" +
+                "TAIL_1\r\n                                                                        " +
+                "                WHERE                       (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJ" +
+                "UST_NUMBER)) \r\n                                                                 " +
+                "             AS adjustment_row_cnt, COALESCE\r\n                                  " +
+                "                                                ((SELECT                      BA" +
+                "NK_OR_OFFICE_NAME\r\n                                                             " +
+                "                             FROM                         GAMA_BANK\r\n           " +
+                "                                                                               W" +
+                "HERE                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND (OFFICE_FLG =" +
+                " 1) AND \r\n                                                                      " +
+                "                                                          (DELETE_FLG = 0)), NUL" +
+                "L) AS bank_name, COALESCE\r\n                                                     " +
+                "                             ((SELECT                      BANK_OR_OFFICE_NAME\r\n" +
+                "                                                                                " +
+                "          FROM                         GAMA_BANK AS GAMA_BANK_1\r\n               " +
+                "                                                                           WHERE" +
+                "                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND \r\n               " +
+                "                                                                                " +
+                "                                 (GADA_ADJUSTMENT.OFFICE_CD = OFFICE_CD) AND (OF" +
+                "FICE_FLG = 2) AND \r\n                                                            " +
+                "                                                                    (DELETE_FLG " +
+                "= 0)), NULL) AS branch_name\r\n                                        FROM       " +
+                "                  GAMA_CLIENT INNER JOIN\r\n                                      " +
+                "                                        GADA_ADJUSTMENT ON GAMA_CLIENT.CLIENT_CD" +
+                " = GADA_ADJUSTMENT.CLIENT_CD INNER JOIN\r\n                                       " +
+                "                                       GADA_PCA_DATA_DETAIL INNER JOIN\r\n        " +
+                "                                                                      GADA_PCA_D" +
+                "ATA ON \r\n                                                                       " +
+                "       GADA_PCA_DATA_DETAIL.PCA_DATA_NUMBER = GADA_PCA_DATA.PCA_DATA_NUMBER ON \r" +
+                "\n                                                                              G" +
+                "ADA_ADJUSTMENT.ADJUST_NUMBER = GADA_PCA_DATA.PATTERN_NUMBER\r\n                   " +
+                "                     WHERE                       (GADA_ADJUSTMENT.PUBLIC_FLG = @" +
+                "PublicFlg) AND (GADA_ADJUSTMENT.DELETE_FLG = 0) AND \r\n                          " +
+                "                                                    (GADA_PCA_DATA.DELETE_FLG = " +
+                "0) AND (GADA_PCA_DATA_DETAIL.DELETE_FLG = 0) AND \r\n                             " +
+                "                                                 (GAMA_CLIENT.DELETE_FLG = 0)\r\n " +
+                "                                       ORDER BY               GADA_ADJUSTMENT.AD" +
+                "JUST_NUMBER) AS s\r\nWHERE                       (payment_flg <> adjustment_row_cn" +
+                "t) AND (payment_flg <> 0)\r\n";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PublicFlg", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_FLG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].CommandText = "SELECT DISTINCT \r\n                                      GADA_ADJUSTMENT.ADJUST_NU" +
+                "MBER, GADA_ADJUSTMENT.PUBLIC_FLG, GADA_ADJUSTMENT.BUSINESS_CD, \r\n               " +
+                "                       GADA_ADJUSTMENT.BUSINESS_ITEM_NAME, GADA_ADJUSTMENT.BILL_" +
+                "ID, GADA_ADJUSTMENT.CLIENT_CD, \r\n                                      GAMA_CLIE" +
+                "NT.CLIENT_NAME, GADA_ADJUSTMENT.TEMP_PAY_NUMBER, GADA_ADJUSTMENT.ADJUST_DATE, \r\n" +
+                "                                      GADA_ADJUSTMENT.ADJUST_PAY_TYPE, GADA_ADJU" +
+                "STMENT.BANK_CD, GADA_ADJUSTMENT.OFFICE_CD, \r\n                                   " +
+                "   GADA_ADJUSTMENT.ACCOUNT_TYPE, GADA_ADJUSTMENT.ACCOUNT_HOLDER_KANA, \r\n        " +
+                "                              GADA_ADJUSTMENT.ACCOUNT_NUMBER, GADA_ADJUSTMENT.RE" +
+                "C_NUMBER, \r\n                                      GADA_ADJUSTMENT.MANUAL_UPDATE," +
+                " GADA_ADJUSTMENT.ADMIN_NUMBER, \r\n                                      GADA_ADJU" +
+                "STMENT.SYSTEM_UPDATE, GADA_PCA_DATA_DETAIL.PCA_OUTPUT_DATE,\r\n                   " +
+                "                       (SELECT                      COUNT(ADJUST_NUMBER) AS Expr" +
+                "1\r\n                                                FROM                         " +
+                "GADA_ADJUSTMENT_DETAIL\r\n                                                WHERE   " +
+                "                    (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJUST_NUMBER) AND (PAYMENT" +
+                "_DAY IS NULL)) \r\n                                      AS payment_flg,\r\n        " +
+                "                                  (SELECT                      COUNT(ADJUST_NUMB" +
+                "ER) AS Expr2\r\n                                                FROM              " +
+                "           GADA_ADJUSTMENT_DETAIL AS GADA_ADJUSTMENT_DETAIL_1\r\n                 " +
+                "                               WHERE                       (ADJUST_NUMBER = GADA" +
+                "_ADJUSTMENT.ADJUST_NUMBER)) AS adjustment_row_cnt, \r\n                           " +
+                "           COALESCE\r\n                                          ((SELECT         " +
+                "             BANK_OR_OFFICE_NAME\r\n                                              " +
+                "    FROM                         GAMA_BANK\r\n                                    " +
+                "              WHERE                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AN" +
+                "D (OFFICE_FLG = 1) AND \r\n                                                       " +
+                "                                 (DELETE_FLG = 0)), NULL) AS bank_name, COALESCE" +
+                "\r\n                                          ((SELECT                      BANK_O" +
+                "R_OFFICE_NAME\r\n                                                  FROM           " +
+                "              GAMA_BANK AS GAMA_BANK_1\r\n                                        " +
+                "          WHERE                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND \r\n" +
+                "                                                                                " +
+                "        (GADA_ADJUSTMENT.OFFICE_CD = OFFICE_CD) AND (OFFICE_FLG = 2) AND \r\n     " +
+                "                                                                                " +
+                "   (DELETE_FLG = 0)), NULL) AS branch_name\r\nFROM                         GAMA_CL" +
+                "IENT INNER JOIN\r\n                                      GADA_ADJUSTMENT ON GAMA_C" +
+                "LIENT.CLIENT_CD = GADA_ADJUSTMENT.CLIENT_CD INNER JOIN\r\n                        " +
+                "              GADA_PCA_DATA_DETAIL INNER JOIN\r\n                                 " +
+                "     GADA_PCA_DATA ON GADA_PCA_DATA_DETAIL.PCA_DATA_NUMBER = GADA_PCA_DATA.PCA_D" +
+                "ATA_NUMBER ON \r\n                                      GADA_ADJUSTMENT.ADJUST_NUM" +
+                "BER = GADA_PCA_DATA.PATTERN_NUMBER\r\nWHERE                       (GADA_ADJUSTMENT" +
+                ".PUBLIC_FLG = @PublicFlg) AND (GADA_ADJUSTMENT.DELETE_FLG = 0) AND \r\n           " +
+                "                           (GADA_PCA_DATA.DELETE_FLG = 0) AND (GADA_PCA_DATA_DET" +
+                "AIL.DELETE_FLG = 0) AND \r\n                                      (GAMA_CLIENT.DEL" +
+                "ETE_FLG = 0) AND \r\n                                      (GADA_ADJUSTMENT.BUSINE" +
+                "SS_ITEM_NAME LIKE \'%\' + @BussinessItemName + \'%\')\r\nORDER BY               GADA_A" +
+                "DJUSTMENT.ADJUST_NUMBER\r\n";
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PublicFlg", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_FLG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BussinessItemName", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "BUSINESS_ITEM_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[7].Connection = this.Connection;
+            this._commandCollection[7].CommandText = "SELECT DISTINCT \r\n                                      GADA_ADJUSTMENT.ADJUST_NU" +
+                "MBER, GADA_ADJUSTMENT.PUBLIC_FLG, GADA_ADJUSTMENT.BUSINESS_CD, \r\n               " +
+                "                       GADA_ADJUSTMENT.BUSINESS_ITEM_NAME, GADA_ADJUSTMENT.BILL_" +
+                "ID, GADA_ADJUSTMENT.CLIENT_CD, \r\n                                      GAMA_CLIE" +
+                "NT.CLIENT_NAME, GADA_ADJUSTMENT.TEMP_PAY_NUMBER, GADA_ADJUSTMENT.ADJUST_DATE, \r\n" +
+                "                                      GADA_ADJUSTMENT.ADJUST_PAY_TYPE, GADA_ADJU" +
+                "STMENT.BANK_CD, GADA_ADJUSTMENT.OFFICE_CD, \r\n                                   " +
+                "   GADA_ADJUSTMENT.ACCOUNT_TYPE, GADA_ADJUSTMENT.ACCOUNT_HOLDER_KANA, \r\n        " +
+                "                              GADA_ADJUSTMENT.ACCOUNT_NUMBER, GADA_ADJUSTMENT.RE" +
+                "C_NUMBER, \r\n                                      GADA_ADJUSTMENT.MANUAL_UPDATE," +
+                " GADA_ADJUSTMENT.ADMIN_NUMBER, \r\n                                      GADA_ADJU" +
+                "STMENT.SYSTEM_UPDATE, GADA_PCA_DATA_DETAIL.PCA_OUTPUT_DATE,\r\n                   " +
+                "                       (SELECT                      COUNT(ADJUST_NUMBER) AS Expr" +
+                "1\r\n                                                FROM                         " +
+                "GADA_ADJUSTMENT_DETAIL\r\n                                                WHERE   " +
+                "                    (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJUST_NUMBER) AND (PAYMENT" +
+                "_DAY IS NULL)) \r\n                                      AS payment_flg,\r\n        " +
+                "                                  (SELECT                      COUNT(ADJUST_NUMB" +
+                "ER) AS Expr2\r\n                                                FROM              " +
+                "           GADA_ADJUSTMENT_DETAIL AS GADA_ADJUSTMENT_DETAIL_1\r\n                 " +
+                "                               WHERE                       (ADJUST_NUMBER = GADA" +
+                "_ADJUSTMENT.ADJUST_NUMBER)) AS adjustment_row_cnt, \r\n                           " +
+                "           COALESCE\r\n                                          ((SELECT         " +
+                "             BANK_OR_OFFICE_NAME\r\n                                              " +
+                "    FROM                         GAMA_BANK\r\n                                    " +
+                "              WHERE                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AN" +
+                "D (OFFICE_FLG = 1) AND \r\n                                                       " +
+                "                                 (DELETE_FLG = 0)), NULL) AS bank_name, COALESCE" +
+                "\r\n                                          ((SELECT                      BANK_O" +
+                "R_OFFICE_NAME\r\n                                                  FROM           " +
+                "              GAMA_BANK AS GAMA_BANK_1\r\n                                        " +
+                "          WHERE                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND \r\n" +
+                "                                                                                " +
+                "        (GADA_ADJUSTMENT.OFFICE_CD = OFFICE_CD) AND (OFFICE_FLG = 2) AND \r\n     " +
+                "                                                                                " +
+                "   (DELETE_FLG = 0)), NULL) AS branch_name\r\nFROM                         GAMA_CL" +
+                "IENT INNER JOIN\r\n                                      GADA_ADJUSTMENT ON GAMA_C" +
+                "LIENT.CLIENT_CD = GADA_ADJUSTMENT.CLIENT_CD INNER JOIN\r\n                        " +
+                "              GADA_PCA_DATA_DETAIL INNER JOIN\r\n                                 " +
+                "     GADA_PCA_DATA ON GADA_PCA_DATA_DETAIL.PCA_DATA_NUMBER = GADA_PCA_DATA.PCA_D" +
+                "ATA_NUMBER ON \r\n                                      GADA_ADJUSTMENT.ADJUST_NUM" +
+                "BER = GADA_PCA_DATA.PATTERN_NUMBER\r\nWHERE                       (GADA_ADJUSTMENT" +
+                ".PUBLIC_FLG = @PublicFlg) AND (GADA_ADJUSTMENT.DELETE_FLG = 0) AND \r\n           " +
+                "                           (GADA_PCA_DATA.DELETE_FLG = 0) AND (GADA_PCA_DATA_DET" +
+                "AIL.DELETE_FLG = 0) AND \r\n                                      (GAMA_CLIENT.DEL" +
+                "ETE_FLG = 0)\r\nORDER BY               GADA_ADJUSTMENT.ADJUST_NUMBER\r\n";
+            this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PublicFlg", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_FLG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[8].Connection = this.Connection;
+            this._commandCollection[8].CommandText = "SELECT                      ADJUST_NUMBER, PUBLIC_FLG, BUSINESS_CD, BUSINESS_ITEM" +
+                "_NAME, BILL_ID, CLIENT_CD, CLIENT_NAME, \r\n                                      " +
+                "TEMP_PAY_NUMBER, ADJUST_DATE, ADJUST_PAY_TYPE, BANK_CD, OFFICE_CD, ACCOUNT_TYPE," +
+                " \r\n                                      ACCOUNT_HOLDER_KANA, ACCOUNT_NUMBER, RE" +
+                "C_NUMBER, MANUAL_UPDATE, ADMIN_NUMBER, \r\n                                      S" +
+                "YSTEM_UPDATE, PCA_OUTPUT_DATE, payment_flg, adjustment_row_cnt, bank_name, branc" +
+                "h_name\r\nFROM                         (SELECT DISTINCT \r\n                        " +
+                "                                                      TOP (100) PERCENT GADA_ADJ" +
+                "USTMENT.ADJUST_NUMBER, GADA_ADJUSTMENT.PUBLIC_FLG, \r\n                           " +
+                "                                                   GADA_ADJUSTMENT.BUSINESS_CD, " +
+                "GADA_ADJUSTMENT.BUSINESS_ITEM_NAME, \r\n                                          " +
+                "                                    GADA_ADJUSTMENT.BILL_ID, GADA_ADJUSTMENT.CLI" +
+                "ENT_CD, GAMA_CLIENT.CLIENT_NAME, \r\n                                             " +
+                "                                 GADA_ADJUSTMENT.TEMP_PAY_NUMBER, GADA_ADJUSTMEN" +
+                "T.ADJUST_DATE, \r\n                                                               " +
+                "               GADA_ADJUSTMENT.ADJUST_PAY_TYPE, GADA_ADJUSTMENT.BANK_CD, \r\n     " +
+                "                                                                         GADA_AD" +
+                "JUSTMENT.OFFICE_CD, GADA_ADJUSTMENT.ACCOUNT_TYPE, \r\n                            " +
+                "                                                  GADA_ADJUSTMENT.ACCOUNT_HOLDER" +
+                "_KANA, GADA_ADJUSTMENT.ACCOUNT_NUMBER, \r\n                                       " +
+                "                                       GADA_ADJUSTMENT.REC_NUMBER, GADA_ADJUSTME" +
+                "NT.MANUAL_UPDATE, \r\n                                                            " +
+                "                  GADA_ADJUSTMENT.ADMIN_NUMBER, GADA_ADJUSTMENT.SYSTEM_UPDATE, \r" +
+                "\n                                                                              G" +
+                "ADA_PCA_DATA_DETAIL.PCA_OUTPUT_DATE,\r\n                                          " +
+                "                                        (SELECT                      COUNT(ADJUS" +
+                "T_NUMBER) AS Expr1\r\n                                                            " +
+                "                            FROM                         GADA_ADJUSTMENT_DETAIL\r" +
+                "\n                                                                               " +
+                "         WHERE                       (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJUST_NUM" +
+                "BER) AND \r\n                                                                     " +
+                "                                                         (PAYMENT_DAY IS NULL)) " +
+                "AS payment_flg,\r\n                                                               " +
+                "                   (SELECT                      COUNT(ADJUST_NUMBER) AS Expr2\r\n " +
+                "                                                                                " +
+                "       FROM                         GADA_ADJUSTMENT_DETAIL AS GADA_ADJUSTMENT_DE" +
+                "TAIL_1\r\n                                                                        " +
+                "                WHERE                       (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJ" +
+                "UST_NUMBER)) \r\n                                                                 " +
+                "             AS adjustment_row_cnt, COALESCE\r\n                                  " +
+                "                                                ((SELECT                      BA" +
+                "NK_OR_OFFICE_NAME\r\n                                                             " +
+                "                             FROM                         GAMA_BANK\r\n           " +
+                "                                                                               W" +
+                "HERE                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND (OFFICE_FLG =" +
+                " 1) AND \r\n                                                                      " +
+                "                                                          (DELETE_FLG = 0)), NUL" +
+                "L) AS bank_name, COALESCE\r\n                                                     " +
+                "                             ((SELECT                      BANK_OR_OFFICE_NAME\r\n" +
+                "                                                                                " +
+                "          FROM                         GAMA_BANK AS GAMA_BANK_1\r\n               " +
+                "                                                                           WHERE" +
+                "                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND \r\n               " +
+                "                                                                                " +
+                "                                 (GADA_ADJUSTMENT.OFFICE_CD = OFFICE_CD) AND (OF" +
+                "FICE_FLG = 2) AND \r\n                                                            " +
+                "                                                                    (DELETE_FLG " +
+                "= 0)), NULL) AS branch_name\r\n                                        FROM       " +
+                "                  GAMA_CLIENT INNER JOIN\r\n                                      " +
+                "                                        GADA_ADJUSTMENT ON GAMA_CLIENT.CLIENT_CD" +
+                " = GADA_ADJUSTMENT.CLIENT_CD INNER JOIN\r\n                                       " +
+                "                                       GADA_PCA_DATA_DETAIL INNER JOIN\r\n        " +
+                "                                                                      GADA_PCA_D" +
+                "ATA ON \r\n                                                                       " +
+                "       GADA_PCA_DATA_DETAIL.PCA_DATA_NUMBER = GADA_PCA_DATA.PCA_DATA_NUMBER ON \r" +
+                "\n                                                                              G" +
+                "ADA_ADJUSTMENT.ADJUST_NUMBER = GADA_PCA_DATA.PATTERN_NUMBER\r\n                   " +
+                "                     WHERE                       (GADA_ADJUSTMENT.DELETE_FLG = 0" +
+                ") AND (GADA_PCA_DATA.DELETE_FLG = 0) AND \r\n                                     " +
+                "                                         (GADA_PCA_DATA_DETAIL.DELETE_FLG = 0) A" +
+                "ND (GAMA_CLIENT.DELETE_FLG = 0) AND \r\n                                          " +
+                "                                    (GADA_ADJUSTMENT.BUSINESS_ITEM_NAME LIKE \'%\'" +
+                " + @BussinessItemName + \'%\')\r\n                                        ORDER BY  " +
+                "             GADA_ADJUSTMENT.ADJUST_NUMBER) AS s\r\nWHERE                       (p" +
+                "ayment_flg = adjustment_row_cnt)\r\n";
+            this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BussinessItemName", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "BUSINESS_ITEM_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[9].Connection = this.Connection;
+            this._commandCollection[9].CommandText = "SELECT                      ADJUST_NUMBER, PUBLIC_FLG, BUSINESS_CD, BUSINESS_ITEM" +
+                "_NAME, BILL_ID, CLIENT_CD, CLIENT_NAME, \r\n                                      " +
+                "TEMP_PAY_NUMBER, ADJUST_DATE, ADJUST_PAY_TYPE, BANK_CD, OFFICE_CD, ACCOUNT_TYPE," +
+                " \r\n                                      ACCOUNT_HOLDER_KANA, ACCOUNT_NUMBER, RE" +
+                "C_NUMBER, MANUAL_UPDATE, ADMIN_NUMBER, \r\n                                      S" +
+                "YSTEM_UPDATE, PCA_OUTPUT_DATE, payment_flg, adjustment_row_cnt, bank_name, branc" +
+                "h_name\r\nFROM                         (SELECT DISTINCT \r\n                        " +
+                "                                                      TOP (100) PERCENT GADA_ADJ" +
+                "USTMENT.ADJUST_NUMBER, GADA_ADJUSTMENT.PUBLIC_FLG, \r\n                           " +
+                "                                                   GADA_ADJUSTMENT.BUSINESS_CD, " +
+                "GADA_ADJUSTMENT.BUSINESS_ITEM_NAME, \r\n                                          " +
+                "                                    GADA_ADJUSTMENT.BILL_ID, GADA_ADJUSTMENT.CLI" +
+                "ENT_CD, GAMA_CLIENT.CLIENT_NAME, \r\n                                             " +
+                "                                 GADA_ADJUSTMENT.TEMP_PAY_NUMBER, GADA_ADJUSTMEN" +
+                "T.ADJUST_DATE, \r\n                                                               " +
+                "               GADA_ADJUSTMENT.ADJUST_PAY_TYPE, GADA_ADJUSTMENT.BANK_CD, \r\n     " +
+                "                                                                         GADA_AD" +
+                "JUSTMENT.OFFICE_CD, GADA_ADJUSTMENT.ACCOUNT_TYPE, \r\n                            " +
+                "                                                  GADA_ADJUSTMENT.ACCOUNT_HOLDER" +
+                "_KANA, GADA_ADJUSTMENT.ACCOUNT_NUMBER, \r\n                                       " +
+                "                                       GADA_ADJUSTMENT.REC_NUMBER, GADA_ADJUSTME" +
+                "NT.MANUAL_UPDATE, \r\n                                                            " +
+                "                  GADA_ADJUSTMENT.ADMIN_NUMBER, GADA_ADJUSTMENT.SYSTEM_UPDATE, \r" +
+                "\n                                                                              G" +
+                "ADA_PCA_DATA_DETAIL.PCA_OUTPUT_DATE,\r\n                                          " +
+                "                                        (SELECT                      COUNT(ADJUS" +
+                "T_NUMBER) AS Expr1\r\n                                                            " +
+                "                            FROM                         GADA_ADJUSTMENT_DETAIL\r" +
+                "\n                                                                               " +
+                "         WHERE                       (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJUST_NUM" +
+                "BER) AND \r\n                                                                     " +
+                "                                                         (PAYMENT_DAY IS NULL)) " +
+                "AS payment_flg,\r\n                                                               " +
+                "                   (SELECT                      COUNT(ADJUST_NUMBER) AS Expr2\r\n " +
+                "                                                                                " +
+                "       FROM                         GADA_ADJUSTMENT_DETAIL AS GADA_ADJUSTMENT_DE" +
+                "TAIL_1\r\n                                                                        " +
+                "                WHERE                       (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJ" +
+                "UST_NUMBER)) \r\n                                                                 " +
+                "             AS adjustment_row_cnt, COALESCE\r\n                                  " +
+                "                                                ((SELECT                      BA" +
+                "NK_OR_OFFICE_NAME\r\n                                                             " +
+                "                             FROM                         GAMA_BANK\r\n           " +
+                "                                                                               W" +
+                "HERE                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND (OFFICE_FLG =" +
+                " 1) AND \r\n                                                                      " +
+                "                                                          (DELETE_FLG = 0)), NUL" +
+                "L) AS bank_name, COALESCE\r\n                                                     " +
+                "                             ((SELECT                      BANK_OR_OFFICE_NAME\r\n" +
+                "                                                                                " +
+                "          FROM                         GAMA_BANK AS GAMA_BANK_1\r\n               " +
+                "                                                                           WHERE" +
+                "                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND \r\n               " +
+                "                                                                                " +
+                "                                 (GADA_ADJUSTMENT.OFFICE_CD = OFFICE_CD) AND (OF" +
+                "FICE_FLG = 2) AND \r\n                                                            " +
+                "                                                                    (DELETE_FLG " +
+                "= 0)), NULL) AS branch_name\r\n                                        FROM       " +
+                "                  GAMA_CLIENT INNER JOIN\r\n                                      " +
+                "                                        GADA_ADJUSTMENT ON GAMA_CLIENT.CLIENT_CD" +
+                " = GADA_ADJUSTMENT.CLIENT_CD INNER JOIN\r\n                                       " +
+                "                                       GADA_PCA_DATA_DETAIL INNER JOIN\r\n        " +
+                "                                                                      GADA_PCA_D" +
+                "ATA ON \r\n                                                                       " +
+                "       GADA_PCA_DATA_DETAIL.PCA_DATA_NUMBER = GADA_PCA_DATA.PCA_DATA_NUMBER ON \r" +
+                "\n                                                                              G" +
+                "ADA_ADJUSTMENT.ADJUST_NUMBER = GADA_PCA_DATA.PATTERN_NUMBER\r\n                   " +
+                "                     WHERE                       (GADA_ADJUSTMENT.DELETE_FLG = 0" +
+                ") AND (GADA_PCA_DATA.DELETE_FLG = 0) AND \r\n                                     " +
+                "                                         (GADA_PCA_DATA_DETAIL.DELETE_FLG = 0) A" +
+                "ND (GAMA_CLIENT.DELETE_FLG = 0)\r\n                                        ORDER B" +
+                "Y               GADA_ADJUSTMENT.ADJUST_NUMBER) AS s\r\nWHERE                      " +
+                " (payment_flg = adjustment_row_cnt)\r\n";
+            this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[10] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[10].Connection = this.Connection;
+            this._commandCollection[10].CommandText = "SELECT                      ADJUST_NUMBER, PUBLIC_FLG, BUSINESS_CD, BUSINESS_ITEM" +
+                "_NAME, BILL_ID, CLIENT_CD, CLIENT_NAME, \r\n                                      " +
+                "TEMP_PAY_NUMBER, ADJUST_DATE, ADJUST_PAY_TYPE, BANK_CD, OFFICE_CD, ACCOUNT_TYPE," +
+                " \r\n                                      ACCOUNT_HOLDER_KANA, ACCOUNT_NUMBER, RE" +
+                "C_NUMBER, MANUAL_UPDATE, ADMIN_NUMBER, \r\n                                      S" +
+                "YSTEM_UPDATE, PCA_OUTPUT_DATE, payment_flg, adjustment_row_cnt, bank_name, branc" +
+                "h_name\r\nFROM                         (SELECT DISTINCT \r\n                        " +
+                "                                                      TOP (100) PERCENT GADA_ADJ" +
+                "USTMENT.ADJUST_NUMBER, GADA_ADJUSTMENT.PUBLIC_FLG, \r\n                           " +
+                "                                                   GADA_ADJUSTMENT.BUSINESS_CD, " +
+                "GADA_ADJUSTMENT.BUSINESS_ITEM_NAME, \r\n                                          " +
+                "                                    GADA_ADJUSTMENT.BILL_ID, GADA_ADJUSTMENT.CLI" +
+                "ENT_CD, GAMA_CLIENT.CLIENT_NAME, \r\n                                             " +
+                "                                 GADA_ADJUSTMENT.TEMP_PAY_NUMBER, GADA_ADJUSTMEN" +
+                "T.ADJUST_DATE, \r\n                                                               " +
+                "               GADA_ADJUSTMENT.ADJUST_PAY_TYPE, GADA_ADJUSTMENT.BANK_CD, \r\n     " +
+                "                                                                         GADA_AD" +
+                "JUSTMENT.OFFICE_CD, GADA_ADJUSTMENT.ACCOUNT_TYPE, \r\n                            " +
+                "                                                  GADA_ADJUSTMENT.ACCOUNT_HOLDER" +
+                "_KANA, GADA_ADJUSTMENT.ACCOUNT_NUMBER, \r\n                                       " +
+                "                                       GADA_ADJUSTMENT.REC_NUMBER, GADA_ADJUSTME" +
+                "NT.MANUAL_UPDATE, \r\n                                                            " +
+                "                  GADA_ADJUSTMENT.ADMIN_NUMBER, GADA_ADJUSTMENT.SYSTEM_UPDATE, \r" +
+                "\n                                                                              G" +
+                "ADA_PCA_DATA_DETAIL.PCA_OUTPUT_DATE,\r\n                                          " +
+                "                                        (SELECT                      COUNT(ADJUS" +
+                "T_NUMBER) AS Expr1\r\n                                                            " +
+                "                            FROM                         GADA_ADJUSTMENT_DETAIL\r" +
+                "\n                                                                               " +
+                "         WHERE                       (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJUST_NUM" +
+                "BER) AND \r\n                                                                     " +
+                "                                                         (PAYMENT_DAY IS NULL)) " +
+                "AS payment_flg,\r\n                                                               " +
+                "                   (SELECT                      COUNT(ADJUST_NUMBER) AS Expr2\r\n " +
+                "                                                                                " +
+                "       FROM                         GADA_ADJUSTMENT_DETAIL AS GADA_ADJUSTMENT_DE" +
+                "TAIL_1\r\n                                                                        " +
+                "                WHERE                       (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJ" +
+                "UST_NUMBER)) \r\n                                                                 " +
+                "             AS adjustment_row_cnt, COALESCE\r\n                                  " +
+                "                                                ((SELECT                      BA" +
+                "NK_OR_OFFICE_NAME\r\n                                                             " +
+                "                             FROM                         GAMA_BANK\r\n           " +
+                "                                                                               W" +
+                "HERE                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND (OFFICE_FLG =" +
+                " 1) AND \r\n                                                                      " +
+                "                                                          (DELETE_FLG = 0)), NUL" +
+                "L) AS bank_name, COALESCE\r\n                                                     " +
+                "                             ((SELECT                      BANK_OR_OFFICE_NAME\r\n" +
+                "                                                                                " +
+                "          FROM                         GAMA_BANK AS GAMA_BANK_1\r\n               " +
+                "                                                                           WHERE" +
+                "                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND \r\n               " +
+                "                                                                                " +
+                "                                 (GADA_ADJUSTMENT.OFFICE_CD = OFFICE_CD) AND (OF" +
+                "FICE_FLG = 2) AND \r\n                                                            " +
+                "                                                                    (DELETE_FLG " +
+                "= 0)), NULL) AS branch_name\r\n                                        FROM       " +
+                "                  GAMA_CLIENT INNER JOIN\r\n                                      " +
+                "                                        GADA_ADJUSTMENT ON GAMA_CLIENT.CLIENT_CD" +
+                " = GADA_ADJUSTMENT.CLIENT_CD INNER JOIN\r\n                                       " +
+                "                                       GADA_PCA_DATA_DETAIL INNER JOIN\r\n        " +
+                "                                                                      GADA_PCA_D" +
+                "ATA ON \r\n                                                                       " +
+                "       GADA_PCA_DATA_DETAIL.PCA_DATA_NUMBER = GADA_PCA_DATA.PCA_DATA_NUMBER ON \r" +
+                "\n                                                                              G" +
+                "ADA_ADJUSTMENT.ADJUST_NUMBER = GADA_PCA_DATA.PATTERN_NUMBER\r\n                   " +
+                "                     WHERE                       (GADA_ADJUSTMENT.PUBLIC_FLG = @" +
+                "PublicFlg) AND (GADA_ADJUSTMENT.DELETE_FLG = 0) AND \r\n                          " +
+                "                                                    (GADA_PCA_DATA.DELETE_FLG = " +
+                "0) AND (GADA_PCA_DATA_DETAIL.DELETE_FLG = 0) AND \r\n                             " +
+                "                                                 (GAMA_CLIENT.DELETE_FLG = 0) AN" +
+                "D \r\n                                                                            " +
+                "  (GADA_ADJUSTMENT.BUSINESS_ITEM_NAME LIKE \'%\' + @BussinessItemName + \'%\')\r\n    " +
+                "                                    ORDER BY               GADA_ADJUSTMENT.ADJUS" +
+                "T_NUMBER) AS s\r\nWHERE                       (payment_flg = adjustment_row_cnt)\r\n" +
+                "";
+            this._commandCollection[10].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PublicFlg", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_FLG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BussinessItemName", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "BUSINESS_ITEM_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[11] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[11].Connection = this.Connection;
+            this._commandCollection[11].CommandText = "SELECT                      ADJUST_NUMBER, PUBLIC_FLG, BUSINESS_CD, BUSINESS_ITEM" +
+                "_NAME, BILL_ID, CLIENT_CD, CLIENT_NAME, \r\n                                      " +
+                "TEMP_PAY_NUMBER, ADJUST_DATE, ADJUST_PAY_TYPE, BANK_CD, OFFICE_CD, ACCOUNT_TYPE," +
+                " \r\n                                      ACCOUNT_HOLDER_KANA, ACCOUNT_NUMBER, RE" +
+                "C_NUMBER, MANUAL_UPDATE, ADMIN_NUMBER, \r\n                                      S" +
+                "YSTEM_UPDATE, PCA_OUTPUT_DATE, payment_flg, adjustment_row_cnt, bank_name, branc" +
+                "h_name\r\nFROM                         (SELECT DISTINCT \r\n                        " +
+                "                                                      TOP (100) PERCENT GADA_ADJ" +
+                "USTMENT.ADJUST_NUMBER, GADA_ADJUSTMENT.PUBLIC_FLG, \r\n                           " +
+                "                                                   GADA_ADJUSTMENT.BUSINESS_CD, " +
+                "GADA_ADJUSTMENT.BUSINESS_ITEM_NAME, \r\n                                          " +
+                "                                    GADA_ADJUSTMENT.BILL_ID, GADA_ADJUSTMENT.CLI" +
+                "ENT_CD, GAMA_CLIENT.CLIENT_NAME, \r\n                                             " +
+                "                                 GADA_ADJUSTMENT.TEMP_PAY_NUMBER, GADA_ADJUSTMEN" +
+                "T.ADJUST_DATE, \r\n                                                               " +
+                "               GADA_ADJUSTMENT.ADJUST_PAY_TYPE, GADA_ADJUSTMENT.BANK_CD, \r\n     " +
+                "                                                                         GADA_AD" +
+                "JUSTMENT.OFFICE_CD, GADA_ADJUSTMENT.ACCOUNT_TYPE, \r\n                            " +
+                "                                                  GADA_ADJUSTMENT.ACCOUNT_HOLDER" +
+                "_KANA, GADA_ADJUSTMENT.ACCOUNT_NUMBER, \r\n                                       " +
+                "                                       GADA_ADJUSTMENT.REC_NUMBER, GADA_ADJUSTME" +
+                "NT.MANUAL_UPDATE, \r\n                                                            " +
+                "                  GADA_ADJUSTMENT.ADMIN_NUMBER, GADA_ADJUSTMENT.SYSTEM_UPDATE, \r" +
+                "\n                                                                              G" +
+                "ADA_PCA_DATA_DETAIL.PCA_OUTPUT_DATE,\r\n                                          " +
+                "                                        (SELECT                      COUNT(ADJUS" +
+                "T_NUMBER) AS Expr1\r\n                                                            " +
+                "                            FROM                         GADA_ADJUSTMENT_DETAIL\r" +
+                "\n                                                                               " +
+                "         WHERE                       (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJUST_NUM" +
+                "BER) AND \r\n                                                                     " +
+                "                                                         (PAYMENT_DAY IS NULL)) " +
+                "AS payment_flg,\r\n                                                               " +
+                "                   (SELECT                      COUNT(ADJUST_NUMBER) AS Expr2\r\n " +
+                "                                                                                " +
+                "       FROM                         GADA_ADJUSTMENT_DETAIL AS GADA_ADJUSTMENT_DE" +
+                "TAIL_1\r\n                                                                        " +
+                "                WHERE                       (ADJUST_NUMBER = GADA_ADJUSTMENT.ADJ" +
+                "UST_NUMBER)) \r\n                                                                 " +
+                "             AS adjustment_row_cnt, COALESCE\r\n                                  " +
+                "                                                ((SELECT                      BA" +
+                "NK_OR_OFFICE_NAME\r\n                                                             " +
+                "                             FROM                         GAMA_BANK\r\n           " +
+                "                                                                               W" +
+                "HERE                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND (OFFICE_FLG =" +
+                " 1) AND \r\n                                                                      " +
+                "                                                          (DELETE_FLG = 0)), NUL" +
+                "L) AS bank_name, COALESCE\r\n                                                     " +
+                "                             ((SELECT                      BANK_OR_OFFICE_NAME\r\n" +
+                "                                                                                " +
+                "          FROM                         GAMA_BANK AS GAMA_BANK_1\r\n               " +
+                "                                                                           WHERE" +
+                "                       (GADA_ADJUSTMENT.BANK_CD = BANK_CD) AND \r\n               " +
+                "                                                                                " +
+                "                                 (GADA_ADJUSTMENT.OFFICE_CD = OFFICE_CD) AND (OF" +
+                "FICE_FLG = 2) AND \r\n                                                            " +
+                "                                                                    (DELETE_FLG " +
+                "= 0)), NULL) AS branch_name\r\n                                        FROM       " +
+                "                  GAMA_CLIENT INNER JOIN\r\n                                      " +
+                "                                        GADA_ADJUSTMENT ON GAMA_CLIENT.CLIENT_CD" +
+                " = GADA_ADJUSTMENT.CLIENT_CD INNER JOIN\r\n                                       " +
+                "                                       GADA_PCA_DATA_DETAIL INNER JOIN\r\n        " +
+                "                                                                      GADA_PCA_D" +
+                "ATA ON \r\n                                                                       " +
+                "       GADA_PCA_DATA_DETAIL.PCA_DATA_NUMBER = GADA_PCA_DATA.PCA_DATA_NUMBER ON \r" +
+                "\n                                                                              G" +
+                "ADA_ADJUSTMENT.ADJUST_NUMBER = GADA_PCA_DATA.PATTERN_NUMBER\r\n                   " +
+                "                     WHERE                       (GADA_ADJUSTMENT.PUBLIC_FLG = @" +
+                "PublicFlg) AND (GADA_ADJUSTMENT.DELETE_FLG = 0) AND \r\n                          " +
+                "                                                    (GADA_PCA_DATA.DELETE_FLG = " +
+                "0) AND (GADA_PCA_DATA_DETAIL.DELETE_FLG = 0) AND \r\n                             " +
+                "                                                 (GAMA_CLIENT.DELETE_FLG = 0)\r\n " +
+                "                                       ORDER BY               GADA_ADJUSTMENT.AD" +
+                "JUST_NUMBER) AS s\r\nWHERE                       (payment_flg = adjustment_row_cnt" +
+                ")\r\n";
+            this._commandCollection[11].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PublicFlg", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_FLG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[12] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[12].Connection = this.Connection;
+            this._commandCollection[12].CommandText = "SELECT     COUNT(ADJUST_NUMBER)\r\nFROM      GADA_ADJUSTMENT\r\nWHERE    SUBSTRING(AD" +
+                "JUST_NUMBER, 3, 4) = YEAR(GETDATE())\r\n                         AND SUBSTRING(ADJ" +
+                "UST_NUMBER, 7, 2) = MONTH(GETDATE())\r\n                         AND DELETE_FLG = " +
+                "0\r\n";
+            this._commandCollection[12].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(JBADBDataSet.GADA_ADJUSTMENTDataTable dataTable, string BussinessItemName) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((BussinessItemName == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(BussinessItemName));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual JBADBDataSet.GADA_ADJUSTMENTDataTable GetData(string BussinessItemName) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((BussinessItemName == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(BussinessItemName));
+            }
+            JBADBDataSet.GADA_ADJUSTMENTDataTable dataTable = new JBADBDataSet.GADA_ADJUSTMENTDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByEmpty(JBADBDataSet.GADA_ADJUSTMENTDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPartial(JBADBDataSet.GADA_ADJUSTMENTDataTable dataTable, string BussinessItemName) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((BussinessItemName == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(BussinessItemName));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPartialEmpty(JBADBDataSet.GADA_ADJUSTMENTDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPartialPublicFlg(JBADBDataSet.GADA_ADJUSTMENTDataTable dataTable, bool PublicFlg, string BussinessItemName) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((bool)(PublicFlg));
+            if ((BussinessItemName == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(BussinessItemName));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPartialPublicFlgEmpty(JBADBDataSet.GADA_ADJUSTMENTDataTable dataTable, bool PublicFlg) {
+            this.Adapter.SelectCommand = this.CommandCollection[5];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((bool)(PublicFlg));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPublicFlg(JBADBDataSet.GADA_ADJUSTMENTDataTable dataTable, bool PublicFlg, string BussinessItemName) {
+            this.Adapter.SelectCommand = this.CommandCollection[6];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((bool)(PublicFlg));
+            if ((BussinessItemName == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(BussinessItemName));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPublicFlgEmpty(JBADBDataSet.GADA_ADJUSTMENTDataTable dataTable, bool PublicFlg) {
+            this.Adapter.SelectCommand = this.CommandCollection[7];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((bool)(PublicFlg));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByUnsettled(JBADBDataSet.GADA_ADJUSTMENTDataTable dataTable, string BussinessItemName) {
+            this.Adapter.SelectCommand = this.CommandCollection[8];
+            if ((BussinessItemName == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(BussinessItemName));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByUnsettledEmpty(JBADBDataSet.GADA_ADJUSTMENTDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[9];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByUnsettledPublicFlg(JBADBDataSet.GADA_ADJUSTMENTDataTable dataTable, bool PublicFlg, string BussinessItemName) {
+            this.Adapter.SelectCommand = this.CommandCollection[10];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((bool)(PublicFlg));
+            if ((BussinessItemName == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(BussinessItemName));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByUnsettledPublicFlgEmpty(JBADBDataSet.GADA_ADJUSTMENTDataTable dataTable, bool PublicFlg) {
+            this.Adapter.SelectCommand = this.CommandCollection[11];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((bool)(PublicFlg));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> ScalarQueryAdjustmentSeq() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[12];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10719,6 +15877,8 @@ WHERE                       (A.DELETE_FLG = 0) AND (B.DELETE_FLG = 0) AND (C.DEL
         private GAMA_TRANSFER_FROM_BANKTableAdapter _gAMA_TRANSFER_FROM_BANKTableAdapter;
         
         private GAMA_ADDRESSTableAdapter _gAMA_ADDRESSTableAdapter;
+        
+        private GADA_ADJUSTMENT_DETAILTableAdapter _gADA_ADJUSTMENT_DETAILTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -10821,6 +15981,20 @@ WHERE                       (A.DELETE_FLG = 0) AND (B.DELETE_FLG = 0) AND (C.DEL
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public GADA_ADJUSTMENT_DETAILTableAdapter GADA_ADJUSTMENT_DETAILTableAdapter {
+            get {
+                return this._gADA_ADJUSTMENT_DETAILTableAdapter;
+            }
+            set {
+                this._gADA_ADJUSTMENT_DETAILTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -10862,6 +16036,10 @@ WHERE                       (A.DELETE_FLG = 0) AND (B.DELETE_FLG = 0) AND (C.DEL
                             && (this._gAMA_ADDRESSTableAdapter.Connection != null))) {
                     return this._gAMA_ADDRESSTableAdapter.Connection;
                 }
+                if (((this._gADA_ADJUSTMENT_DETAILTableAdapter != null) 
+                            && (this._gADA_ADJUSTMENT_DETAILTableAdapter.Connection != null))) {
+                    return this._gADA_ADJUSTMENT_DETAILTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -10891,6 +16069,9 @@ WHERE                       (A.DELETE_FLG = 0) AND (B.DELETE_FLG = 0) AND (C.DEL
                     count = (count + 1);
                 }
                 if ((this._gAMA_ADDRESSTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._gADA_ADJUSTMENT_DETAILTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -10958,6 +16139,15 @@ WHERE                       (A.DELETE_FLG = 0) AND (B.DELETE_FLG = 0) AND (C.DEL
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._gADA_ADJUSTMENT_DETAILTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.GADA_ADJUSTMENT_DETAIL.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._gADA_ADJUSTMENT_DETAILTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -11016,6 +16206,14 @@ WHERE                       (A.DELETE_FLG = 0) AND (B.DELETE_FLG = 0) AND (C.DEL
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._gADA_ADJUSTMENT_DETAILTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.GADA_ADJUSTMENT_DETAIL.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._gADA_ADJUSTMENT_DETAILTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -11026,6 +16224,14 @@ WHERE                       (A.DELETE_FLG = 0) AND (B.DELETE_FLG = 0) AND (C.DEL
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(JBADBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._gADA_ADJUSTMENT_DETAILTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.GADA_ADJUSTMENT_DETAIL.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._gADA_ADJUSTMENT_DETAILTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._gAMA_ADDRESSTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.GAMA_ADDRESS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -11137,6 +16343,10 @@ WHERE                       (A.DELETE_FLG = 0) AND (B.DELETE_FLG = 0) AND (C.DEL
                         && (this.MatchTableAdapterConnection(this._gAMA_ADDRESSTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("TableAdapterManager で管理されるすべての TableAdapter は同一の接続文字列を使用する必要があります。");
             }
+            if (((this._gADA_ADJUSTMENT_DETAILTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._gADA_ADJUSTMENT_DETAILTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("TableAdapterManager で管理されるすべての TableAdapter は同一の接続文字列を使用する必要があります。");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager には接続情報がありません。それぞれの TableAdapterManager TableAdapter プロパティを有効な" +
@@ -11222,6 +16432,15 @@ WHERE                       (A.DELETE_FLG = 0) AND (B.DELETE_FLG = 0) AND (C.DEL
                         adaptersWithAcceptChangesDuringUpdate.Add(this._gAMA_ADDRESSTableAdapter.Adapter);
                     }
                 }
+                if ((this._gADA_ADJUSTMENT_DETAILTableAdapter != null)) {
+                    revertConnections.Add(this._gADA_ADJUSTMENT_DETAILTableAdapter, this._gADA_ADJUSTMENT_DETAILTableAdapter.Connection);
+                    this._gADA_ADJUSTMENT_DETAILTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._gADA_ADJUSTMENT_DETAILTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._gADA_ADJUSTMENT_DETAILTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._gADA_ADJUSTMENT_DETAILTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._gADA_ADJUSTMENT_DETAILTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -11303,6 +16522,10 @@ WHERE                       (A.DELETE_FLG = 0) AND (B.DELETE_FLG = 0) AND (C.DEL
                 if ((this._gAMA_ADDRESSTableAdapter != null)) {
                     this._gAMA_ADDRESSTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gAMA_ADDRESSTableAdapter]));
                     this._gAMA_ADDRESSTableAdapter.Transaction = null;
+                }
+                if ((this._gADA_ADJUSTMENT_DETAILTableAdapter != null)) {
+                    this._gADA_ADJUSTMENT_DETAILTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gADA_ADJUSTMENT_DETAILTableAdapter]));
+                    this._gADA_ADJUSTMENT_DETAILTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

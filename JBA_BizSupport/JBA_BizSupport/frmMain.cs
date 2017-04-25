@@ -21,8 +21,8 @@ namespace JBA_BizSupport
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        // メインメソッドから設定されるメンバー
-        public string Argument; // コマンドライン引数の内容
+        //// メインメソッドから設定されるメンバー
+        //public string Argument; // コマンドライン引数の内容
 
         // フォームの起動時に実行されるイベントプロシージャ
         private void frmMain_Load(object sender, EventArgs e)
@@ -39,15 +39,20 @@ namespace JBA_BizSupport
                     sb,                             // 格納先
                     Convert.ToUInt32(sb.Capacity),  // 格納先のキャパ
                     iniFileName);                   // iniファイル名
-                Argument = sb.ToString();
+                    Program.Argument = sb.ToString();
 
             // コマンドライン引数が入力設定されていない場合
-            if (Argument == "" || Argument == "0")
+            if (Program.Argument == "" || Program.Argument == "0")
             {
                 this.button3.Enabled = true;
             }
             // コマンドライン引数が1の場合
-            else if (Argument == "1")
+            else if (Program.Argument == "1")
+            {
+                this.button3.Enabled = false;
+            }
+            // コマンドライン引数が2の場合
+            else if (Program.Argument == "2")
             {
                 MessageBox.Show("利用者権限がないためシステムを利用できません。システム管理者に連絡して利用者登録を行ってください。", "警告");
                 //CancelEventArgsオブジェクトの作成
@@ -62,11 +67,6 @@ namespace JBA_BizSupport
                 {
                     Console.WriteLine("キャンセルされました");
                 }
-            }
-            // コマンドライン引数が2の場合
-            else if (Argument == "2")
-            {
-                this.button3.Enabled = false;
             }
             else
             {

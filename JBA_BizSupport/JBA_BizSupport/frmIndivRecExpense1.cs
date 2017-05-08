@@ -49,6 +49,8 @@ namespace JBA_BizSupport
             this.gAMA_HIMOKUTableAdapter.Fill(this.jBADBDataSet.GAMA_HIMOKU);
             // TODO: このコード行はデータを 'jBADBDataSet.GAMA_BUSINESS' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.gAMA_BUSINESSTableAdapter.Fill(this.jBADBDataSet.GAMA_BUSINESS);
+            // TODO: このコード行はデータを 'jBADBDataSet.GAMA_TRANSFER_FROM_BANK' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.gAMA_TRANSFER_FROM_BANKTableAdapter.Fill(this.jBADBDataSet.GAMA_TRANSFER_FROM_BANK);
             // 列ヘッダの背景色の変更
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.PeachPuff;
             // データグリッドビューダブルクリック・選択ボタンクリックか新規作成ボタンクリックかで初期設定を変更
@@ -57,9 +59,8 @@ namespace JBA_BizSupport
                 // 初期表示設定
                 //精算番号欄
                 textBox1.Text = TextAdjustNum;
-                comboBox11.Visible = true;
-                comboBox11.Text = TextBizCDAdj;
-                textBox3.Visible = false;
+                textBox3.Visible = true;
+                textBox3.Text = TextBizCDAdj;
                 textBox2.Text = TextBizItemName;
                 switch (IntBillID)
                 {
@@ -168,16 +169,30 @@ namespace JBA_BizSupport
         }
 
         // 事業コード変更（精算欄）
-        private void comboBox11_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        //private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (comboBox4.SelectedIndex == -1)
+        //    {
+        //        textBox2.Text = "";                                                       // 事業名      
+        //    }
+        //    else
+        //    {
+        //        textBox2.Text = comboBox4.SelectedValue.ToString();                      // 事業名
+        //    }
+        //}
 
         // 事業コード変更（仮払先）
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            label2.Text = comboBox1.ValueMember.ToString();                           // 事業名
-        }
+        //private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (comboBox1.SelectedIndex == -1)
+        //    {
+        //        label2.Text = "";                                                         // 事業名      
+        //    }
+        //    else
+        //    {
+        //        label2.Text = comboBox1.SelectedValue.ToString();                         // 事業名
+        //    }
+        //}
 
         // 仮払い有無ラジオボタン（仮払いあり）変更
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
@@ -194,13 +209,14 @@ namespace JBA_BizSupport
                 textBox18.ReadOnly = true;
                 textBox18.BackColor = Color.FromKnownColor(KnownColor.Control);
                 textBox18.Text = this.jBADBDataSet.ADJUST_TEMP_PAY.Rows[0][0].ToString(); // 事業コード
-                comboBox1.Visible = false;
                 label2.Enabled = true;
-                //label2.Text = this.jBADBDataSet.ADJUST_TEMP_PAY.Rows[0][1].ToString();    // 事業名
+                label2.Text = this.jBADBDataSet.ADJUST_TEMP_PAY.Rows[0][1].ToString();    // 事業名
+                textBox16.Enabled = true;
                 textBox16.Visible = true;
                 textBox16.ReadOnly = true;
                 textBox16.BackColor = Color.FromKnownColor(KnownColor.Control);
                 textBox16.Text = this.jBADBDataSet.ADJUST_TEMP_PAY.Rows[0][2].ToString(); // 目的
+                textBox15.Enabled = true;
                 textBox15.Visible = true;
                 textBox15.ReadOnly = true;
                 textBox15.BackColor = Color.FromKnownColor(KnownColor.Control);
@@ -208,7 +224,7 @@ namespace JBA_BizSupport
                 textBox19.Visible = true;
                 textBox19.ReadOnly = true;
                 textBox19.BackColor = Color.FromKnownColor(KnownColor.Control);
-                textBox19.Text = this.jBADBDataSet.ADJUST_TEMP_PAY.Rows[0][4].ToString(); // 仮払日付
+                textBox19.Text = DateTime.Parse(this.jBADBDataSet.ADJUST_TEMP_PAY.Rows[0][4].ToString()).ToString("d"); // 仮払日付
                 dateTimePicker2.Visible = false;
                 label11.Enabled = true;
                 label11.Text = this.jBADBDataSet.ADJUST_TEMP_PAY.Rows[0][5].ToString();   // 支払先CODE
@@ -225,15 +241,22 @@ namespace JBA_BizSupport
             {
                 button6.Enabled = false;                                                // 仮払先ボタン
                 textBox14.Enabled = false;                                              // 仮払番号
-                textBox18.Visible = false;
-                comboBox1.Visible = true;                                               // 事業コード
+                textBox14.Text = "";
+                textBox18.Visible = false;                                              // 事業コード
+                textBox18.Text = "";
                 label2.Enabled = false;                                                 // 事業名
+                label2.Text = "";
                 textBox16.Enabled = false;                                              // 目的
+                textBox16.Text = "";
                 textBox15.Enabled = false;                                              // 金額
-                textBox19.Visible = false;
-                dateTimePicker2.Visible = true;                                         // 仮払日付
+                textBox15.Text = "";
+                textBox19.Visible = false;                                              // 仮払日付
+                textBox19.Text = "";
+                dateTimePicker2.Visible = false;
                 label11.Enabled = false;                                                // 支払先CODE
+                label11.Text = "";
                 label10.Enabled = false;                                                // 支払先
+                label10.Text = "";
             }
         }
 
@@ -247,9 +270,27 @@ namespace JBA_BizSupport
         // 仮払先選択ボタンクリック
         private void button6_Click(object sender, EventArgs e)
         {
-            frmSeaTempDest1 frm1 = new frmSeaTempDest1();
-            frm1.StartPosition = FormStartPosition.CenterParent;
-            frm1.ShowDialog(this);
+            frmSeaTempDest frm2 = new frmSeaTempDest();
+            frm2.InputTmpPayNumber = label6.Text;
+            frm2.InputBizCD = label8.Text;
+            frm2.InputBizName = label6.Text;
+            frm2.InputPurpose = label8.Text;
+            frm2.InputPrice = label6.Text;
+            frm2.InputTmpPayDay = label8.Text;
+            frm2.InputClientCD = label6.Text;
+            frm2.InputClientName = label8.Text;
+            frm2.SearchStrTmpPay = label8.Text;
+            frm2.SelectedClientRow = -1;
+            frm2.StartPosition = FormStartPosition.CenterParent;
+            frm2.ShowDialog(this);
+            label6.Text = frm2.InputTmpPayNumber;
+            label6.Text = frm2.InputBizCD;
+            label6.Text = frm2.InputBizName;
+            label6.Text = frm2.InputPurpose;
+            label6.Text = frm2.InputPrice;
+            label6.Text = frm2.InputTmpPayDay;
+            label6.Text = frm2.InputClientCD;
+            label8.Text = frm2.InputClientName;
         }
 
         // 銀行選択ボタンクリック
@@ -602,6 +643,21 @@ namespace JBA_BizSupport
             {
                 SendKeys.Send("{F4}");
             }
+        }
+
+        // 事業選択ボタンクリック
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmSeaBusinessName frm = new frmSeaBusinessName();
+            frm.InputBusinessCD = textBox3.Text;
+            frm.InputBusinessName = textBox2.Text;
+            frm.InputBillCD = label5.Text;
+            frm.SearchBusinessName = label2.Text;
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.ShowDialog(this);
+            textBox3.Text = frm.InputBusinessCD;
+            textBox2.Text = frm.InputBusinessName;
+            label5.Text = frm.InputBillCD;
         }
     }
 }

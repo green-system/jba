@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIndivRecExpense1));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
@@ -51,7 +51,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
             this.gAMABUSINESSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jBADBDataSet = new JBA_BizSupport.JBADBDataSet();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -87,7 +86,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button17 = new System.Windows.Forms.Button();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -133,6 +131,8 @@
             this.pCA_DATA_DETAILTableAdapter = new JBA_BizSupport.JBADBDataSetTableAdapters.PCA_DATA_DETAILTableAdapter();
             this.aDJUSTTEMPPAYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aDJUST_TEMP_PAYTableAdapter = new JBA_BizSupport.JBADBDataSetTableAdapters.ADJUST_TEMP_PAYTableAdapter();
+            this.gAMA_TRANSFER_FROM_BANKTableAdapter = new JBA_BizSupport.JBADBDataSetTableAdapters.GAMA_TRANSFER_FROM_BANKTableAdapter();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gAMABUSINESSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jBADBDataSet)).BeginInit();
@@ -157,6 +157,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.textBox24);
             this.groupBox2.Controls.Add(this.dateTimePicker3);
             this.groupBox2.Controls.Add(this.textBox23);
@@ -174,7 +175,6 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.textBox18);
             this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.comboBox11);
             this.groupBox2.Controls.Add(this.textBox11);
             this.groupBox2.Controls.Add(this.textBox13);
             this.groupBox2.Controls.Add(this.textBox12);
@@ -187,7 +187,6 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.button17);
             this.groupBox2.Controls.Add(this.maskedTextBox1);
-            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Controls.Add(this.panel2);
             this.groupBox2.Controls.Add(this.button12);
@@ -341,7 +340,7 @@
             this.textBox19.Location = new System.Drawing.Point(629, 137);
             this.textBox19.Name = "textBox19";
             this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(80, 12);
+            this.textBox19.Size = new System.Drawing.Size(104, 12);
             this.textBox19.TabIndex = 76;
             this.textBox19.Text = "TEMP_PAY_DAY";
             this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -406,19 +405,6 @@
             this.textBox3.Size = new System.Drawing.Size(57, 12);
             this.textBox3.TabIndex = 5;
             this.textBox3.Text = "BUSINESS_CD";
-            // 
-            // comboBox11
-            // 
-            this.comboBox11.DataSource = this.gAMABUSINESSBindingSource;
-            this.comboBox11.DisplayMember = "BUSINESS_CD";
-            this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(159, 60);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(58, 20);
-            this.comboBox11.TabIndex = 6;
-            this.comboBox11.ValueMember = "BUSINESS_NAME";
-            this.comboBox11.SelectedIndexChanged += new System.EventHandler(this.comboBox11_SelectedIndexChanged);
             // 
             // gAMABUSINESSBindingSource
             // 
@@ -610,9 +596,9 @@
             // 
             // PRICE
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "N0";
-            this.PRICE.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N0";
+            this.PRICE.DefaultCellStyle = dataGridViewCellStyle4;
             this.PRICE.FillWeight = 67F;
             this.PRICE.HeaderText = "金額";
             this.PRICE.MaxInputLength = 9;
@@ -635,9 +621,9 @@
             // 
             // DEPOSIT
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "N0";
-            this.DEPOSIT.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N0";
+            this.DEPOSIT.DefaultCellStyle = dataGridViewCellStyle5;
             this.DEPOSIT.FillWeight = 76F;
             this.DEPOSIT.HeaderText = "内預り金";
             this.DEPOSIT.MaxInputLength = 9;
@@ -648,8 +634,8 @@
             // 
             // PAYMENT_DATE
             // 
-            dataGridViewCellStyle9.Format = "d";
-            this.PAYMENT_DATE.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Format = "d";
+            this.PAYMENT_DATE.DefaultCellStyle = dataGridViewCellStyle6;
             this.PAYMENT_DATE.FillWeight = 109F;
             this.PAYMENT_DATE.HeaderText = "支払日";
             this.PAYMENT_DATE.MinimumWidth = 109;
@@ -792,19 +778,6 @@
             this.maskedTextBox1.TabIndex = 60;
             this.maskedTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.maskedTextBox1_KeyDown);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DataSource = this.gAMABUSINESSBindingSource;
-            this.comboBox1.DisplayMember = "BUSINESS_CD";
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(159, 134);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(67, 20);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.ValueMember = "BUSINESS_NAME";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
@@ -855,7 +828,6 @@
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(76, 16);
             this.radioButton4.TabIndex = 10;
-            this.radioButton4.TabStop = true;
             this.radioButton4.Text = "仮払いなし";
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
@@ -863,12 +835,10 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Checked = true;
             this.radioButton3.Location = new System.Drawing.Point(9, 6);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(75, 16);
             this.radioButton3.TabIndex = 9;
-            this.radioButton3.TabStop = true;
             this.radioButton3.Text = "仮払いあり";
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
@@ -1202,6 +1172,20 @@
             // 
             this.aDJUST_TEMP_PAYTableAdapter.ClearBeforeFill = true;
             // 
+            // gAMA_TRANSFER_FROM_BANKTableAdapter
+            // 
+            this.gAMA_TRANSFER_FROM_BANKTableAdapter.ClearBeforeFill = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(5, 33);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(49, 27);
+            this.button5.TabIndex = 85;
+            this.button5.Text = "事業";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // frmIndivRecExpense1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1281,7 +1265,6 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.ComboBox comboBox11;
         private UserControl7 userControl71;
         private UserControl8 userControl81;
         private UserControl8 userControl82;
@@ -1303,7 +1286,6 @@
         private JBADBDataSetTableAdapters.GAMA_HIMOKUTableAdapter gAMA_HIMOKUTableAdapter;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label5;
@@ -1340,5 +1322,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DEPOSIT;
         private CalendarColumn PAYMENT_DATE;
         private JBADBDataSetTableAdapters.ADJUST_TEMP_PAYTableAdapter aDJUST_TEMP_PAYTableAdapter;
+        private JBADBDataSetTableAdapters.GAMA_TRANSFER_FROM_BANKTableAdapter gAMA_TRANSFER_FROM_BANKTableAdapter;
+        private System.Windows.Forms.Button button5;
     }
 }

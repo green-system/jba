@@ -36,7 +36,6 @@ namespace JBA_BizSupport
                 SelectedClientRow = dataGridView1.CurrentCell.RowIndex;
                 this.Close();
             }
-
         }
 
         // フォームロード

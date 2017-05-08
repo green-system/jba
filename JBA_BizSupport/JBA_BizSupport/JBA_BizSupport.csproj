@@ -132,12 +132,6 @@
     <Compile Include="frmSeaPaymentDest.Designer.cs">
       <DependentUpon>frmSeaPaymentDest.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSeaTempDest1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSeaTempDest1.Designer.cs">
-      <DependentUpon>frmSeaTempDest1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmTempPayment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,9 +254,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSeaPaymentDest.resx">
       <DependentUpon>frmSeaPaymentDest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSeaTempDest1.resx">
-      <DependentUpon>frmSeaTempDest1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTempPayment.resx">
       <DependentUpon>frmTempPayment.cs</DependentUpon>

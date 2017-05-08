@@ -144,10 +144,10 @@
             this.userControl71.LabelText = "PCA_DATA_NUMBER";
             this.userControl71.Location = new System.Drawing.Point(48, 366);
             this.userControl71.Name = "userControl71";
+            this.userControl71.PatternNumber = null;
             this.userControl71.Size = new System.Drawing.Size(837, 241);
             this.userControl71.TabIndex = 64;
             this.userControl71.TabNumber = ((byte)(0));
-            //this.userControl71.TmpPayNumber = null;
             // 
             // dataGridView1
             // 
@@ -360,7 +360,8 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "普通",
-            "当座"});
+            "当座",
+            "貯蓄"});
             this.comboBox3.Location = new System.Drawing.Point(472, 234);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(58, 20);

@@ -12449,7 +12449,7 @@ WHERE                       (COALESCE (BANK_OR_OFFICE_NAME, NULL) LIKE '%' + @Br
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[11];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[12];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT                      GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_" +
@@ -12830,11 +12830,62 @@ WHERE                       (COALESCE (BANK_OR_OFFICE_NAME, NULL) LIKE '%' + @Br
             this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[10] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[10].Connection = this.Connection;
-            this._commandCollection[10].CommandText = "SELECT     COUNT(TEMP_PAY_NUMBER)\r\nFROM      GADA_TEMP_PAY\r\nWHERE    SUBSTRING(TE" +
+            this._commandCollection[10].CommandText = "SELECT                      GADA_TEMP_PAY.TEMP_PAY_NUMBER, GADA_TEMP_PAY.REQUEST_" +
+                "PERSON_NAME, GADA_TEMP_PAY.BUSINESS_CD, \r\n                                      " +
+                "GADA_TEMP_PAY.TEMP_PAY_PURPOSE, GADA_TEMP_PAY.CLIENT_CD, GADA_TEMP_PAY.TEMP_PAY_" +
+                "PRICE, \r\n                                      GADA_TEMP_PAY.TEMP_PAY_DAY, GADA_" +
+                "TEMP_PAY.TEMP_PAY_TYPE, GADA_TEMP_PAY.PROGRESS_STATUS_CD, \r\n                    " +
+                "                  GADA_TEMP_PAY.TEMP_PAY_OUTPUT_DANDT, GADA_TEMP_PAY.TEMP_PAY_AD" +
+                "MIN_NUMBER, \r\n                                      GADA_TEMP_PAY.PCA_FILE_OUTPU" +
+                "T_DANDT, GADA_TEMP_PAY.PCA_FILE_ADMIN_NUMBER, \r\n                                " +
+                "      GADA_TEMP_PAY.TEMP_PAY_OUTLINE, GADA_TEMP_PAY.BANK_CD, GADA_TEMP_PAY.OFFIC" +
+                "E_CD, \r\n                                      GADA_TEMP_PAY.ACCOUNT_TYPE, GADA_T" +
+                "EMP_PAY.ACCOUNT_HOLDER_KANA, \r\n                                      GADA_TEMP_P" +
+                "AY.ACCOUNT_NUMBER, GADA_TEMP_PAY.REC_NUMBER, GADA_TEMP_PAY.DELETE_FLG, \r\n       " +
+                "                               GADA_TEMP_PAY.MANUAL_UPDATE, GADA_TEMP_PAY.ADMIN_" +
+                "NUMBER, GADA_TEMP_PAY.SYSTEM_UPDATE, \r\n                                      GAM" +
+                "A_BUSINESS.BUSINESS_NAME, GAMA_CLIENT.CLIENT_NAME, GAMA_BUSINESS.BILL_ID, COALES" +
+                "CE\r\n                                          ((SELECT                      BANK" +
+                "_OR_OFFICE_NAME\r\n                                                  FROM         " +
+                "                GAMA_BANK\r\n                                                  WHE" +
+                "RE                       (GADA_TEMP_PAY.BANK_CD = BANK_CD) AND (OFFICE_FLG = 1) " +
+                "AND (DELETE_FLG = 0)), NULL)\r\n                                       AS bank_nam" +
+                "e, COALESCE\r\n                                          ((SELECT                 " +
+                "     BANK_OR_OFFICE_NAME\r\n                                                  FROM" +
+                "                         GAMA_BANK AS GAMA_BANK_1\r\n                             " +
+                "                     WHERE                       (GADA_TEMP_PAY.BANK_CD = BANK_C" +
+                "D) AND (GADA_TEMP_PAY.OFFICE_CD = OFFICE_CD) \r\n                                 " +
+                "                                                       AND (OFFICE_FLG = 2) AND " +
+                "(DELETE_FLG = 0)), NULL) AS branch_name\r\nFROM                         GADA_TEMP_" +
+                "PAY LEFT OUTER JOIN\r\n                                      GAMA_BUSINESS ON GADA" +
+                "_TEMP_PAY.BUSINESS_CD = GAMA_BUSINESS.BUSINESS_CD LEFT OUTER JOIN\r\n             " +
+                "                         GAMA_CLIENT ON GADA_TEMP_PAY.CLIENT_CD = GAMA_CLIENT.CL" +
+                "IENT_CD\r\nWHERE                       (GADA_TEMP_PAY.DELETE_FLG = 0) AND (GAMA_BU" +
+                "SINESS.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FLG = 0) \r\n                      " +
+                "                AND (GADA_TEMP_PAY.PROGRESS_STATUS_CD < 60) AND \r\n              " +
+                "                        (GADA_TEMP_PAY.REQUEST_PERSON_NAME LIKE \'%\' + @StrTmpPay" +
+                " + \'%\') OR\r\n                                      (GADA_TEMP_PAY.DELETE_FLG = 0)" +
+                " AND (GAMA_BUSINESS.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FLG = 0) \r\n         " +
+                "                             AND (GADA_TEMP_PAY.PROGRESS_STATUS_CD < 60) AND \r\n " +
+                "                                     (GAMA_BUSINESS.BUSINESS_NAME LIKE \'%\' + @St" +
+                "rTmpPay + \'%\') OR\r\n                                      (GADA_TEMP_PAY.DELETE_F" +
+                "LG = 0) AND (GAMA_BUSINESS.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FLG = 0) \r\n  " +
+                "                                    AND (GADA_TEMP_PAY.PROGRESS_STATUS_CD < 60) " +
+                "AND \r\n                                      (GADA_TEMP_PAY.TEMP_PAY_PURPOSE LIKE" +
+                " \'%\' + @StrTmpPay + \'%\') OR\r\n                                      (GADA_TEMP_PA" +
+                "Y.DELETE_FLG = 0) AND (GAMA_BUSINESS.DELETE_FLG = 0) AND (GAMA_CLIENT.DELETE_FLG" +
+                " = 0) \r\n                                      AND (GADA_TEMP_PAY.PROGRESS_STATUS" +
+                "_CD < 60) AND (GAMA_CLIENT.CLIENT_NAME LIKE \'%\' + @StrTmpPay + \'%\')\r\nORDER BY   " +
+                "            GADA_TEMP_PAY.TEMP_PAY_NUMBER";
+            this._commandCollection[10].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StrTmpPay", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "REQUEST_PERSON_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[11] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[11].Connection = this.Connection;
+            this._commandCollection[11].CommandText = "SELECT     COUNT(TEMP_PAY_NUMBER)\r\nFROM      GADA_TEMP_PAY\r\nWHERE    SUBSTRING(TE" +
                 "MP_PAY_NUMBER, 3, 4) = YEAR(GETDATE())\r\n                         AND SUBSTRING(T" +
                 "EMP_PAY_NUMBER, 7, 2) = MONTH(GETDATE())\r\n                         AND DELETE_FL" +
                 "G = 0\r\n";
-            this._commandCollection[10].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[11].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13017,8 +13068,27 @@ WHERE                       (COALESCE (BANK_OR_OFFICE_NAME, NULL) LIKE '%' + @Br
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByUnsettledSearch(JBADBDataSet.GADA_TEMP_PAYDataTable dataTable, string StrTmpPay) {
+            this.Adapter.SelectCommand = this.CommandCollection[10];
+            if ((StrTmpPay == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(StrTmpPay));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual global::System.Nullable<int> ScalarQueryTmpPaySeq() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[10];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[11];
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

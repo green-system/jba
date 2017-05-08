@@ -48,7 +48,6 @@ C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA
 C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA_BizSupport.frmMasterMaintenance.resources
 C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA_BizSupport.frmSeaAddress.resources
 C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA_BizSupport.frmSeaPaymentDest.resources
-C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA_BizSupport.frmSeaTempDest1.resources
 C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA_BizSupport.frmTempPayment.resources
 C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA_BizSupport.frmSeaBusinessName.resources
 C:\Users\ES3408\Documents\GitHub\jba\JBA_BizSupport\JBA_BizSupport\obj\Debug\JBA_BizSupport.frmSeaTempDest.resources
